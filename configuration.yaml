@@ -1,0 +1,126 @@
+homeassistant:
+  # Name of the location where Home Assistant is running
+  name: Home
+  # Location required to calculate the time the sun rises and sets
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  # Impacts weather/sunrise data (altitude above sea level in meters)
+  elevation: 123
+  # metric for Metric, imperial for Imperial
+  unit_system: metric
+  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+  time_zone: Europe/Moscow
+  
+  customize: !include customize.yaml
+
+automation: !include automation.yaml
+# Show links to resources in log and frontend
+introduction:
+
+# Enables the frontend
+frontend:
+
+# Enables configuration UI
+config:
+
+http:
+  api_password: !secret http_password
+  #ssl_certificate: /home/homeassistant/.homeassistant/fullchain.pem
+  #ssl_key: /home/homeassistant/.homeassistant/privkey.pem
+  # Uncomment this if you are using SSL or running in Docker etc
+  # base_url: example.duckdns.org:8123
+
+# Checks for available updates
+updater:
+
+# Discover some devices automatically
+discovery:
+
+# Allows you to issue voice commands from the frontend in enabled browsers
+conversation:
+
+# Enables support for tracking state changes over time.
+history:
+
+# View all events in a logbook
+logbook:
+
+# Track the sun
+sun:
+
+script: !include scripts.yaml
+
+device_tracker:
+  platform: snmp
+  host: 192.168.88.1
+  community: !secret snmp_comunity 
+  baseoid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+  track_new_devices: false
+  interval_seconds: 30
+  home_interval: 5
+  consider_home: 300
+
+# Weather Prediction
+sensor:
+  - platform: yr
+#  - platform: openweathermap
+#    api_key: !secret openweather_apikey
+#    monitored_conditions:
+#      - weather
+#      - temperature
+#      - wind_speed
+#      - humidity
+#      - clouds
+#      - rain
+#      - snow
+
+light:
+  - platform: mqtt
+    name: switch1
+    state_topic: "home/switches/1/status"
+    command_topic: "home/switches/1"
+    payload_on: 1
+    payload_off: 0
+    qos: 0
+  - platform: mqtt
+    name: switch2
+    state_topic: "home/switches/2/status"
+    command_topic: "home/switches/2"
+    payload_on: 1
+    payload_off: 0
+    qos: 0
+
+media_player:
+  platform: vlc
+  name: vlc
+  arguments: '--alsa-audio-device=default'
+
+tts:
+  platform: google
+  language: 'ru'
+  cache: true
+  cache_dir: /tmp/tts
+  time_memory: 300
+  
+group: !include groups.yaml
+
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  protocol: 3.1.1
+  client_id: home-assistant
+  username: !secret mqtt_login
+  password: !secret mqtt_password
+
+recorder:
+  purge_days: 7
+
+logger:
+  default: error
+#  logs:
+#    homeassistant.components.mqtt: debug
+#    homeassistant.components.device_tracker: debug
+
+# Zones
+zone: !include zones.yaml

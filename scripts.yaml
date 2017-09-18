@@ -1,0 +1,14 @@
+
+  light_plants_on:
+    alias: Включить подсветку растений
+    sequence:
+      - service: light.turn_on
+        data:
+          entity_id: group.light_plants
+
+  light_plants_off:
+    alias: Выключить подсветку растений
+    sequence:
+      - service: light.turn_off
+        data:
+          entity_id: group.light_plants

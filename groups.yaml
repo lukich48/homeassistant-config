@@ -1,0 +1,5 @@
+
+light_plants:
+  #name: подсветка растений
+  #entities:
+  - light.switch2
