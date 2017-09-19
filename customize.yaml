@@ -1,0 +1,6 @@
+  group.light_plants:
+    friendly_name: "Подсветка растений"
+
+  group.all_lights:
+    hidden: false
+    friendly_name: Свет

@@ -1,5 +1,19 @@
+  default_view:
+    view: yes
+    icon: mdi:home
+    entities:
+      - group.all_lights
 
-light_plants:
-  #name: подсветка растений
-  #entities:
-  - light.switch2
+  media:
+    name: Media
+    view: yes
+    icon: mdi:play-circle-outline
+    entities:
+      - group.media_player
+
+  light_plants:
+    - light.switch2
+
+  media_player:
+    - media_player.vlc
+
