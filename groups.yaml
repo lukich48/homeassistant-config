@@ -3,9 +3,20 @@
     icon: mdi:home
     entities:
       - group.all_lights
+      - sun.sun
+      - device_tracker.mqtt_GalaxyS7
+      - device_tracker.mqtt_ipad
+
+  Automations:
+    name: Automations and scripts
+    view: yes
+    icon: mdi:bike
+    entities:
+      - group.all_automations
+      - group.all_scripts
 
   media:
-    name: Media
+    name: Медиа
     view: yes
     icon: mdi:play-circle-outline
     entities:
@@ -16,4 +27,8 @@
 
   media_player:
     - media_player.vlc
+
+  devices_tracker:
+    - device_tracker.mqtt_GalaxyS7
+    - device_tracker.mqtt_ipad
 
