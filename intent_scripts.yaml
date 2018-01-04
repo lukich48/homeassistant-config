@@ -1,0 +1,9 @@
+  Temperature:
+    speech:
+      text: Температура в доме 10 градусов
+
+  TurnLights:
+    speech:
+      text: Свет в {{ Room }} {{ OnOff }}
+    action:
+      - service_template: "script.light_plants_{{ OnOff }}"

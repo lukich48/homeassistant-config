@@ -125,3 +125,7 @@ logger:
 
 # Zones
 zone: !include zones.yaml
+
+dialogflow:
+
+intent_script: !include intent_scripts.yaml
