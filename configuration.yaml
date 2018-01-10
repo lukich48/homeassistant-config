@@ -76,9 +76,9 @@ sensor:
 
 light:
   - platform: mqtt
-    name: switch1
-    state_topic: "home/switches/1/status"
-    command_topic: "home/switches/1"
+    name: switch3
+    state_topic: "home/switches/3/status"
+    command_topic: "home/switches/3"
     payload_on: 1
     payload_off: 0
     qos: 0
