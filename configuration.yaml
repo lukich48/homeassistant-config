@@ -13,7 +13,12 @@ homeassistant:
   
   customize: !include customize.yaml
 
-automation: !include automation.yaml
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+intent_script: !include intent_scripts.yaml
+zone: !include zones.yaml
+
 # Show links to resources in log and frontend
 #introduction:
 
@@ -25,10 +30,10 @@ config:
 
 http:
   api_password: !secret http_password
-  ssl_certificate: /home/homeassistant/.homeassistant/ssl/fullchain.pem
-  ssl_key: /home/homeassistant/.homeassistant/ssl/privkey.pem
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
   # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: example.duckdns.org:8123
+  # base_url: rodal2807.synology.me:8123
 
 # Checks for available updates
 updater:
@@ -45,10 +50,11 @@ history:
 # View all events in a logbook
 logbook:
 
+# Enables a map showing the location of tracked devices
+map:
+
 # Track the sun
 sun:
-
-script: !include scripts.yaml
 
 device_tracker:
   platform: snmp
@@ -90,10 +96,10 @@ light:
     payload_off: 0
     qos: 0
 
-media_player:
-  platform: vlc
-  name: vlc
-  arguments: '--alsa-audio-device=default'
+# media_player:
+  # platform: vlc
+  # name: vlc
+  # arguments: '--alsa-audio-device=default'
 
 tts:
   platform: google
@@ -102,11 +108,9 @@ tts:
   cache_dir: /tmp/tts
   time_memory: 300
   
-group: !include groups.yaml
-
 
 mqtt:
-  broker: 127.0.0.1
+  broker: 192.168.88.3
   port: 1883
   protocol: 3.1.1
   client_id: home-assistant
@@ -117,15 +121,13 @@ recorder:
   purge_interval: 1
   purge_keep_days: 7
 
-logger:
-  default: error
+# Cloud
+cloud:
+
+# logger:
+  # default: error
 #  logs:
 #    homeassistant.components.mqtt: debug
 #    homeassistant.components.device_tracker: debug
 
-# Zones
-zone: !include zones.yaml
-
 dialogflow:
-
-intent_script: !include intent_scripts.yaml
