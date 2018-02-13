@@ -19,9 +19,7 @@
     order: 2
 
   device_tracker.mqtt_GalaxyS7:
-    icon: mdi:cellphone-iphone
     friendly_name: Алеша
-
+    
   device_tracker.mqtt_ipad:
-    icon: mdi:cellphone-iphone
     friendly_name: Полина
