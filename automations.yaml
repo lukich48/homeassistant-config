@@ -1,15 +1,16 @@
-- id: turn_on_light_plants  
+- action:
+  - service: script.light_plants_on
   alias: Включить подсветку растений
+  condition: []
+  id: '1518642425834'
   trigger:
+  - event: sunrise
     platform: sun
-    event: sunrise
-  action:
-    service: script.light_plants_on
-
-- id: turn_off_light_plants  
+- action:
+  - service: script.light_plants_off
   alias: Выключить подсветку растений
+  condition: []
+  id: '1518642622398'
   trigger:
+  - at: '23:00:00'
     platform: time
-    at: "23:00:00"
-  action:
-    service: script.light_plants_off

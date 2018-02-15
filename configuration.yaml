@@ -14,8 +14,8 @@ homeassistant:
   customize: !include customize.yaml
 
 group: !include groups.yaml
-automation: !include automations.yaml
 script: !include scripts.yaml
+automation: !include automations.yaml
 intent_script: !include intent_scripts.yaml
 zone: !include zones.yaml
 
@@ -69,6 +69,14 @@ device_tracker:
 # Weather Prediction
 sensor:
   - platform: yr
+  - platform: mqtt
+    state_topic: 'home/holl/temperature'
+    name: Temperature
+    unit_of_measurement: '°C'
+  - platform: mqtt
+    state_topic: 'home/holl/humidity'
+    name: Humidity
+    unit_of_measurement: '%'
 #  - platform: openweathermap
 #    api_key: !secret openweather_apikey
 #    monitored_conditions:
@@ -131,3 +139,4 @@ cloud:
 #    homeassistant.components.device_tracker: debug
 
 dialogflow:
+
