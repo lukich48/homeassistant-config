@@ -1,25 +1,23 @@
-  group.light_plants:
-    friendly_name: Подсветка растений
-
-  group.devices_tracker:
-    friendly_name: Люди
-
-  group.all_lights:
-    hidden: false
-    friendly_name: Свет
-
-  group.all_automations:
-    hidden: false
-    friendly_name: Automations
-    order: 1
-
-  group.all_scripts:
-    hidden: false
-    friendly_name: Scripts
-    order: 2
-
-  device_tracker.mqtt_GalaxyS7:
-    friendly_name: Алеша
-    
-  device_tracker.mqtt_ipad:
-    friendly_name: Полина
+group.light_plants:
+  friendly_name: Подсветка растений
+group.devices_tracker:
+  friendly_name: Люди
+group.all_lights:
+  hidden: false
+  friendly_name: Свет
+group.all_automations:
+  hidden: false
+  friendly_name: Automations
+  order: 1
+group.all_scripts:
+  hidden: false
+  friendly_name: Scripts
+  order: 2
+device_tracker.mqtt_GalaxyS7:
+  friendly_name: Алеша
+device_tracker.mqtt_ipad:
+  friendly_name: Полина
+light.switch2:
+  friendly_name: подсв. растений
+light.switch3:
+  friendly_name: подсветка кухни

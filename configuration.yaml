@@ -64,7 +64,7 @@ device_tracker:
   track_new_devices: false
   interval_seconds: 30
   home_interval: 5
-  consider_home: 300
+  consider_home: 600
 
 # Weather Prediction
 sensor:
@@ -118,7 +118,7 @@ tts:
   
 
 mqtt:
-  broker: 192.168.88.3
+  broker: rodal2807.synology.me
   port: 1883
   protocol: 3.1.1
   client_id: home-assistant
