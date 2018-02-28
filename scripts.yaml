@@ -1,13 +1,13 @@
 
   light_plants_on:
-    alias: Включить подсветку растений
+    alias: light_plants_on
     sequence:
       - service: light.turn_on
         data:
           entity_id: group.light_plants
 
   light_plants_off:
-    alias: Выключить подсветку растений
+    alias: light_plants_off
     sequence:
       - service: light.turn_off
         data:

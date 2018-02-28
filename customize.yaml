@@ -15,7 +15,7 @@ group.all_scripts:
   order: 2
 device_tracker.mqtt_GalaxyS7:
   friendly_name: Алеша
-device_tracker.mqtt_ipad:
+device_tracker.mqtt_Iphone:
   friendly_name: Полина
 light.switch2:
   friendly_name: подсв. растений
@@ -23,7 +23,9 @@ light.switch3:
   friendly_name: подсветка кухни
 automation.turn_on_light_plants:
   friendly_name: Включить подсветку растений
-
 automation.turn_off_light_plants:
   friendly_name: Выключить подсветку растений
-
+script.light_plants_on:
+  friendly_name: Включить подсветку растений
+script.light_plants_off:
+  friendly_name: Выключить подсветку растений

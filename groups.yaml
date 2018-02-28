@@ -4,12 +4,11 @@
     entities:
       - group.all_lights
       - sun.sun
-      - device_tracker.mqtt_GalaxyS7
-      - device_tracker.mqtt_ipad
+      - group.devices_tracker
       - sensor.Humidity
       - sensor.Temperature
 
-  Automations:
+  automations:
     name: Automations and scripts
     view: yes
     icon: mdi:bike
@@ -32,5 +31,5 @@
 
   devices_tracker:
     - device_tracker.mqtt_GalaxyS7
-    - device_tracker.mqtt_ipad
+    - device_tracker.mqtt_Iphone
 

@@ -130,8 +130,6 @@ mqtt:
   password: !secret mqtt_password
 
 recorder:
-  purge_interval: 1
-  purge_keep_days: 7
 
 # Cloud
 cloud:
@@ -144,3 +142,25 @@ cloud:
 
 dialogflow:
 
+media_player:
+  - platform: kodi
+    host: 192.168.88.3
+    turn_on_action:
+      service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: Addons.ExecuteAddon
+        addonid: script.json-cec
+        params:
+          command: activate
+    turn_off_action:
+    - service: media_player.media_stop
+      data:
+        entity_id: media_player.kodi
+    - service: media_player.kodi_call_method
+      data:
+        entity_id: media_player.kodi
+        method: Addons.ExecuteAddon
+        addonid: script.json-cec
+        params:
+          command: standby
