@@ -1,9 +1,23 @@
   Temperature:
     speech:
-      text: Температура в доме 10 градусов
+      text: Температура в доме {{states('sensor.temperature')}} градусов. Влажность {{states('sensor.humidity')}} процентов
 
+  # TurnLights:
+    # speech:
+      # text: Свет в {{ Room }} {{ OnOff }}
+    # action:
+      # - service_template: "script.light_plants_{{ OnOff }}"
+      
   TurnLights:
     speech:
       text: Свет в {{ Room }} {{ OnOff }}
     action:
-      - service_template: "script.light_plants_{{ OnOff }}"
+      - service_template: "light.turn_{{ OnOff }}"
+        data_template:
+          entity_id: "light.switch3"
+          
+  TurnOnTV:
+    speech:
+      text: Телевизор включен
+    action:
+      - service: script.turn_on_tv

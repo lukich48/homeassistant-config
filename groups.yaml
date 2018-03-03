@@ -4,7 +4,8 @@
     entities:
       - group.all_lights
       - sun.sun
-      - group.devices_tracker
+      - device_tracker.mqtt_GalaxyS7
+      - device_tracker.mqtt_Iphone
       - sensor.Humidity
       - sensor.Temperature
 
@@ -16,18 +17,18 @@
       - group.all_automations
       - group.all_scripts
 
-  # media:
-    # name: Медиа
-    # view: yes
-    # icon: mdi:play-circle-outline
-    # entities:
-      # - group.media_player
+  media:
+    name: Медиа
+    view: yes
+    icon: mdi:play-circle-outline
+    entities:
+      - group.media_player
 
   light_plants:
     - light.switch2
 
-  # media_player:
-    # - media_player.vlc
+  media_player:
+    - media_player.kodi
 
   devices_tracker:
     - device_tracker.mqtt_GalaxyS7

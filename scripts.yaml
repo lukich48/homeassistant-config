@@ -12,3 +12,10 @@
       - service: light.turn_off
         data:
           entity_id: group.light_plants
+          
+  turn_on_tv:
+    alias: Turn on tv
+    sequence:
+      - service: media_player.turn_on
+        data:
+          entity_id: media_player.kodi
