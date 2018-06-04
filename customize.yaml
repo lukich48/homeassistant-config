@@ -13,9 +13,9 @@ group.all_scripts:
   hidden: false
   friendly_name: Scripts
   order: 2
-device_tracker.mqtt_GalaxyS7:
+device_tracker.ce011711d451ca0f05:
   friendly_name: Алеша
-device_tracker.mqtt_Iphone:
+device_tracker.iphone:
   friendly_name: Полина
 light.switch2:
   friendly_name: подсв. растений
@@ -29,3 +29,21 @@ script.light_plants_on:
   friendly_name: Включить подсветку растений
 script.light_plants_off:
   friendly_name: Выключить подсветку растений
+group.humidity:
+  friendly_name: Влажность
+group.temperature:
+  friendly_name: Температура
+sensor.humidity:
+  friendly_name: Влажность зал
+sensor.temperature:
+  friendly_name: Температура зал
+sensor.temperature2:
+  friendly_name: Температура кухня
+  hidden: true
+sensor.humidity2:
+  friendly_name: Влажность кухня
+  hidden: true
+zone.work_alesha:
+  friendly_name: Work
+zone.work_polina:
+  friendly_name: Work

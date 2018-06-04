@@ -14,3 +14,16 @@
   trigger:
   - at: '23:00:00'
     platform: time
+
+# # REFRESH OWNTRACKS #
+# - id: '1518642622399'
+  # alias: refresh_owntracks
+  # trigger:
+    # - platform: time
+      # minutes: '/5'
+      # seconds: 00
+  # action:
+    # - service: mqtt.publish
+      # data:
+        # topic: "owntracks/mqtt/galaxys7/cmd"
+        # payload_template: '{"_type": "cmd","action": "reportlocation"}'

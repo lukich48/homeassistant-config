@@ -4,11 +4,11 @@
     entities:
       - group.all_lights
       - sun.sun
-      - device_tracker.mqtt_GalaxyS7
-      - device_tracker.mqtt_Iphone
-      - sensor.Humidity
-      - sensor.Temperature
-
+      - device_tracker.ce011711d451ca0f05
+      - device_tracker.iphone
+      - group.temperature
+      - group.humidity      
+      
   automations:
     name: Automations and scripts
     view: yes
@@ -31,6 +31,13 @@
     - media_player.kodi
 
   devices_tracker:
-    - device_tracker.mqtt_GalaxyS7
-    - device_tracker.mqtt_Iphone
+    - device_tracker.ce011711d451ca0f05
+    - device_tracker.iphone
 
+  humidity:
+    - sensor.humidity
+    - sensor.humidity2
+    
+  temperature:
+    - sensor.temperature
+    - sensor.temperature2

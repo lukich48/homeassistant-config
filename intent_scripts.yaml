@@ -21,3 +21,4 @@
       text: Телевизор включен
     action:
       - service: script.turn_on_tv
+  
