@@ -7,7 +7,8 @@
       - device_tracker.ce011711d451ca0f05
       - device_tracker.iphone
       - group.temperature
-      - group.humidity      
+      - group.humidity 
+      # - sensor.ups_name
       
   automations:
     name: Automations and scripts

@@ -65,9 +65,10 @@ device_tracker:
     interval_seconds: 30
     home_interval: 5
     consider_home: 120
-  - platform: icloud
+  - platform: icloud2
     username: polinaizm3004@gmail.com
     password: !secret polina_icloud_password
+    filter_devices: 'phone'
   # - platform: owntracks
     # mqtt_topic: "owntracks/#"
     # events_only: true    
@@ -104,6 +105,14 @@ sensor:
     name: humidity2
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
+    
+  # - platform: nut
+    # name: UPS Name
+    # alias: ups_name
+    # host: 192.168.88.3
+    # port: 3493
+    # resources:
+      # - ups.status.display
     
   # - platform: filter
     # name: "filtered humidity"
@@ -170,9 +179,8 @@ cloud:
 
 # logger:
   # default: error
-#  logs:
-#    homeassistant.components.mqtt: debug
-#    homeassistant.components.device_tracker: debug
+  # logs:
+   # homeassistant.components.device_tracker: debug
 
 dialogflow:
 
