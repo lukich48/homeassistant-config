@@ -12,6 +12,11 @@ homeassistant:
   time_zone: Europe/Moscow
   
   customize: !include customize.yaml
+  
+  auth_providers:
+   - type: homeassistant
+   - type: legacy_api_password
+   - type: trusted_networks
 
 group: !include groups.yaml
 script: !include scripts.yaml
@@ -32,8 +37,10 @@ http:
   api_password: !secret http_password
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  # Uncomment this if you are using SSL or running in Docker etc
-  # base_url: rodal2807.synology.me:8123
+  trusted_networks:
+    - 192.168.88.0/24
+
+  
 
 # Checks for available updates
 updater:
@@ -64,14 +71,13 @@ device_tracker:
     track_new_devices: false
     interval_seconds: 30
     home_interval: 5
-    consider_home: 120
+    # consider_home: 120
   - platform: icloud2
     username: polinaizm3004@gmail.com
     password: !secret polina_icloud_password
     filter_devices: 'phone'
   # - platform: owntracks
-    # mqtt_topic: "owntracks/#"
-    # events_only: true    
+    # mqtt_topic: "owntracks"
   - platform: gpslogger
     password: !secret gpslogger_password
   # - platform: google_maps

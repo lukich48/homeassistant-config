@@ -19,3 +19,15 @@
       - service: media_player.turn_on
         data:
           entity_id: media_player.kodi
+          
+  icloud_update_iphone:
+    alias: icloud_update_iphone
+    sequence:
+      - service: device_tracker.icloud_update
+        data:
+          device_name: "IPhone"
+          
+  icloud_update:
+    alias: icloud_update
+    sequence:
+      - service: device_tracker.icloud_update
