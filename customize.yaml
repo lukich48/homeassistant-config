@@ -21,6 +21,8 @@ light.switch2:
   friendly_name: подсв. растений
 light.switch3:
   friendly_name: подсветка кухни
+light.switch4:
+  friendly_name: свет в ванной
 automation.turn_on_light_plants:
   friendly_name: Включить подсветку растений
 automation.turn_off_light_plants:
@@ -37,12 +39,6 @@ sensor.humidity:
   friendly_name: Влажность зал
 sensor.temperature:
   friendly_name: Температура зал
-sensor.temperature2:
-  friendly_name: Температура кухня
-  hidden: true
-sensor.humidity2:
-  friendly_name: Влажность кухня
-  hidden: true
 zone.work_alesha:
   friendly_name: Work
 zone.work_polina:

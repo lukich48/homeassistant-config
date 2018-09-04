@@ -37,8 +37,6 @@
 
   humidity:
     - sensor.humidity
-    - sensor.humidity2
     
   temperature:
     - sensor.temperature
-    - sensor.temperature2

@@ -27,7 +27,3 @@
         data:
           device_name: "IPhone"
           
-  icloud_update:
-    alias: icloud_update
-    sequence:
-      - service: device_tracker.icloud_update
