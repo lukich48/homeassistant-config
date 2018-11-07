@@ -1,0 +1,95 @@
+title: Home
+resources:
+    # https://github.com/ciotlosm/custom-lovelace/tree/master/monster-card
+  - url: /local/custom_ui/monster-card/monster-card.js?v=1
+    type: js
+  # - url: /local/my-webfont.css
+    # type: css
+
+# Optional background for all views. Check https://developer.mozilla.org/en-US/docs/Web/CSS/background for more examples.
+background: center / cover no-repeat url("/background.png") fixed
+# Exclude entities from "Unused entities" view
+# excluded_entities:
+  # - weblink.router
+views:
+  - title: Главная
+    # Unique id for direct access /lovelace/${id}. If you don't specify one, it is added automatically.
+    id: index
+    background: radial-gradient(crimson, skyblue)
+    theme: dark-mode
+    cards:
+    
+      - type: vertical-stack
+        cards:
+     
+          - type: custom:monster-card
+            card: 
+              type: map
+              default_zoom: 14
+            filter:
+              include:
+                - domain: device_tracker
+                - entity_id: zone.home
+              # exclude:
+                # - state: home
+              # when:
+                # entity: device_tracker.ce011711d451ca0f05
+                # state: not_home
+            #show_empty: false
+
+          - type: custom:monster-card
+            card:
+              type: glance
+            filter:
+              include:
+                - domain: device_tracker     
+       
+      - type: horizontal-stack
+        cards:
+          - type: gauge
+            entity: sensor.humidity
+            title: Влажн
+            severity:
+              red: 0
+              yellow: 30
+              green: 40              
+          - type: gauge
+            entity: sensor.temperature
+            title: Темпер
+            max: 50
+            severity:
+              normal: 0
+              green: 20
+              yellow: 25
+              red: 30
+              
+      - type: entities
+        title: Свет
+        entities:
+          - light.switch3
+          - light.switch4
+          
+      - type: entities
+        title: Выключатели
+        entities:
+          - switch.switch2
+          - switch.switch5
+
+  - title: Настройки
+    id: config
+    icon: mdi:home-assistant
+    cards:
+      - type: entities
+        title: Автоматизация
+        entities:
+          - automation.turn_on_light_plants
+          - automation.turn_off_light_plants
+          - automation.turn_off_warm_flow_night
+          - automation.turn_on_warm_flow_night
+          - automation.turn_off_warm_flow_day
+          - automation.turn_on_warm_flow_day
+
+      - type: entities
+        title: Скрипты
+        entities:
+          - script.icloud_update_iphone

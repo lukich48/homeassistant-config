@@ -5,6 +5,9 @@ group.devices_tracker:
 group.all_lights:
   hidden: false
   friendly_name: Свет
+group.all_switches:
+  hidden: false
+  friendly_name: Выключатели
 group.all_automations:
   hidden: false
   friendly_name: Automations
@@ -17,20 +20,41 @@ device_tracker.ce011711d451ca0f05:
   friendly_name: Алеша
 device_tracker.iphone:
   friendly_name: Полина
-light.switch2:
+switch.switch2:
   friendly_name: подсв. растений
 light.switch3:
   friendly_name: подсветка кухни
 light.switch4:
   friendly_name: свет в ванной
+switch.switch5:
+  friendly_name: теплый пол
+  
 automation.turn_on_light_plants:
-  friendly_name: Включить подсветку растений
+  friendly_name: Включать  подсветку растений
+  icon: mdi:flower-tulip-outline
 automation.turn_off_light_plants:
-  friendly_name: Выключить подсветку растений
+  friendly_name: Выключать подсветку растений
+  icon: mdi:flower-tulip
+automation.turn_off_warm_flow_night:
+  friendly_name: Выключать теплый пол на ночь
+  icon: mdi:radiator-off
+automation.turn_on_warm_flow_night:
+  friendly_name: Включать теплый пол утром
+  icon: mdi:radiator
+automation.turn_off_warm_flow_day:
+  friendly_name: Выключать теплый пол перед работой
+  icon: mdi:radiator-off
+automation.turn_on_warm_flow_day:
+  friendly_name: Включать теплый пол вечером
+  icon: mdi:radiator
+  
 script.light_plants_on:
   friendly_name: Включить подсветку растений
 script.light_plants_off:
   friendly_name: Выключить подсветку растений
+script.icloud_update_iphone:
+  friendly_name: Найти Полину 
+  
 group.humidity:
   friendly_name: Влажность
 group.temperature:

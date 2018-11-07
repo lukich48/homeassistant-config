@@ -64,15 +64,15 @@ map:
 sun:
 
 device_tracker:
-  # - platform: snmp
-    # host: 192.168.88.1
-    # community: !secret snmp_comunity 
-    # baseoid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
-    # track_new_devices: false
-    # interval_seconds: 30
-    # home_interval: 5
-    # consider_home: 120
-  - platform: icloud2
+  - platform: snmp
+    host: 192.168.88.1
+    community: !secret snmp_comunity 
+    baseoid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
+    track_new_devices: false
+    interval_seconds: 30
+    home_interval: 5
+    consider_home: 120
+  - platform: icloud
     username: polinaizm3004@gmail.com
     password: !secret polina_icloud_password
     filter_devices: 'phone'
@@ -99,15 +99,7 @@ sensor:
     name: humidity
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
-    
-  # - platform: nut
-    # name: UPS Name
-    # alias: ups_name
-    # host: 192.168.88.3
-    # port: 3493
-    # resources:
-      # - ups.status.display
-    
+        
   # - platform: filter
     # name: "filtered humidity"
     # entity_id: sensor.Humidity
@@ -130,13 +122,7 @@ sensor:
 #      - snow
 
 light:
-  - platform: mqtt
-    name: switch2
-    state_topic: "home/switches/2/status"
-    command_topic: "home/switches/2"
-    payload_on: 1
-    payload_off: 0
-    qos: 0
+# подсветка кухни
   - platform: mqtt
     name: switch3
     state_topic: "home/switches/3/status"
@@ -144,6 +130,7 @@ light:
     payload_on: 1
     payload_off: 0
     qos: 0
+# свет в ванной
   - platform: mqtt
     name: switch4
     state_topic: "home/switches/4/status"
@@ -151,6 +138,24 @@ light:
     payload_on: 1
     payload_off: 0
     qos: 0  
+
+switch:
+# подсветка растений
+  - platform: mqtt
+    name: switch2
+    state_topic: "home/switches/2/status"
+    command_topic: "home/switches/2"
+    payload_on: 1
+    payload_off: 0
+    qos: 0
+# теплый пол    
+  - platform: mqtt
+    name: switch5
+    state_topic: "home/switches/5/status"
+    command_topic: "home/switches/5"
+    payload_on: 1
+    payload_off: 0
+    qos: 0
 
 # media_player:
   # platform: vlc
@@ -175,8 +180,6 @@ mqtt:
 
 recorder:
 
-# Cloud
-cloud:
 
 # logger:
   # default: error

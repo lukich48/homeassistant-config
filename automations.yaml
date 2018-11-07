@@ -1,38 +1,63 @@
-- action:
-  - service: script.light_plants_on
+- id: turn_on_light_plants
   alias: turn_on_light_plants
+  action:
+  - service: script.light_plants_on
   condition: []
-  id: '001'
   trigger:
-  - event: sunrise
-    platform: sun
-- action:
-  - service: script.light_plants_off
+  - at: '7:00:00'
+    platform: time
+- id: turn_off_light_plants
   alias: turn_off_light_plants
+  action:
+  - service: script.light_plants_off
   condition: []
-  id: '002'
   trigger:
   - at: '23:00:00'
     platform: time
-
-# REFRESH OWNTRACKS #
-# - id: '1518642622399'
-  # alias: refresh_owntracks
-  # trigger:
-    # - platform: time
-      # minutes: '/5'
-      # seconds: 00
-  # action:
-    # - service: mqtt.publish
-      # data:
-        # topic: "owntracks/polina/iphone/cmd"
-        # payload_template: '{"_type": "cmd","action": "reportLocation"}'
-
-# - id: '003'
-  # alias: icloud_update
-  # trigger:
-    # - platform: time
-      # minutes: '/5'
-      # seconds: 00
-  # action:
-    # - service: device_tracker.icloud_update
+    
+- id: turn_off_warm_flow_night
+  alias: turn_off_warm_flow_night
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.switch5
+  trigger:
+  - at: '23:30:00'
+    platform: time
+- id: turn_on_warm_flow_night
+  alias: turn_on_warm_flow_night
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.switch5
+  trigger:
+  - at: '6:00:00'
+    platform: time
+  condition:
+  - condition: state
+    entity_id: group.devices_tracker
+    state: home
+- id: turn_off_warm_flow_day
+  alias: turn_off_warm_flow_day
+  trigger:
+  - at: '10:00:00'
+    platform: time
+  - at: '11:00:00'
+    platform: time
+  condition:
+  - condition: state
+    entity_id: group.devices_tracker
+    state: not_home
+  action:
+  - data:
+      entity_id: switch.switch5
+    service: switch.turn_off
+- id: turn_on_warm_flow_day
+  alias: turn_on_warm_flow_day
+  action:
+  - service: switch.turn_on
+    data:
+      entity_id: switch.switch5
+  trigger:
+  - at: '18:00:00'
+    platform: time

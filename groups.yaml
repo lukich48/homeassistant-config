@@ -3,6 +3,7 @@
     icon: mdi:home
     entities:
       - group.all_lights
+      - group.all_switches
       - sun.sun
       - device_tracker.ce011711d451ca0f05
       - device_tracker.iphone
@@ -26,7 +27,7 @@
       - group.media_player
 
   light_plants:
-    - light.switch2
+    - switch.switch2
 
   media_player:
     - media_player.kodi
