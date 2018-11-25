@@ -19,10 +19,12 @@ views:
     theme: dark-mode
     cards:
     
-      - type: vertical-stack
+      - id: main-vertical-stack-1
+        type: vertical-stack
         cards:
      
-          - type: custom:monster-card
+          - id: main-people-on-map
+            type: custom:monster-card
             card: 
               type: map
               default_zoom: 14
@@ -37,23 +39,27 @@ views:
                 # state: not_home
             #show_empty: false
 
-          - type: custom:monster-card
+          - id: main-people
+            type: custom:monster-card
             card:
               type: glance
             filter:
               include:
                 - domain: device_tracker     
        
-      - type: horizontal-stack
+      - id: main-horizontal-stack-1
+        type: horizontal-stack
         cards:
-          - type: gauge
+          - id: main-humidity
+            type: gauge
             entity: sensor.humidity
             title: Влажн
             severity:
               red: 0
               yellow: 30
               green: 40              
-          - type: gauge
+          - id: main-temperature
+            type: gauge
             entity: sensor.temperature
             title: Темпер
             max: 50
@@ -63,13 +69,15 @@ views:
               yellow: 25
               red: 30
               
-      - type: entities
+      - id: main-light
+        type: entities
         title: Свет
         entities:
           - light.switch3
           - light.switch4
           
-      - type: entities
+      - id: main-switches
+        type: entities
         title: Выключатели
         entities:
           - switch.switch2
@@ -79,7 +87,8 @@ views:
     id: config
     icon: mdi:home-assistant
     cards:
-      - type: entities
+      - id: config-automation
+        type: entities
         title: Автоматизация
         entities:
           - automation.turn_on_light_plants
@@ -89,7 +98,8 @@ views:
           - automation.turn_off_warm_flow_day
           - automation.turn_on_warm_flow_day
 
-      - type: entities
+      - id: config-scripts
+        type: entities
         title: Скрипты
         entities:
           - script.icloud_update_iphone
