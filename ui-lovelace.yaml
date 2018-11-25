@@ -75,6 +75,7 @@ views:
         entities:
           - light.switch3
           - light.switch4
+          - light.switch2_main
           
       - id: main-switches
         type: entities

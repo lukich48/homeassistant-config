@@ -22,6 +22,8 @@ device_tracker.iphone:
   friendly_name: Полина
 switch.switch2:
   friendly_name: подсв. растений
+light.switch2_main:
+  friendly_name: лампа на кухне
 light.switch3:
   friendly_name: подсветка кухни
 light.switch4:
