@@ -64,7 +64,7 @@
 - id: mqtt_turn_on_kitchen_light    
   trigger:
     platform: mqtt
-    topic: home/switches/3/status
+    topic: home/switches/switch3/pins/main/state
     payload: '1'
   action:
     service: light.turn_on
@@ -72,7 +72,7 @@
 - id: mqtt_turn_off_kitchen_light    
   trigger:
     platform: mqtt
-    topic: home/switches/3/status
+    topic: home/switches/switch3/pins/main/state
     payload: '0'
   action:
     service: light.turn_off

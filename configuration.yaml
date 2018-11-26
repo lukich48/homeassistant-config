@@ -125,8 +125,8 @@ light:
 # подсветка кухни
   - platform: mqtt
     name: switch3
-    state_topic: "home/switches/3/status"
-    command_topic: "home/switches/3"
+    state_topic: "home/switches/switch3/pins/14/state"
+    command_topic: "home/switches/switch3/pins/14"
     payload_on: 1
     payload_off: 0
     qos: 0
@@ -159,10 +159,10 @@ switch:
 # теплый пол    
   - platform: mqtt
     name: switch5
-    state_topic: "home/switches/5/status"
-    command_topic: "home/switches/5"
-    payload_on: 1
-    payload_off: 0
+    state_topic: "home/switches/switch5/pins/14/state"
+    command_topic: "home/switches/switch5/pins/14"
+    payload_on: 0
+    payload_off: 1
     qos: 0
 
 # media_player:
