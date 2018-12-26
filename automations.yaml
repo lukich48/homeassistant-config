@@ -77,3 +77,14 @@
   action:
     service: light.turn_off
     entity_id: light.switch2_main
+    
+- id: test1
+  trigger:
+    platform: webhook
+    webhook_id: test
+  action:
+    service: logbook.log
+    data_template:
+      name: testlog
+      message: >
+        {{ trigger.data.a }}

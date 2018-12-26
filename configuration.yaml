@@ -30,6 +30,9 @@ zone: !include zones.yaml
 # Enables the frontend
 frontend:
 
+lovelace:
+  mode: yaml
+
 # Enables configuration UI
 config:
 
@@ -75,7 +78,8 @@ device_tracker:
   - platform: icloud
     username: polinaizm3004@gmail.com
     password: !secret polina_icloud_password
-    filter_devices: 'phone'
+    # filter_devices: 'phone'
+    max_interval: 15
   # - platform: owntracks
     # mqtt_topic: "owntracks"
   - platform: gpslogger
@@ -125,8 +129,8 @@ light:
 # подсветка кухни
   - platform: mqtt
     name: switch3
-    state_topic: "home/switches/switch3/pins/14/state"
-    command_topic: "home/switches/switch3/pins/14"
+    state_topic: "home/switches/kitchen/btn1/state"
+    command_topic: "home/switches/kitchen/btn1"
     payload_on: 1
     payload_off: 0
     qos: 0
@@ -141,8 +145,8 @@ light:
 # свет в ванной
   - platform: mqtt
     name: switch4
-    state_topic: "home/switches/4/status"
-    command_topic: "home/switches/4"
+    state_topic: "home/switches/switch4/pins/12/state"
+    command_topic: "home/switches/switch4/pins/12"
     payload_on: 1
     payload_off: 0
     qos: 0  
@@ -156,6 +160,7 @@ switch:
     payload_on: 1
     payload_off: 0
     qos: 0
+    retain: true
 # теплый пол    
   - platform: mqtt
     name: switch5
@@ -164,7 +169,7 @@ switch:
     payload_on: 0
     payload_off: 1
     qos: 0
-
+    retain: true
 # media_player:
   # platform: vlc
   # name: vlc

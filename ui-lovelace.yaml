@@ -31,13 +31,13 @@ views:
             filter:
               include:
                 - domain: device_tracker
-                - entity_id: zone.home
-              # exclude:
-                # - state: home
+              #  - entity_id: zone.home
+              exclude:
+                - state: home
               # when:
                 # entity: device_tracker.ce011711d451ca0f05
                 # state: not_home
-            #show_empty: false
+            show_empty: false
 
           - id: main-people
             type: custom:monster-card
@@ -53,7 +53,7 @@ views:
           - id: main-humidity
             type: gauge
             entity: sensor.humidity
-            title: Влажн
+            name: Влажность
             severity:
               red: 0
               yellow: 30
@@ -61,7 +61,7 @@ views:
           - id: main-temperature
             type: gauge
             entity: sensor.temperature
-            title: Темпер
+            name: Температура
             max: 50
             severity:
               normal: 0
