@@ -61,22 +61,6 @@
   trigger:
   - at: '18:00:00'
     platform: time
-- id: mqtt_turn_on_kitchen_light    
-  trigger:
-    platform: mqtt
-    topic: home/switches/switch3/pins/main/state
-    payload: '1'
-  action:
-    service: light.turn_on
-    entity_id: light.switch2_main
-- id: mqtt_turn_off_kitchen_light    
-  trigger:
-    platform: mqtt
-    topic: home/switches/switch3/pins/main/state
-    payload: '0'
-  action:
-    service: light.turn_off
-    entity_id: light.switch2_main
     
 - id: test1
   trigger:

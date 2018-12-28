@@ -129,24 +129,24 @@ light:
 # подсветка кухни
   - platform: mqtt
     name: switch3
-    state_topic: "home/switches/kitchen/btn1/state"
-    command_topic: "home/switches/kitchen/btn1"
+    state_topic: "home/kitchen/switch/worktop/state"
+    command_topic: "home/kitchen/switch/worktop"
     payload_on: 1
     payload_off: 0
     qos: 0
 # лампа на кухне
   - platform: mqtt
     name: switch2_main
-    state_topic: "home/switches/switch2/pins/14/state"
-    command_topic: "home/switches/switch2/pins/14"
+    state_topic: "home/kitchen/switch2/table/state"
+    command_topic: "home/kitchen/switch2/table"
     payload_on: 1
     payload_off: 0
     qos: 0
 # свет в ванной
   - platform: mqtt
     name: switch4
-    state_topic: "home/switches/switch4/pins/12/state"
-    command_topic: "home/switches/switch4/pins/12"
+    state_topic: "home/bathroom/switch/mirror/state"
+    command_topic: "home/bathroom/switch/mirror"
     payload_on: 1
     payload_off: 0
     qos: 0  
@@ -155,8 +155,8 @@ switch:
 # подсветка растений
   - platform: mqtt
     name: switch2
-    state_topic: "home/switches/switch2/pins/12/state"
-    command_topic: "home/switches/switch2/pins/12"
+    state_topic: "home/kitchen/switch2/plants/state"
+    command_topic: "home/kitchen/switch2/plants"
     payload_on: 1
     payload_off: 0
     qos: 0
@@ -164,10 +164,10 @@ switch:
 # теплый пол    
   - platform: mqtt
     name: switch5
-    state_topic: "home/switches/switch5/pins/14/state"
-    command_topic: "home/switches/switch5/pins/14"
-    payload_on: 0
-    payload_off: 1
+    state_topic: "home/hall/switch/warmfloor/state"
+    command_topic: "home/hall/switch/warmfloor"
+    payload_on: 1
+    payload_off: 0
     qos: 0
     retain: true
 # media_player:
