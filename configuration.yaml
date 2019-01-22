@@ -66,6 +66,16 @@ map:
 # Track the sun
 sun:
 
+#https://github.com/custom-components/custom_updater
+custom_updater:
+  track:
+    - components
+    - cards
+    - python_scripts
+  card_urls:
+    - https://raw.githubusercontent.com/ciotlosm/custom-lovelace/blob/master/monster-card/monster-card.js
+    - https://raw.githubusercontent.com/sgttrs/lovelace-weather-card-chart/master/custom-updater.json
+
 device_tracker:
   - platform: snmp
     host: 192.168.88.1
@@ -75,11 +85,16 @@ device_tracker:
     interval_seconds: 30
     home_interval: 5
     consider_home: 120
-  - platform: icloud
+  - platform: icloud3
     username: polinaizm3004@gmail.com
     password: !secret polina_icloud_password
+    # include_device: iPhone (Полина)
+    # include_device_type: iphone
     # filter_devices: 'phone'
-    max_interval: 15
+    include_device_types:
+      - iphone
+      # - ipad
+    # max_interval: 15
   # - platform: owntracks
     # mqtt_topic: "owntracks"
   - platform: gpslogger
@@ -89,6 +104,11 @@ device_tracker:
     # password: !secret google_password
 
 # Weather Prediction
+weather:
+  - platform: openweathermap
+    api_key: !secret openweather_apikey
+    mode: daily
+
 sensor:
   - platform: yr
   
@@ -114,16 +134,6 @@ sensor:
       # - filter: lowpass
         # time_constant: 10
         # precision: 2    
-#  - platform: openweathermap
-#    api_key: !secret openweather_apikey
-#    monitored_conditions:
-#      - weather
-#      - temperature
-#      - wind_speed
-#      - humidity
-#      - clouds
-#      - rain
-#      - snow
 
 light:
 # подсветка кухни

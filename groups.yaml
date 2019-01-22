@@ -1,15 +1,3 @@
-  default_view:
-    view: yes
-    icon: mdi:home
-    entities:
-      - group.all_lights
-      - group.all_switches
-      - sun.sun
-      - device_tracker.ce011711d451ca0f05
-      - device_tracker.iphone
-      - group.temperature
-      - group.humidity 
-      # - sensor.ups_name
       
   automations:
     name: Automations and scripts
@@ -31,10 +19,6 @@
 
   media_player:
     - media_player.kodi
-
-  devices_tracker:
-    - device_tracker.ce011711d451ca0f05
-    - device_tracker.iphone
 
   humidity:
     - sensor.humidity

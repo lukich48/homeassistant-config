@@ -25,5 +25,5 @@
     sequence:
       - service: device_tracker.icloud_update
         data:
-          device_name: "IPhone"
+          device_name: iPhone (Полина)
           

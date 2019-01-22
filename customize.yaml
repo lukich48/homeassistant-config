@@ -18,8 +18,8 @@ group.all_scripts:
   order: 2
 device_tracker.ce011711d451ca0f05:
   friendly_name: Алеша
-device_tracker.iphone:
-  friendly_name: Полина
+# device_tracker.iphone:
+  # friendly_name: Полина
 switch.switch2:
   friendly_name: подсв. растений
 light.switch2_main:
