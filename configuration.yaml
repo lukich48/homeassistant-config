@@ -14,9 +14,11 @@ homeassistant:
   customize: !include customize.yaml
   
   auth_providers:
-   - type: homeassistant
-   - type: legacy_api_password
-   - type: trusted_networks
+    - type: homeassistant
+    # - type: legacy_api_password
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.88.0/24
 
 group: !include groups.yaml
 script: !include scripts.yaml
@@ -36,14 +38,12 @@ lovelace:
 # Enables configuration UI
 config:
 
+default_config:
+
 http:
-  api_password: !secret http_password
+  # api_password: !secret http_password
   ssl_certificate: /ssl/fullchain.pem
   ssl_key: /ssl/privkey.pem
-  trusted_networks:
-    - 192.168.88.0/24
-
-  
 
 # Checks for available updates
 updater:
@@ -66,6 +66,8 @@ map:
 # Track the sun
 sun:
 
+system_health:
+
 #https://github.com/custom-components/custom_updater
 custom_updater:
   track:
@@ -73,9 +75,20 @@ custom_updater:
     - cards
     - python_scripts
   card_urls:
-    - https://raw.githubusercontent.com/ciotlosm/custom-lovelace/blob/master/monster-card/monster-card.js
+    # - https://raw.githubusercontent.com/ciotlosm/custom-lovelace/blob/master/monster-card/monster-card.js
     - https://raw.githubusercontent.com/sgttrs/lovelace-weather-card-chart/master/custom-updater.json
 
+person:
+  - name: Polina
+    id: polina
+    device_trackers:
+      - device_tracker.iphone_polina    
+  - name: Alesha
+    id: alesha
+    device_trackers:
+      - device_tracker.ce011711d451ca0f05  
+
+      
 device_tracker:
   - platform: snmp
     host: 192.168.88.1
@@ -83,20 +96,17 @@ device_tracker:
     baseoid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     track_new_devices: false
     interval_seconds: 30
-    home_interval: 5
     consider_home: 120
-  - platform: icloud3
+  - platform: icloud
     username: polinaizm3004@gmail.com
     password: !secret polina_icloud_password
+    account_name: polina_icloud
     # include_device: iPhone (Полина)
     # include_device_type: iphone
-    # filter_devices: 'phone'
-    include_device_types:
-      - iphone
+    # include_device_types:
+      # - iphone
       # - ipad
-    # max_interval: 15
-  # - platform: owntracks
-    # mqtt_topic: "owntracks"
+    max_interval: 10
   - platform: gpslogger
     password: !secret gpslogger_password
   # - platform: google_maps
@@ -113,13 +123,13 @@ sensor:
   - platform: yr
   
   - platform: mqtt
-    state_topic: 'home/dht/1'
+    state_topic: 'home/livingroom/dht'
     name: temperature
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
     
   - platform: mqtt
-    state_topic: 'home/dht/1'
+    state_topic: 'home/livingroom/dht'
     name: humidity
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
@@ -138,7 +148,7 @@ sensor:
 light:
 # подсветка кухни
   - platform: mqtt
-    name: switch3
+    name: kitchen_worktop
     state_topic: "home/kitchen/switch/worktop/state"
     command_topic: "home/kitchen/switch/worktop"
     payload_on: 1
@@ -146,7 +156,7 @@ light:
     qos: 0
 # лампа на кухне
   - platform: mqtt
-    name: switch2_main
+    name: kitchen_table
     state_topic: "home/kitchen/switch2/table/state"
     command_topic: "home/kitchen/switch2/table"
     payload_on: 1
@@ -154,7 +164,7 @@ light:
     qos: 0
 # свет в ванной
   - platform: mqtt
-    name: switch4
+    name: bathroom_mirror
     state_topic: "home/bathroom/switch/mirror/state"
     command_topic: "home/bathroom/switch/mirror"
     payload_on: 1
@@ -164,7 +174,7 @@ light:
 switch:
 # подсветка растений
   - platform: mqtt
-    name: switch2
+    name: kitchen_plants
     state_topic: "home/kitchen/switch2/plants/state"
     command_topic: "home/kitchen/switch2/plants"
     payload_on: 1
@@ -173,13 +183,22 @@ switch:
     retain: true
 # теплый пол    
   - platform: mqtt
-    name: switch5
+    name: hall_warmfloor
     state_topic: "home/hall/switch/warmfloor/state"
     command_topic: "home/hall/switch/warmfloor"
     payload_on: 1
     payload_off: 0
     qos: 0
     retain: true
+#автополив
+  - platform: mqtt
+    name: autowatering  
+    state_topic: "home/kitchen/autowatering/btn1/state"
+    command_topic: "home/kitchen/autowatering/btn1"
+    payload_on: 20
+    payload_off: 0
+    qos: 0     
+    
 # media_player:
   # platform: vlc
   # name: vlc

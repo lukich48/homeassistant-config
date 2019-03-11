@@ -20,7 +20,7 @@
   action:
   - service: switch.turn_off
     data:
-      entity_id: switch.switch5
+      entity_id: switch.hall_warmfloor
   trigger:
   - at: '23:30:00'
     platform: time
@@ -29,13 +29,13 @@
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.switch5
+      entity_id: switch.hall_warmfloor
   trigger:
   - at: '6:00:00'
     platform: time
   condition:
   - condition: state
-    entity_id: group.devices_tracker
+    entity_id: group.all_devices
     state: home
 - id: turn_off_warm_flow_day
   alias: turn_off_warm_flow_day
@@ -46,18 +46,18 @@
     platform: time
   condition:
   - condition: state
-    entity_id: group.devices_tracker
+    entity_id: group.all_devices
     state: not_home
   action:
   - data:
-      entity_id: switch.switch5
+      entity_id: switch.hall_warmfloor
     service: switch.turn_off
 - id: turn_on_warm_flow_day
   alias: turn_on_warm_flow_day
   action:
   - service: switch.turn_on
     data:
-      entity_id: switch.switch5
+      entity_id: switch.hall_warmfloor
   trigger:
   - at: '18:00:00'
     platform: time
@@ -72,3 +72,14 @@
       name: testlog
       message: >
         {{ trigger.data.a }}
+        
+- id: mqtt_started
+  trigger:
+    platform: mqtt
+    topic: Start
+  action:
+    service: logbook.log
+    data_template:
+      name: started
+      message: >
+        {{ trigger.payload }}

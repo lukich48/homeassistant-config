@@ -16,20 +16,31 @@ group.all_scripts:
   hidden: false
   friendly_name: Scripts
   order: 2
+  
 device_tracker.ce011711d451ca0f05:
   friendly_name: Алеша
-# device_tracker.iphone:
-  # friendly_name: Полина
-switch.switch2:
+device_tracker.iphone_polina:
+  friendly_name: Полина
+ 
+person.alesha:
+  friendly_name: Алеша
+  entity_picture: "/local/lesha.jpg"
+person.polina:
+  friendly_name: Полина
+  entity_picture: "/local/polina.jpg"
+  
+switch.kitchen_plants:
   friendly_name: подсв. растений
-light.switch2_main:
+light.kitchen_table:
   friendly_name: лампа на кухне
-light.switch3:
+light.kitchen_worktop:
   friendly_name: подсветка кухни
-light.switch4:
+light.bathroom_mirror:
   friendly_name: свет в ванной
-switch.switch5:
+switch.hall_warmfloor:
   friendly_name: теплый пол
+switch.autowatering:
+  friendly_name: автополив
   
 automation.turn_on_light_plants:
   friendly_name: Включать  подсветку растений

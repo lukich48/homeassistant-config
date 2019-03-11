@@ -6,11 +6,11 @@ resources:
     
   # https://github.com/sgttrs/lovelace-weather-card-chart 
   - type: module
-    url: /local/custom_ui/lovelace-weather-card-chart/custom-weather-card-chart.js?v=0.2.2
+    url: /local/custom_ui/lovelace-weather-card-chart/custom-weather-card-chart.js?v=0.2.4
      
   # https://github.com/custom-cards/tracker-card
   - type: js
-    url: /local/custom_ui/tracker-card/tracker-card.js?v=0.1.5
+    url: /local/custom_ui/tracker-card/tracker-card.js?v=1.2.3
     
   # - url: /local/my-webfont.css
     # type: css
@@ -32,30 +32,21 @@ views:
         type: vertical-stack
         cards:
      
-          - id: main-people-on-map
-            type: custom:monster-card
-            card: 
-              type: map
-              default_zoom: 14
-            filter:
-              include:
-                - domain: device_tracker
-              #  - entity_id: zone.home
-              exclude:
-                - state: home
-              # when:
-                # entity: device_tracker.ce011711d451ca0f05
-                # state: not_home
-            show_empty: false
-
+          - id: main-map-filter
+            type: map
+            default_zoom: 14
+            entities:
+              - person.alesha
+              - person.polina
+            
           - id: main-people
             type: custom:monster-card
             card:
               type: glance
             filter:
               include:
-                - domain: device_tracker     
-       
+                - domain: person     
+                       
       - id: main-horizontal-stack-1
         type: horizontal-stack
         cards:
@@ -77,28 +68,93 @@ views:
               green: 20
               yellow: 25
               red: 30
-      
-      - id: main-weather
-        type: custom:weather-card-chart
-        title: Погода
-        weather: weather.openweathermap
-        sun: sun.sun
-         
+       
       - id: main-light
         type: entities
         title: Свет
         entities:
-          - light.switch3
-          - light.switch4
-          - light.switch2_main
+          - light.kitchen_worktop
+          - light.bathroom_mirror
+          - light.kitchen_table
           
       - id: main-switches
         type: entities
         title: Выключатели
         entities:
-          - switch.switch2
-          - switch.switch5
+          - switch.kitchen_plants
+          - switch.hall_warmfloor
+          - switch.autowatering
           
+  - title: Погода
+    id: weather
+    icon: mdi:weather-partlycloudy
+    cards:
+      - id: weather-openweathermap
+        type: custom:weather-card-chart
+        title: Погода
+        weather: weather.openweathermap
+        sun: sun.sun
+       
+      - id: weather-windy
+        type: iframe
+        aspect_ratio: 100%
+        url: https://embed.windy.com/embed2.html?rain,55.750,37.857,5
+
+  - title: План
+    id: plan
+    icon: mdi:floor-plan
+    cards:
+      - type: picture-elements
+        image: /local/home_plan_2d.jpg
+        elements:
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.kitchen_worktop
+            style:
+              top: 19.5%
+              left: 94%
+          - type: image
+            tap_action:
+              action: toggle
+            entity: light.kitchen_table
+            state_image:
+              "on": /local/lamp_on.png
+              "off": /local/lamp_off.png
+            style:
+              top: 17%
+              left: 57.5%
+              width: 5%
+          - type: state-icon
+            tap_action:
+              action: toggle
+            entity: light.bathroom_mirror
+            style:
+              top: 71.5%
+              left: 94%              
+          - type: image
+            tap_action:
+              action: toggle
+            entity: switch.kitchen_plants
+            state_image:
+              "on": /local/led-light_on.png
+              "off": /local/led-light_off.png
+            style:
+              top: 10%
+              left: 54%
+              width: 6%
+          - type: image
+            tap_action:
+              action: toggle
+            entity: switch.hall_warmfloor
+            state_image:
+              "on": /local/heater_on.png
+              "off": /local/heater_off.png
+            style:
+              top: 92%
+              left: 80%
+              width: 5%
+    
   - title: Настройки
     id: config
     icon: mdi:home-assistant
