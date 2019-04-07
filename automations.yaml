@@ -4,46 +4,42 @@
   - service: script.light_plants_on
   condition: []
   trigger:
-  - at: '7:00:00'
-    platform: time
+  - platform: template
+    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_on_light_plants.state[0:5] }}"
 - id: turn_off_light_plants
   alias: turn_off_light_plants
   action:
   - service: script.light_plants_off
   condition: []
   trigger:
-  - at: '23:00:00'
-    platform: time
-    
-- id: turn_off_warm_flow_night
-  alias: turn_off_warm_flow_night
-  action:
-  - service: switch.turn_off
-    data:
-      entity_id: switch.hall_warmfloor
-  trigger:
-  - at: '23:30:00'
-    platform: time
-- id: turn_on_warm_flow_night
-  alias: turn_on_warm_flow_night
+  - platform: template
+    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_off_light_plants.state[0:5] }}"
+ 
+ 
+ # автоматизация теплого пола ----------------------
+ 
+- id: turn_on_warm_flow_morning
+  alias: turn_on_warm_flow_morning
   action:
   - service: switch.turn_on
     data:
       entity_id: switch.hall_warmfloor
   trigger:
-  - at: '6:00:00'
-    platform: time
+  - platform: template
+    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_on_warm_flow_morning.state[0:5] }}"
   condition:
   - condition: state
     entity_id: group.all_devices
     state: home
+    
 - id: turn_off_warm_flow_day
   alias: turn_off_warm_flow_day
   trigger:
-  - at: '10:00:00'
-    platform: time
-  - at: '11:00:00'
-    platform: time
+  - platform: template
+    value_template: >
+      {{ states.sensor.time.state == states.input_datetime.turn_off_warm_flow_day.state[0:5] 
+      or states.sensor.time.state == states.input_datetime.turn_off_warm_flow_day2.state[0:5] 
+      }}
   condition:
   - condition: state
     entity_id: group.all_devices
@@ -52,16 +48,29 @@
   - data:
       entity_id: switch.hall_warmfloor
     service: switch.turn_off
-- id: turn_on_warm_flow_day
-  alias: turn_on_warm_flow_day
+    
+- id: turn_on_warm_flow_evening
+  alias: turn_on_warm_flow_evening
   action:
   - service: switch.turn_on
     data:
       entity_id: switch.hall_warmfloor
   trigger:
-  - at: '18:00:00'
-    platform: time
+  - platform: template
+    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_on_warm_flow_evening.state[0:5] }}"
     
+- id: turn_off_warm_flow_night
+  alias: turn_off_warm_flow_night
+  action:
+  - service: switch.turn_off
+    data:
+      entity_id: switch.hall_warmfloor
+  trigger:
+  - platform: template
+    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_off_warm_flow_night.state[0:5] }}"
+ 
+ # --------------
+ 
 - id: test1
   trigger:
     platform: webhook

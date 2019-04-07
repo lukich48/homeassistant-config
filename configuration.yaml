@@ -50,6 +50,8 @@ updater:
 
 # Discover some devices automatically
 discovery:
+  ignore:
+  - igd
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -59,6 +61,9 @@ history:
 
 # View all events in a logbook
 logbook:
+  exclude:
+    domains:
+    - sensor
 
 # Enables a map showing the location of tracked devices
 map:
@@ -82,11 +87,11 @@ person:
   - name: Polina
     id: polina
     device_trackers:
-      - device_tracker.iphone_polina    
+      - device_tracker.phone_polina    
   - name: Alesha
     id: alesha
     device_trackers:
-      - device_tracker.ce011711d451ca0f05  
+      - device_tracker.phone_alesha  
 
       
 device_tracker:
@@ -97,16 +102,16 @@ device_tracker:
     track_new_devices: false
     interval_seconds: 30
     consider_home: 120
-  - platform: icloud
-    username: polinaizm3004@gmail.com
-    password: !secret polina_icloud_password
-    account_name: polina_icloud
+  # - platform: icloud
+    # username: polinaizm3004@gmail.com
+    # password: !secret polina_icloud_password
+    # account_name: polina_icloud
     # include_device: iPhone (Полина)
     # include_device_type: iphone
     # include_device_types:
       # - iphone
       # - ipad
-    max_interval: 10
+    # max_interval: 10
   - platform: gpslogger
     password: !secret gpslogger_password
   # - platform: google_maps
@@ -120,6 +125,15 @@ weather:
     mode: daily
 
 sensor:
+  - platform: time_date
+    display_options:
+    - 'time'
+    # - 'date'
+    # - 'date_time'
+    # - 'time_utc'
+    # - 'time_date'
+    # - 'beat'
+      
   - platform: yr
   
   - platform: mqtt
@@ -252,3 +266,48 @@ media_player:
         addonid: script.json-cec
         params:
           command: standby
+          
+input_datetime:
+# автоматизация освещения растений
+  turn_on_light_plants:
+    name: 'Включать подсветку растений'
+    has_date: false
+    has_time: true
+    initial: '7:00:00'
+  turn_off_light_plants:
+    name: 'Выключать подсветку растений'
+    has_date: false
+    has_time: true
+    initial: '23:00:00'
+
+# автоматизация теплого пола
+  turn_on_warm_flow_morning:
+    name: 'Включать теплый пол утром'
+    has_date: false
+    has_time: true
+    initial: '6:30:00'
+  turn_off_warm_flow_day:
+    name: 'Выключать теплый пол днем'
+    has_date: false
+    has_time: true
+    initial: '10:00:00'
+  turn_off_warm_flow_day2:
+    name: 'Выключать теплый пол днем 2'
+    has_date: false
+    has_time: true
+    initial: '11:00:00'
+  turn_on_warm_flow_evening:
+    name: 'Включать теплый пол вечером'
+    has_date: false
+    has_time: true
+    initial: '18:30:00'
+  turn_off_warm_flow_night:
+    name: 'Выключать теплый пол на ночь'
+    has_date: false
+    has_time: true
+    initial: '23:30:00'
+
+    
+    
+    
+    

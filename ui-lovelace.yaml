@@ -158,20 +158,82 @@ views:
   - title: Настройки
     id: config
     icon: mdi:home-assistant
-    cards:
-      - id: config-automation
-        type: entities
-        title: Автоматизация
-        entities:
-          - automation.turn_on_light_plants
-          - automation.turn_off_light_plants
-          - automation.turn_off_warm_flow_night
-          - automation.turn_on_warm_flow_night
-          - automation.turn_off_warm_flow_day
-          - automation.turn_on_warm_flow_day
+    cards:     
+      - type: vertical-stack
+        cards:
+        
+        # автоматизация освещения растений
+        - type: markdown
+          content: <h4>Атоматизация освещения растений</h4>
+        - type: horizontal-stack
+          cards:
+          - type: entities
+            entities:
+              - entity: automation.turn_on_light_plants
+                name: Включать утром
+          - type: entities
+            entities:
+              - entity: input_datetime.turn_on_light_plants
+                name: Время
+        - type: horizontal-stack
+          cards:
+          - type: entities
+            entities:
+              - entity: automation.turn_off_light_plants
+                name: Выключать вечером
+          - type: entities
+            entities:
+              - entity: input_datetime.turn_off_light_plants
+                name: Время
+        
+        
+        # автоматизация теплого пола
+        - type: markdown
+          content: <h4>Автоматизация теплого пола</h4>
+        - type: horizontal-stack
+          cards:
+          - type: entities
+            entities:
+              - entity: automation.turn_on_warm_flow_morning
+                name: Включать утром
+          - type: entities
+            entities:
+              - entity: input_datetime.turn_on_warm_flow_morning
+                name: Время
+        - type: horizontal-stack
+          cards:
+          - type: entities
+            entities:
+              - entity: automation.turn_off_warm_flow_day
+                name: Выключать днем
+          - type: entities
+            entities:
+              - entity: input_datetime.turn_off_warm_flow_day
+                name: Время
+              - entity: input_datetime.turn_off_warm_flow_day2
+                name: Время
+        - type: horizontal-stack
+          cards:
+          - type: entities
+            entities:
+              - entity: automation.turn_on_warm_flow_evening
+                name: Включать вечером
+          - type: entities
+            entities:
+              - entity: input_datetime.turn_on_warm_flow_evening
+                name: Время
+        - type: horizontal-stack
+          cards:
+          - type: entities
+            entities:
+              - entity: automation.turn_off_warm_flow_night
+                name: Выключать на ночь
+          - type: entities
+            entities:
+              - entity: input_datetime.turn_off_warm_flow_night
+                name: Время
 
-      - id: config-scripts
-        type: entities
+      - type: entities
         title: Скрипты
         entities:
           - script.icloud_update_iphone
@@ -180,3 +242,4 @@ views:
         trackers:
           - sensor.custom_card_tracker
           - sensor.custom_component_tracker
+         

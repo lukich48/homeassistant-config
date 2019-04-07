@@ -51,13 +51,13 @@ automation.turn_off_light_plants:
 automation.turn_off_warm_flow_night:
   friendly_name: Выключать теплый пол на ночь
   icon: mdi:radiator-off
-automation.turn_on_warm_flow_night:
+automation.turn_on_warm_flow_morning:
   friendly_name: Включать теплый пол утром
   icon: mdi:radiator
 automation.turn_off_warm_flow_day:
   friendly_name: Выключать теплый пол перед работой
   icon: mdi:radiator-off
-automation.turn_on_warm_flow_day:
+automation.turn_on_warm_flow_evening:
   friendly_name: Включать теплый пол вечером
   icon: mdi:radiator
   
