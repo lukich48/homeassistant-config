@@ -26,6 +26,10 @@ automation: !include automations.yaml
 intent_script: !include intent_scripts.yaml
 zone: !include zones.yaml
 
+input_datetime: !include input_datetime.yaml
+input_number: !include input_number.yaml
+
+
 # Show links to resources in log and frontend
 #introduction:
 
@@ -209,7 +213,7 @@ switch:
     name: autowatering  
     state_topic: "home/kitchen/autowatering/btn1/state"
     command_topic: "home/kitchen/autowatering/btn1"
-    payload_on: 20
+    payload_on: 28
     payload_off: 0
     qos: 0     
     
@@ -219,7 +223,7 @@ switch:
   # arguments: '--alsa-audio-device=default'
 
 tts:
-  platform: google
+  platform: google_translate
   language: 'ru'
   cache: true
   cache_dir: /tmp/tts
@@ -267,46 +271,6 @@ media_player:
         params:
           command: standby
           
-input_datetime:
-# автоматизация освещения растений
-  turn_on_light_plants:
-    name: 'Включать подсветку растений'
-    has_date: false
-    has_time: true
-    initial: '7:00:00'
-  turn_off_light_plants:
-    name: 'Выключать подсветку растений'
-    has_date: false
-    has_time: true
-    initial: '23:00:00'
-
-# автоматизация теплого пола
-  turn_on_warm_flow_morning:
-    name: 'Включать теплый пол утром'
-    has_date: false
-    has_time: true
-    initial: '6:30:00'
-  turn_off_warm_flow_day:
-    name: 'Выключать теплый пол днем'
-    has_date: false
-    has_time: true
-    initial: '10:00:00'
-  turn_off_warm_flow_day2:
-    name: 'Выключать теплый пол днем 2'
-    has_date: false
-    has_time: true
-    initial: '11:00:00'
-  turn_on_warm_flow_evening:
-    name: 'Включать теплый пол вечером'
-    has_date: false
-    has_time: true
-    initial: '18:30:00'
-  turn_off_warm_flow_night:
-    name: 'Выключать теплый пол на ночь'
-    has_date: false
-    has_time: true
-    initial: '23:30:00'
-
     
     
     

@@ -1,0 +1,6 @@
+# the last time when autowatering was started
+  autowatering_interval:
+    name: 'Интервал повторений автополива, ч'
+    min: 1
+    max: 9999
+    initial: 48  

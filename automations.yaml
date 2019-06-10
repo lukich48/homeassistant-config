@@ -1,3 +1,5 @@
+# автоматизация подсветки растений -------------------
+
 - id: turn_on_light_plants
   alias: turn_on_light_plants
   action:
@@ -15,6 +17,15 @@
   - platform: template
     value_template: "{{ states.sensor.time.state == states.input_datetime.turn_off_light_plants.state[0:5] }}"
  
+ # полив растений -------
+ 
+# - id: turn_on_autowatering
+  # alias: turn_on_autowatering
+  # action:
+  # - service: switch.turn_on
+    # data:
+      # entity_id: switch.autowatering
+    # trigger:
  
  # автоматизация теплого пола ----------------------
  
