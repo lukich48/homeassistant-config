@@ -233,10 +233,6 @@ views:
               - entity: input_datetime.turn_off_warm_flow_night
                 name: Время
 
-      - type: entities
-        title: Скрипты
-        entities:
-          - script.icloud_update_iphone
           
       - type: custom:tracker-card
         trackers:

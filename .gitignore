@@ -107,5 +107,9 @@ Shop
 Blog
 About
 /.cloud
-/.storage
+/.storage/*
 
+
+!/.storage/1.txt
+!/.storage/lovelace
+!/.storage/person

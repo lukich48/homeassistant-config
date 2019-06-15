@@ -1,4 +1,3 @@
-
   light_plants_on:
     alias: light_plants_on
     sequence:
@@ -20,11 +19,4 @@
         data:
           entity_id: media_player.kodi
           
-  icloud_update_iphone:
-    alias: icloud_update_iphone
-    sequence:
-      - service: device_tracker.icloud_update
-        data:
-          account_name: polina_icloud
-          device_name: iphone_polina
           

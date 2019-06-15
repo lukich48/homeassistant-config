@@ -16,19 +16,16 @@ group.all_scripts:
   hidden: false
   friendly_name: Scripts
   order: 2
-  
 device_tracker.ce011711d451ca0f05:
   friendly_name: Алеша
 device_tracker.iphone_polina:
   friendly_name: Полина
- 
-person.alesha:
+person.Alesha:
   friendly_name: Алеша
-  entity_picture: "/local/lesha.jpg"
-person.polina:
+  entity_picture: /local/lesha.jpg
+person.Polina:
   friendly_name: Полина
-  entity_picture: "/local/polina.jpg"
-  
+  entity_picture: /local/polina.jpg
 switch.kitchen_plants:
   friendly_name: подсв. растений
 light.kitchen_table:
@@ -41,7 +38,6 @@ switch.hall_warmfloor:
   friendly_name: теплый пол
 switch.autowatering:
   friendly_name: автополив
-  
 automation.turn_on_light_plants:
   friendly_name: Включать  подсветку растений
   icon: mdi:flower-tulip-outline
@@ -60,14 +56,12 @@ automation.turn_off_warm_flow_day:
 automation.turn_on_warm_flow_evening:
   friendly_name: Включать теплый пол вечером
   icon: mdi:radiator
-  
 script.light_plants_on:
   friendly_name: Включить подсветку растений
 script.light_plants_off:
   friendly_name: Выключить подсветку растений
 script.icloud_update_iphone:
-  friendly_name: Найти Полину 
-  
+  friendly_name: Найти Полину
 group.humidity:
   friendly_name: Влажность
 group.temperature:
@@ -80,3 +74,4 @@ zone.work_alesha:
   friendly_name: Work
 zone.work_polina:
   friendly_name: Work
+
