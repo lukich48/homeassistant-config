@@ -19,13 +19,15 @@
  
  # полив растений -------
  
-# - id: turn_on_autowatering
-  # alias: turn_on_autowatering
-  # action:
-  # - service: switch.turn_on
-    # data:
-      # entity_id: switch.autowatering
-    # trigger:
+- id: turn_on_autowatering
+  alias: turn_on_autowatering
+  action:
+  - service: script.start_autowatering
+    data:
+      entity_id: switch.autowatering
+  trigger:
+  - platform: template
+    value_template: "{{ (as_timestamp(now()) - as_timestamp(states.input_datetime.last_autowatering.state)) /3600 > (states.input_number.autowatering_interval.state | int)}}"
  
  # автоматизация теплого пола ----------------------
  

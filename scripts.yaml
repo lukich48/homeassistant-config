@@ -19,4 +19,14 @@
         data:
           entity_id: media_player.kodi
           
-          
+  start_autowatering:
+    alias: start_autowatering
+    sequence:
+    - service: switch.turn_on
+      data:  
+        entity_id: switch.autowatering
+    - service: input_datetime.set_datetime
+      data_template:
+        entity_id: input_datetime.last_autowatering
+        time: '{{ (as_timestamp(now()) | timestamp_custom("%H:%M:%S", true)) }}'
+        date: '{{ (as_timestamp(now()) | timestamp_custom("%Y-%m-%d", true)) }}'

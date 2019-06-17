@@ -1,0 +1,26 @@
+{
+    "data": {
+        "persons": [
+            {
+                "device_trackers": [
+                    "device_tracker.phone_alesha",
+                    "device_tracker.phone_alesha_2"
+                ],
+                "id": "54df184f3d8e404ca5787a4b15e17df2",
+                "name": "Alesha",
+                "user_id": "65f72a95d10c442f8e05f1cf964cacba"
+            },
+            {
+                "device_trackers": [
+                    "device_tracker.phone_polina",
+                    "device_tracker.phone_polina_2"
+                ],
+                "id": "e3cc711d968047558fd7300dc4ddede2",
+                "name": "Polina",
+                "user_id": "656a8309842e4e5a899fbb9fef4c69f9"
+            }
+        ]
+    },
+    "key": "person",
+    "version": 1
+}
