@@ -4,7 +4,7 @@
             {
                 "device_trackers": [
                     "device_tracker.phone_alesha",
-                    "device_tracker.phone_alesha_2"
+                    "device_tracker.phone_alesha_snmp"
                 ],
                 "id": "54df184f3d8e404ca5787a4b15e17df2",
                 "name": "Alesha",
@@ -13,7 +13,7 @@
             {
                 "device_trackers": [
                     "device_tracker.phone_polina",
-                    "device_tracker.phone_polina_2"
+                    "device_tracker.phone_polina_snmp"
                 ],
                 "id": "e3cc711d968047558fd7300dc4ddede2",
                 "name": "Polina",

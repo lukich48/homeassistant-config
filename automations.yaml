@@ -26,7 +26,10 @@
     data:
       entity_id: switch.autowatering
   trigger:
-  - platform: template
+    platform: time_pattern
+    hours: '/1'
+  condition: 
+  - condition: template
     value_template: "{{ (as_timestamp(now()) - as_timestamp(states.input_datetime.last_autowatering.state)) /3600 > (states.input_number.autowatering_interval.state | int)}}"
  
  # автоматизация теплого пола ----------------------

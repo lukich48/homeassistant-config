@@ -3,5 +3,12 @@
     name: 'Интервал повторений автополива, ч'
     min: 1
     max: 168
-    initial: 48  
+    # initial: 48  
+    mode: box
+    
+  autowatering_duration:
+    name: 'длительность, сек'
+    min: 1
+    max: 60
+    # initial: 30
     mode: box

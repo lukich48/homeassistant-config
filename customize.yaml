@@ -56,6 +56,9 @@ automation.turn_off_warm_flow_day:
 automation.turn_on_warm_flow_evening:
   friendly_name: Включать теплый пол вечером
   icon: mdi:radiator
+automation.turn_on_autowatering:
+  friendly_name: Автоматизация автополива
+  icon: mdi:water
 script.light_plants_on:
   friendly_name: Включить подсветку растений
 script.light_plants_off:
