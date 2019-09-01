@@ -22,7 +22,7 @@
 - id: turn_on_autowatering
   alias: turn_on_autowatering
   action:
-  - service: script.start_autowatering
+  - service: switch.turn_on
     data:
       entity_id: switch.autowatering
   trigger:
@@ -31,6 +31,22 @@
   condition: 
   - condition: template
     value_template: "{{ (as_timestamp(now()) - as_timestamp(states.input_datetime.last_autowatering.state)) /3600 > (states.input_number.autowatering_interval.state | int)}}"
+ 
+- id: turn_on_autowatering_trigger
+  alias: turn_on_autowatering_trigger
+  trigger:
+    platform: mqtt
+    topic: home/trigger/kitchen/autowatering/btn1
+  action:
+  - service: mqtt.publish
+    data_template:
+      topic: "home/kitchen/autowatering/btn1"
+      payload: 10
+  - service: input_datetime.set_datetime
+    data_template:
+      entity_id: input_datetime.last_autowatering
+      time: '{{ (as_timestamp(now()) | timestamp_custom("%H:%M:%S", true)) }}'
+      date: '{{ (as_timestamp(now()) | timestamp_custom("%Y-%m-%d", true)) }}'
  
  # автоматизация теплого пола ----------------------
  

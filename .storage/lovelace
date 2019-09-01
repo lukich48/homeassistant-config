@@ -24,6 +24,7 @@
             "views": [
                 {
                     "background": "radial-gradient(crimson, skyblue)",
+                    "badges": [],
                     "cards": [
                         {
                             "cards": [
@@ -97,7 +98,9 @@
                                     "entity": "switch.hall_warmfloor"
                                 },
                                 {
-                                    "entity": "script.start_autowatering"
+                                    "entity": "switch.autowatering",
+                                    "icon": "mdi:shower-head",
+                                    "name": "\u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432"
                                 }
                             ],
                             "title": "\u0412\u044b\u043a\u043b\u044e\u0447\u0430\u0442\u0435\u043b\u0438",
@@ -105,10 +108,12 @@
                         }
                     ],
                     "id": "index",
+                    "panel": false,
                     "theme": "dark-mode",
                     "title": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f"
                 },
                 {
+                    "badges": [],
                     "cards": [
                         {
                             "sun": "sun.sun",
@@ -122,8 +127,9 @@
                             "url": "https://embed.windy.com/embed2.html?rain,55.750,37.857,5"
                         }
                     ],
-                    "icon": "mdi:weather-partlycloudy",
+                    "icon": "mdi:weather-partly-snowy-rainy",
                     "id": "weather",
+                    "panel": false,
                     "title": "\u041f\u043e\u0433\u043e\u0434\u0430"
                 },
                 {
@@ -291,7 +297,7 @@
                             "type": "custom:tracker-card"
                         }
                     ],
-                    "icon": "mdi:home-assistant",
+                    "icon": "mdi:settings-outline",
                     "id": "config",
                     "panel": false,
                     "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438"
