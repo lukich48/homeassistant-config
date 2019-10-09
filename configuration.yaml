@@ -199,10 +199,12 @@ switch:
 #автополив
   - platform: mqtt
     name: autowatering  
-    state_topic: "home/kitchen/autowatering/btn1/state"
-    command_topic: "home/trigger/kitchen/autowatering/btn1"
-    payload_on: 10
+    state_topic: "home/kitchen/switch2/waterpump/state"
+    command_topic: "home/trigger/kitchen/switch2/waterpump"
+    payload_on: 1
     payload_off: 0
+    state_on: 1
+    state_off: 0
     qos: 0     
     
 # media_player:
@@ -235,6 +237,10 @@ recorder:
    # homeassistant.components.device_tracker: debug
 
 dialogflow:
+
+google_assistant:
+  project_id: homeassistant-2807
+  api_key: !secret google_assistant_api_key
 
 media_player:
   - platform: kodi

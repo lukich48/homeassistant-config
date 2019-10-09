@@ -36,12 +36,12 @@
   alias: turn_on_autowatering_trigger
   trigger:
     platform: mqtt
-    topic: home/trigger/kitchen/autowatering/btn1
+    topic: home/trigger/kitchen/switch2/waterpump
   action:
   - service: mqtt.publish
     data_template:
-      topic: "home/kitchen/autowatering/btn1"
-      payload: 10
+      topic: "home/kitchen/switch2/waterpump"
+      payload: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state | int)*1000}}}'
   - service: input_datetime.set_datetime
     data_template:
       entity_id: input_datetime.last_autowatering
