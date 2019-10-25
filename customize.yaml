@@ -16,12 +16,12 @@ group.all_scripts:
   hidden: false
   friendly_name: Scripts
   order: 2
-device_tracker.ce011711d451ca0f05:
-  friendly_name: Алеша
-device_tracker.iphone_polina:
-  friendly_name: Полина
+#device_tracker.ce011711d451ca0f05:
+#  friendly_name: Леша
+#device_tracker.iphone_polina:
+#  friendly_name: Полина
 person.Alesha:
-  friendly_name: Алеша
+  friendly_name: Леша
   entity_picture: /local/lesha.jpg
 person.Polina:
   friendly_name: Полина
@@ -63,8 +63,8 @@ script.light_plants_on:
   friendly_name: Включить подсветку растений
 script.light_plants_off:
   friendly_name: Выключить подсветку растений
-script.icloud_update_iphone:
-  friendly_name: Найти Полину
+#script.icloud_update_iphone:
+#  friendly_name: Найти Полину
 group.humidity:
   friendly_name: Влажность
 group.temperature:

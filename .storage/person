@@ -3,17 +3,19 @@
         "persons": [
             {
                 "device_trackers": [
-                    "device_tracker.phone_alesha",
-                    "device_tracker.phone_alesha_snmp"
+                    "device_tracker.phone_alesha_snmp",
+                    "device_tracker.google_maps_114601646161770081243",
+                    "device_tracker.phone_alesha"
                 ],
                 "id": "54df184f3d8e404ca5787a4b15e17df2",
-                "name": "Alesha",
+                "name": "Lesha",
                 "user_id": "65f72a95d10c442f8e05f1cf964cacba"
             },
             {
                 "device_trackers": [
-                    "device_tracker.phone_polina",
-                    "device_tracker.phone_polina_snmp"
+                    "device_tracker.google_maps_118419221494309494729",
+                    "device_tracker.phone_polina_snmp",
+                    "device_tracker.phone_polina"
                 ],
                 "id": "e3cc711d968047558fd7300dc4ddede2",
                 "name": "Polina",

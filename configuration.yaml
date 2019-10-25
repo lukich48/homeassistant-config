@@ -87,7 +87,7 @@ custom_updater:
     # - https://raw.githubusercontent.com/ciotlosm/custom-lovelace/blob/master/monster-card/monster-card.js
     - https://raw.githubusercontent.com/sgttrs/lovelace-weather-card-chart/master/custom-updater.json
 
-# person:
+person:
 #   - name: Polina
 #     id: polina
 #     device_trackers:
@@ -109,6 +109,8 @@ device_tracker:
     consider_home: 120
     new_device_defaults:
       track_new_devices: false
+  - platform: google_maps
+    username: rodal2807.home@gmail.com
 
 # Weather Prediction
 weather:
