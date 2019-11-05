@@ -12,10 +12,6 @@
                     "url": "/local/custom_ui/lovelace-weather-card-chart/custom-weather-card-chart.js?v=0.2.4"
                 },
                 {
-                    "type": "js",
-                    "url": "/local/custom_ui/tracker-card/tracker-card.js?v=1.2.3"
-                },
-                {
                     "type": "module",
                     "url": "/local/custom_ui/config-template-card/config-template-card.js"
                 }
@@ -288,13 +284,6 @@
                             ],
                             "title": "\u0422\u0435\u043f\u043b\u044b\u0439 \u043f\u043e\u043b",
                             "type": "entities"
-                        },
-                        {
-                            "trackers": [
-                                "sensor.custom_card_tracker",
-                                "sensor.custom_component_tracker"
-                            ],
-                            "type": "custom:tracker-card"
                         }
                     ],
                     "icon": "mdi:settings-outline",
