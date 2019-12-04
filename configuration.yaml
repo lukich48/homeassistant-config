@@ -29,6 +29,7 @@ zone: !include zones.yaml
 input_datetime: !include input_datetime.yaml
 input_number: !include input_number.yaml
 
+scene: !include scenes.yaml
 
 # Show links to resources in log and frontend
 #introduction:
@@ -42,7 +43,7 @@ frontend:
 # Enables configuration UI
 config:
 
-default_config:
+# default_config:
 
 http:
   # api_password: !secret http_password
@@ -223,29 +224,22 @@ google_assistant:
   project_id: homeassistant-2807
   api_key: !secret google_assistant_api_key
 
-media_player:
-  - platform: kodi
-    host: 192.168.88.3
-    turn_on_action:
-      service: media_player.kodi_call_method
-      data:
-        entity_id: media_player.kodi
-        method: Addons.ExecuteAddon
-        addonid: script.json-cec
-        params:
-          command: activate
-    turn_off_action:
-    - service: media_player.media_stop
-      data:
-        entity_id: media_player.kodi
-    - service: media_player.kodi_call_method
-      data:
-        entity_id: media_player.kodi
-        method: Addons.ExecuteAddon
-        addonid: script.json-cec
-        params:
-          command: standby
-          
+yandex_smart_home:   
+  filter:
+    include_domains:
+      - switch
+      - light
+  entity_config:
+    light.kitchen_worktop:
+      room: 'Кухня'
+    light.kitchen_table:
+      room: 'Кухня'
+    light.bathroom_mirror:
+      room: 'Ванная'
+    switch.kitchen_plants:
+      room: 'Кухня'
+      
+    
     
     
     

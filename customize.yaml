@@ -27,7 +27,7 @@ person.Polina:
   friendly_name: Полина
   entity_picture: /local/polina.jpg
 switch.kitchen_plants:
-  friendly_name: подсв. растений
+  friendly_name: подсветка растений
 light.kitchen_table:
   friendly_name: лампа на кухне
 light.kitchen_worktop:

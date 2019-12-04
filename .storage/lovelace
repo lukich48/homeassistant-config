@@ -5,7 +5,11 @@
             "resources": [
                 {
                     "type": "js",
-                    "url": "/local/custom_ui/monster-card/monster-card.js?v=0.2.3"
+                    "url": "/community_plugin/monster-card/monster-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
                 },
                 {
                     "type": "module",
@@ -44,7 +48,7 @@
                                         ]
                                     },
                                     "id": "main-people",
-                                    "type": "custom:monster-card"
+                                    "type": "custom:auto-entities"
                                 }
                             ],
                             "type": "vertical-stack"
