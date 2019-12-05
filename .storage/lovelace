@@ -294,6 +294,21 @@
                     "id": "config",
                     "panel": false,
                     "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "vacuum.xiaomi_vacuum_cleaner"
+                                }
+                            ],
+                            "type": "entities"
+                        }
+                    ],
+                    "path": "test",
+                    "title": "test"
                 }
             ]
         }

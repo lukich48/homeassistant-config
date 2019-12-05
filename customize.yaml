@@ -38,6 +38,8 @@ switch.hall_warmfloor:
   friendly_name: теплый пол
 switch.autowatering:
   friendly_name: автополив
+vacuum.mi_robot:
+  friendly_name: пылесосик
 automation.turn_on_light_plants:
   friendly_name: Включать  подсветку растений
   icon: mdi:flower-tulip-outline
