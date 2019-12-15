@@ -1,24 +1,6 @@
-      
-  automations:
-    name: Automations and scripts
-    view: yes
-    icon: mdi:bike
-    entities:
-      - group.all_automations
-      - group.all_scripts
-
-  media:
-    name: Медиа
-    view: yes
-    icon: mdi:play-circle-outline
-    entities:
-      - group.media_player
 
   light_plants:
     - switch.kitchen_plants
-
-  media_player:
-    - media_player.kodi
 
   humidity:
     - sensor.humidity
