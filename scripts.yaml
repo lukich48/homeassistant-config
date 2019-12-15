@@ -30,3 +30,23 @@
         entity_id: input_datetime.last_autowatering
         time: '{{ (as_timestamp(now()) | timestamp_custom("%H:%M:%S", true)) }}'
         date: '{{ (as_timestamp(now()) | timestamp_custom("%Y-%m-%d", true)) }}'
+        
+  vacuum_kitchen:
+    alias: "vacuum_kitchen"
+    sequence:
+      - service: vacuum.send_command
+        data:
+          entity_id: 'vacuum.rockrobo'
+          command: 'zoned_cleanup'
+          params:
+            zone_ids: ['kitchen']
+            
+  vacuum_guest_room:
+    alias: "vacuum_guest_room"
+    sequence:
+      - service: vacuum.send_command
+        data:
+          entity_id: 'vacuum.rockrobo'
+          command: 'zoned_cleanup'
+          params:
+            zone_ids: ['guest room']

@@ -5,10 +5,6 @@
             "resources": [
                 {
                     "type": "js",
-                    "url": "/community_plugin/monster-card/monster-card.js"
-                },
-                {
-                    "type": "js",
                     "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
                 },
                 {
@@ -18,6 +14,10 @@
                 {
                     "type": "module",
                     "url": "/local/custom_ui/config-template-card/config-template-card.js"
+                },
+                {
+                    "type": "js",
+                    "url": "/community_plugin/lovelace-valetudo-map-card/valetudo-map-card.js"
                 }
             ],
             "title": "Home",
@@ -82,9 +82,15 @@
                         },
                         {
                             "entities": [
-                                "light.kitchen_worktop",
-                                "light.bathroom_mirror",
-                                "light.kitchen_table"
+                                {
+                                    "entity": "light.kitchen_worktop"
+                                },
+                                {
+                                    "entity": "light.kitchen_table"
+                                },
+                                {
+                                    "entity": "light.bathroom_mirror"
+                                }
                             ],
                             "title": "\u0421\u0432\u0435\u0442",
                             "type": "entities"
@@ -107,10 +113,46 @@
                             "type": "entities"
                         }
                     ],
+                    "icon": "mdi:home",
                     "id": "index",
                     "panel": false,
                     "theme": "dark-mode",
                     "title": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "vacuum.xiaomi_vacuum"
+                                },
+                                {
+                                    "entity": "script.vacuum_kitchen"
+                                },
+                                {
+                                    "entity": "script.vacuum_guest_room"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "crop": {
+                                "bottom": 30,
+                                "left": 150,
+                                "right": 80,
+                                "top": 250
+                            },
+                            "entity": "sensor.xiaomi_map",
+                            "map_scale": 3,
+                            "min_height": 300,
+                            "rotate": 0,
+                            "type": "custom:valetudo-map-card"
+                        }
+                    ],
+                    "icon": "mdi:robot-vacuum",
+                    "path": "",
+                    "title": "\u0423\u0431\u043e\u0440\u043a\u0430"
                 },
                 {
                     "badges": [],
@@ -288,6 +330,15 @@
                             ],
                             "title": "\u0422\u0435\u043f\u043b\u044b\u0439 \u043f\u043e\u043b",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "automation.vacuum_cleaning"
+                                }
+                            ],
+                            "title": "\u0423\u0431\u043e\u0440\u043a\u0430",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:settings-outline",
@@ -297,16 +348,7 @@
                 },
                 {
                     "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "vacuum.xiaomi_vacuum_cleaner"
-                                }
-                            ],
-                            "type": "entities"
-                        }
-                    ],
+                    "cards": [],
                     "path": "test",
                     "title": "test"
                 }

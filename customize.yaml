@@ -38,8 +38,8 @@ switch.hall_warmfloor:
   friendly_name: теплый пол
 switch.autowatering:
   friendly_name: автополив
-vacuum.mi_robot:
-  friendly_name: пылесосик
+vacuum.xiaomi_vacuum:
+  friendly_name: пылесос
 automation.turn_on_light_plants:
   friendly_name: Включать  подсветку растений
   icon: mdi:flower-tulip-outline
@@ -61,12 +61,19 @@ automation.turn_on_warm_flow_evening:
 automation.turn_on_autowatering:
   friendly_name: Автоматизация автополива
   icon: mdi:water
+automation.vacuum_cleaning:
+  friendly_name: Пылесосить
+  icon: mdi:robot-vacuum
 script.light_plants_on:
   friendly_name: Включить подсветку растений
 script.light_plants_off:
   friendly_name: Выключить подсветку растений
-#script.icloud_update_iphone:
-#  friendly_name: Найти Полину
+script.vacuum_kitchen:
+  friendly_name: Уборка кухни
+  icon: mdi:robot-vacuum
+script.vacuum_guest_room:
+  friendly_name: Уборка гостиной
+  icon: mdi:robot-vacuum
 group.humidity:
   friendly_name: Влажность
 group.temperature:

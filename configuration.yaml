@@ -121,7 +121,14 @@ sensor:
     name: humidity
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
-        
+
+  - platform: mqtt
+    state_topic: "valetudo/rockrobo/state"
+    json_attributes_topic: "valetudo/rockrobo/map_data"
+    name: xiaomi_map
+    value_template: 'OK'
+    scan_interval: 5
+    
   # - platform: filter
     # name: "filtered humidity"
     # entity_id: sensor.Humidity
@@ -192,8 +199,8 @@ switch:
 vacuum:
   - platform: xiaomi_miio
     host: 192.168.88.12
-    token: 6266764245446337766734526e756370
-    name: mi_robot
+    token: 7850526464756e5847514a6b414c346b
+    name: xiaomi_vacuum
 
 
 tts:
@@ -211,15 +218,20 @@ mqtt:
   client_id: home-assistant
   username: !secret mqtt_login
   password: !secret mqtt_password
-
+  discovery: true
+  discovery_prefix: homeassistant
+  
 recorder:
+  exclude:
+    entities:
+      - sensor.xiaomi_map
 
 
 # logger:
   # default: error
   # logs:
    # homeassistant.components.device_tracker: debug
-
+  
 dialogflow:
 
 google_assistant:
@@ -231,7 +243,9 @@ yandex_smart_home:
     include_domains:
       - switch
       - light
-      - vacuum
+      - script
+    include_entities:
+      - vacuum.xiaomi_vacuum
   entity_config:
     light.kitchen_worktop:
       room: 'Кухня'
@@ -243,10 +257,12 @@ yandex_smart_home:
       room: 'Кухня'
     switch.hall_warmfloor:
       room: 'Ванная'
-    vacuum.mi_robot:
-      room: 'Гостинная'
-    
-      
+    vacuum.xiaomi_vacuum:
+      room: 'Гостиная'
+    script.vacuum_kitchen:
+      room: 'Кухня'
+    script.vacuum_guest_room:
+      room: 'Гостиная'  
     
     
     
