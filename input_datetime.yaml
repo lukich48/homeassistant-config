@@ -42,3 +42,9 @@
     name: 'время последнего запуска автополива'  
     has_date: true
     has_time: true
+    
+  vacuum_time:
+    name: 'пылесосить в'
+    has_date: false
+    has_time: true
+    initial: '15:00:00'

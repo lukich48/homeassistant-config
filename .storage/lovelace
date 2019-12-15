@@ -335,6 +335,9 @@
                             "entities": [
                                 {
                                     "entity": "automation.vacuum_cleaning"
+                                },
+                                {
+                                    "entity": "input_datetime.vacuum_time"
                                 }
                             ],
                             "title": "\u0423\u0431\u043e\u0440\u043a\u0430",
