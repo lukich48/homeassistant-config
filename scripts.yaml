@@ -17,8 +17,8 @@
     sequence:
       - service: vacuum.send_command
         data:
-          entity_id: 'vacuum.rockrobo'
-          command: 'zoned_cleanup'
+          entity_id: vacuum.rockrobo
+          command: zoned_cleanup
           params:
             zone_ids: ['kitchen']
             
@@ -27,7 +27,17 @@
     sequence:
       - service: vacuum.send_command
         data:
-          entity_id: 'vacuum.rockrobo'
-          command: 'zoned_cleanup'
+          entity_id: vacuum.rockrobo
+          command: zoned_cleanup
           params:
             zone_ids: ['guest room']
+            
+  vacuum_hall:
+    alias: "vacuum_hall"
+    sequence:
+      - service: vacuum.send_command
+        data:
+          entity_id: vacuum.rockrobo
+          command: zoned_cleanup
+          params:
+            zone_ids: ['hall']

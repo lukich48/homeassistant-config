@@ -3,39 +3,24 @@
     name: 'Включать подсветку растений'
     has_date: false
     has_time: true
-    initial: '7:00:00'
+    # initial: '7:00:00'
   turn_off_light_plants:
     name: 'Выключать подсветку растений'
     has_date: false
     has_time: true
-    initial: '23:00:00'
+    # initial: '23:00:00'
 
 # автоматизация теплого пола
   turn_on_warm_flow_morning:
     name: 'Включать теплый пол утром'
     has_date: false
     has_time: true
-    initial: '6:30:00'
-  turn_off_warm_flow_day:
-    name: 'Выключать теплый пол днем'
-    has_date: false
-    has_time: true
-    initial: '10:00:00'
-  turn_off_warm_flow_day2:
-    name: 'Выключать теплый пол днем 2'
-    has_date: false
-    has_time: true
-    initial: '11:00:00'
-  turn_on_warm_flow_evening:
-    name: 'Включать теплый пол вечером'
-    has_date: false
-    has_time: true
-    initial: '18:30:00'
+    # initial: '6:30:00'
   turn_off_warm_flow_night:
     name: 'Выключать теплый пол на ночь'
     has_date: false
     has_time: true
-    initial: '23:30:00'
+    # initial: '23:30:00'
 
 # the last time when autowatering was started
   last_autowatering:
@@ -47,4 +32,4 @@
     name: 'пылесосить в'
     has_date: false
     has_time: true
-    initial: '15:00:00'
+    # initial: '15:00:00'

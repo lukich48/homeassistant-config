@@ -86,7 +86,7 @@ device_tracker:
     community: !secret snmp_comunity 
     baseoid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     interval_seconds: 30
-    # consider_home: 120
+    consider_home: 120
     new_device_defaults:
       track_new_devices: false
   - platform: google_maps
@@ -225,6 +225,7 @@ recorder:
   exclude:
     entities:
       - sensor.xiaomi_map
+      - vacuum.rockrobo
 
 
 # logger:
@@ -240,12 +241,17 @@ google_assistant:
 
 yandex_smart_home:   
   filter:
-    include_domains:
-      - switch
-      - light
-      - script
     include_entities:
-      - vacuum.xiaomi_vacuum
+      - light.kitchen_worktop
+      - light.kitchen_table
+      - light.bathroom_mirror
+      - switch.kitchen_plants
+      - switch.kitchen_plants
+      - switch.hall_warmfloor
+      - vacuum.rockrobo
+      - script.vacuum_kitchen
+      - script.vacuum_guest_room
+      - script.vacuum_hall
   entity_config:
     light.kitchen_worktop:
       room: 'Кухня'
@@ -257,12 +263,15 @@ yandex_smart_home:
       room: 'Кухня'
     switch.hall_warmfloor:
       room: 'Ванная'
-    vacuum.xiaomi_vacuum:
+    vacuum.rockrobo:
       room: 'Гостиная'
+      name: 'Пылесос'
     script.vacuum_kitchen:
       room: 'Кухня'
     script.vacuum_guest_room:
       room: 'Гостиная'  
+    script.vacuum_hall:
+      room: 'Коридор'  
     
     
     

@@ -132,16 +132,19 @@
                                 },
                                 {
                                     "entity": "script.vacuum_guest_room"
+                                },
+                                {
+                                    "entity": "script.vacuum_hall"
                                 }
                             ],
                             "type": "entities"
                         },
                         {
                             "crop": {
-                                "bottom": 30,
+                                "bottom": 0,
                                 "left": 150,
-                                "right": 80,
-                                "top": 250
+                                "right": 0,
+                                "top": 0
                             },
                             "entity": "sensor.xiaomi_map",
                             "map_scale": 3,
@@ -310,16 +313,7 @@
                                     "entity": "automation.turn_off_warm_flow_day"
                                 },
                                 {
-                                    "entity": "input_datetime.turn_off_warm_flow_day"
-                                },
-                                {
-                                    "entity": "input_datetime.turn_off_warm_flow_day2"
-                                },
-                                {
                                     "entity": "automation.turn_on_warm_flow_evening"
-                                },
-                                {
-                                    "entity": "input_datetime.turn_on_warm_flow_evening"
                                 },
                                 {
                                     "entity": "automation.turn_off_warm_flow_night"

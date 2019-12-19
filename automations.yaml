@@ -1,5 +1,3 @@
-  # автоматизация подсветки растений -------------------
-
 - id: turn_on_light_plants
   alias: turn_on_light_plants
   action:
@@ -7,7 +5,8 @@
   condition: []
   trigger:
   - platform: template
-    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_on_light_plants.state[0:5] }}"
+    value_template: '{{ states.sensor.time.state == states.input_datetime.turn_on_light_plants.state[0:5]
+      }}'
 - id: turn_off_light_plants
   alias: turn_off_light_plants
   action:
@@ -15,10 +14,8 @@
   condition: []
   trigger:
   - platform: template
-    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_off_light_plants.state[0:5] }}"
- 
- # полив растений -------
- 
+    value_template: '{{ states.sensor.time.state == states.input_datetime.turn_off_light_plants.state[0:5]
+      }}'
 - id: turn_on_autowatering
   alias: turn_on_autowatering
   action:
@@ -27,11 +24,11 @@
       entity_id: switch.autowatering
   trigger:
     platform: time_pattern
-    hours: '/1'
-  condition: 
+    hours: /1
+  condition:
   - condition: template
-    value_template: "{{ (as_timestamp(now()) - as_timestamp(states.input_datetime.last_autowatering.state)) /3600 > (states.input_number.autowatering_interval.state | int)}}"
- 
+    value_template: '{{ (as_timestamp(now()) - as_timestamp(states.input_datetime.last_autowatering.state))
+      /3600 > (states.input_number.autowatering_interval.state | int)}}'
 - id: turn_on_autowatering_trigger
   alias: turn_on_autowatering_trigger
   trigger:
@@ -40,16 +37,14 @@
   action:
   - service: mqtt.publish
     data_template:
-      topic: "home/kitchen/switch2/waterpump"
-      payload: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state | int)*1000}}}'
+      topic: home/kitchen/switch2/waterpump
+      payload: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state
+        | int)*1000}}}'
   - service: input_datetime.set_datetime
     data_template:
       entity_id: input_datetime.last_autowatering
       time: '{{ (as_timestamp(now()) | timestamp_custom("%H:%M:%S", true)) }}'
       date: '{{ (as_timestamp(now()) | timestamp_custom("%Y-%m-%d", true)) }}'
- 
- # автоматизация теплого пола ----------------------
- 
 - id: turn_on_warm_flow_morning
   alias: turn_on_warm_flow_morning
   action:
@@ -58,39 +53,50 @@
       entity_id: switch.hall_warmfloor
   trigger:
   - platform: template
-    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_on_warm_flow_morning.state[0:5] }}"
+    value_template: '{{ states.sensor.time.state == states.input_datetime.turn_on_warm_flow_morning.state[0:5]
+      }}'
   condition:
   - condition: state
     entity_id: group.all_devices
     state: home
-    
 - id: turn_off_warm_flow_day
   alias: turn_off_warm_flow_day
   trigger:
-  - platform: template
-    value_template: >
-      {{ states.sensor.time.state == states.input_datetime.turn_off_warm_flow_day.state[0:5] 
-      or states.sensor.time.state == states.input_datetime.turn_off_warm_flow_day2.state[0:5] 
-      }}
+  - entity_id: person.alesha
+    event: leave
+    platform: zone
+    zone: zone.reutov
+  - entity_id: person.polina
+    event: leave
+    platform: zone
+    zone: zone.reutov
   condition:
-  - condition: state
-    entity_id: group.all_devices
-    state: not_home
+  - after: '9:00'
+    before: '22:00'
+    condition: time
   action:
   - data:
       entity_id: switch.hall_warmfloor
     service: switch.turn_off
-    
 - id: turn_on_warm_flow_evening
   alias: turn_on_warm_flow_evening
-  action:
-  - service: switch.turn_on
-    data:
-      entity_id: switch.hall_warmfloor
   trigger:
-  - platform: template
-    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_on_warm_flow_evening.state[0:5] }}"
-    
+  - entity_id: person.alesha
+    event: enter
+    platform: zone
+    zone: zone.reutov
+  - entity_id: person.polina
+    event: enter
+    platform: zone
+    zone: zone.reutov
+  condition:
+  - after: '9:00'
+    before: '22:00'
+    condition: time
+  action:
+  - data:
+      entity_id: switch.hall_warmfloor
+    service: switch.turn_on
 - id: turn_off_warm_flow_night
   alias: turn_off_warm_flow_night
   action:
@@ -99,44 +105,44 @@
       entity_id: switch.hall_warmfloor
   trigger:
   - platform: template
-    value_template: "{{ states.sensor.time.state == states.input_datetime.turn_off_warm_flow_night.state[0:5] }}"
- 
- # автоматизация уборки ------------- 
+    value_template: '{{ states.sensor.time.state == states.input_datetime.turn_off_warm_flow_night.state[0:5]
+      }}'
 - id: vacuum_cleaning
   alias: vacuum_cleaning
   description: ''
   trigger:
-  trigger:
   - platform: template
-    value_template: "{{ states.sensor.time.state == states.input_datetime.vacuum_time.state[0:5] }}"
+    value_template: '{{ states.sensor.time.state == states.input_datetime.vacuum_time.state[0:5]
+      }}'
   condition:
   - condition: state
     entity_id: group.all_devices
     state: not_home
   action:
   - service: vacuum.start
-
- # tests --------------
- 
+    entity_id: vacuum.rockrobo
 - id: test1
+  alias: Webhook test
+  description: Тестовая автоматизация
   trigger:
-    platform: webhook
+  - platform: webhook
     webhook_id: test
   action:
-    service: logbook.log
-    data_template:
+  - data_template:
+      message: '{{ trigger.data.a }}
+
+        '
       name: testlog
-      message: >
-        {{ trigger.data.a }}
-        
+    service: logbook.log
 - id: mqtt_started
+  alias: mqtt_start
   trigger:
-    platform: mqtt
+  - platform: mqtt
     topic: Start
   action:
-    service: logbook.log
-    data_template:
+  - data_template:
+      message: '{{ trigger.payload }}
+
+        '
       name: started
-      message: >
-        {{ trigger.payload }}
-    
+    service: logbook.log

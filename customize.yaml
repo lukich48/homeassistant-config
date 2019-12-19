@@ -27,17 +27,17 @@ person.Polina:
   friendly_name: Полина
   entity_picture: /local/polina.jpg
 switch.kitchen_plants:
-  friendly_name: подсветка растений
+  friendly_name: Подсветка растений
 light.kitchen_table:
-  friendly_name: лампа на кухне
+  friendly_name: Лампа на кухне
 light.kitchen_worktop:
-  friendly_name: подсветка кухни
+  friendly_name: Подсветка кухни
 light.bathroom_mirror:
-  friendly_name: свет в ванной
+  friendly_name: Свет в ванной
 switch.hall_warmfloor:
-  friendly_name: теплый пол
+  friendly_name: Теплый пол
 switch.autowatering:
-  friendly_name: автополив
+  friendly_name: Автополив
 vacuum.xiaomi_vacuum:
   friendly_name: пылесос
 automation.turn_on_light_plants:
@@ -73,6 +73,9 @@ script.vacuum_kitchen:
   icon: mdi:robot-vacuum
 script.vacuum_guest_room:
   friendly_name: Уборка гостиной
+  icon: mdi:robot-vacuum
+script.vacuum_hall:
+  friendly_name: Уборка коридора
   icon: mdi:robot-vacuum
 group.humidity:
   friendly_name: Влажность
