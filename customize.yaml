@@ -38,6 +38,10 @@ switch.hall_warmfloor:
   friendly_name: Теплый пол
 switch.autowatering:
   friendly_name: Автополив
+fan.laundry_fan:
+  friendly_name: Вытяжка в прачечной
+fan.bathroom_fan:
+  friendly_name: Вытяжка в ванной
 vacuum.xiaomi_vacuum:
   friendly_name: пылесос
 automation.turn_on_light_plants:

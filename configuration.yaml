@@ -164,7 +164,7 @@ light:
     command_topic: "home/bathroom/switch/mirror"
     payload_on: 1
     payload_off: 0
-    qos: 0  
+    qos: 0    
 
 switch:
 # подсветка растений
@@ -194,7 +194,25 @@ switch:
     payload_off: 0
     state_on: 1
     state_off: 0
-    qos: 0     
+    qos: 0  
+    
+fan:
+# вытяжка в прачечной
+  - platform: mqtt
+    name: laundry_fan
+    state_topic: "home/bathroom/switch/fan1/state"
+    command_topic: "home/trigger/bathroom/switch/fan1"
+    payload_on: 1
+    payload_off: 0
+    qos: 0    
+# вытяжка в ванной
+  - platform: mqtt
+    name: bathroom_fan
+    state_topic: "home/bathroom/switch/fan2/state"
+    command_topic: "home/trigger/bathroom/switch/fan2"
+    payload_on: 1
+    payload_off: 0
+    qos: 0      
 
 vacuum:
   - platform: xiaomi_miio
@@ -214,7 +232,7 @@ tts:
 mqtt:
   broker: rodal2807.synology.me
   port: 1883
-  protocol: 3.1.1
+  # protocol: 3.1.1
   client_id: home-assistant
   username: !secret mqtt_login
   password: !secret mqtt_password
@@ -237,7 +255,7 @@ dialogflow:
 
 google_assistant:
   project_id: homeassistant-2807
-  api_key: !secret google_assistant_api_key
+  # api_key: !secret google_assistant_api_key
 
 yandex_smart_home:   
   filter:
@@ -248,6 +266,8 @@ yandex_smart_home:
       - switch.kitchen_plants
       - switch.kitchen_plants
       - switch.hall_warmfloor
+      - fan.laundry_fan
+      - fan.bathroom_fan
       - vacuum.rockrobo
       - script.vacuum_kitchen
       - script.vacuum_guest_room
@@ -262,6 +282,10 @@ yandex_smart_home:
     switch.kitchen_plants:
       room: 'Кухня'
     switch.hall_warmfloor:
+      room: 'Ванная'
+    fan.laundry_fan:
+      room: 'Прачечная'
+    fan.bathroom_fan:
       room: 'Ванная'
     vacuum.rockrobo:
       room: 'Гостиная'

@@ -111,6 +111,17 @@
                             ],
                             "title": "\u0412\u044b\u043a\u043b\u044e\u0447\u0430\u0442\u0435\u043b\u0438",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "fan.laundry_fan"
+                                },
+                                {
+                                    "entity": "fan.bathroom_fan"
+                                }
+                            ],
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:home",
@@ -329,12 +340,19 @@
                             "entities": [
                                 {
                                     "entity": "automation.vacuum_cleaning"
-                                },
-                                {
-                                    "entity": "input_datetime.vacuum_time"
                                 }
                             ],
                             "title": "\u0423\u0431\u043e\u0440\u043a\u0430",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "input_number.fan_duration"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "\u0412\u0435\u043d\u0442\u0438\u043b\u044f\u0442\u043e\u0440\u044b",
                             "type": "entities"
                         }
                     ],
@@ -345,9 +363,21 @@
                 },
                 {
                     "badges": [],
-                    "cards": [],
-                    "path": "test",
-                    "title": "test"
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.temperature"
+                                }
+                            ],
+                            "hours_to_show": 240,
+                            "refresh_interval": 0,
+                            "title": "\u0422\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
+                            "type": "history-graph"
+                        }
+                    ],
+                    "path": "history",
+                    "title": "History"
                 }
             ]
         }
