@@ -20,10 +20,10 @@ group.all_scripts:
 #  friendly_name: Леша
 #device_tracker.iphone_polina:
 #  friendly_name: Полина
-person.Alesha:
+person.lesha:
   friendly_name: Леша
   entity_picture: /local/lesha.jpg
-person.Polina:
+person.polina:
   friendly_name: Полина
   entity_picture: /local/polina.jpg
 switch.kitchen_plants:

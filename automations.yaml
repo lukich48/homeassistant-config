@@ -57,7 +57,7 @@
       }}'
   condition:
   - condition: state
-    entity_id: group.all_devices
+    entity_id: group.all_person
     state: home
 - id: turn_off_warm_flow_day
   alias: turn_off_warm_flow_day
@@ -115,7 +115,7 @@
     platform: time_pattern
   condition:
   - condition: state
-    entity_id: group.all_devices
+    entity_id: group.all_person
     state: not_home
   - condition: template
     value_template: '{{states.vacuum.xiaomi_vacuum.attributes.clean_start.date() <

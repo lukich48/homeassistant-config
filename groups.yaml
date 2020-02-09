@@ -7,3 +7,7 @@
     
   temperature:
     - sensor.temperature
+    
+  all_person:
+    - person.polina
+    - person.lesha
