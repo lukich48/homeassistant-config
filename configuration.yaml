@@ -51,7 +51,7 @@ http:
   ssl_key: /ssl/privkey.pem
 
 # Checks for available updates
-updater:
+# updater:
 
 # Discover some devices automatically
 discovery:
@@ -244,6 +244,7 @@ recorder:
     entities:
       - sensor.xiaomi_map
       - vacuum.rockrobo
+      - sensor.time
 
 
 # logger:

@@ -81,7 +81,7 @@
 - id: turn_on_warm_flow_evening
   alias: turn_on_warm_flow_evening
   trigger:
-  - entity_id: person.alesha
+  - entity_id: person.lesha
     event: enter
     platform: zone
     zone: zone.reutov
@@ -218,3 +218,15 @@
       payload: 0
       topic: home/kitchen/switch2/waterpump
     service: mqtt.publish
+- id: '1581284354574'
+  alias: Test
+  description: Test
+  trigger:
+  - hours: /1
+    platform: time_pattern
+  condition:
+  - condition: state
+    entity_id: group.all_person
+    state: not_home
+  action:
+  - delay: '1'

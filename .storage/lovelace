@@ -29,12 +29,21 @@
                         {
                             "cards": [
                                 {
-                                    "default_zoom": 14,
-                                    "entities": [
-                                        "person.alesha",
-                                        "person.polina"
-                                    ],
-                                    "type": "map"
+                                    "card": {
+                                        "default_zoom": 14,
+                                        "type": "map"
+                                    },
+                                    "filter": {
+                                        "include": [
+                                            {
+                                                "domain": "person"
+                                            },
+                                            {
+                                                "domain": "zone"
+                                            }
+                                        ]
+                                    },
+                                    "type": "custom:auto-entities"
                                 },
                                 {
                                     "card": {
