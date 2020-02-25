@@ -75,8 +75,7 @@
     before: '22:00'
     condition: time
   action:
-  - data:
-      entity_id: switch.hall_warmfloor
+  - entity_id: switch.hall_warmfloor
     service: switch.turn_off
 - id: turn_on_warm_flow_evening
   alias: turn_on_warm_flow_evening
@@ -94,8 +93,8 @@
     before: '22:00'
     condition: time
   action:
-  - data:
-      entity_id: switch.hall_warmfloor
+  - data: {}
+    entity_id: switch.hall_warmfloor
     service: switch.turn_on
 - id: turn_off_warm_flow_night
   alias: turn_off_warm_flow_night

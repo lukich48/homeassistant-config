@@ -99,6 +99,12 @@
                                 },
                                 {
                                     "entity": "light.bathroom_mirror"
+                                },
+                                {
+                                    "entity": "switch.31110200d8f15b07853e"
+                                },
+                                {
+                                    "entity": "switch.51015521d8f15b078555"
                                 }
                             ],
                             "title": "\u0421\u0432\u0435\u0442",
@@ -161,20 +167,26 @@
                         },
                         {
                             "crop": {
-                                "bottom": 0,
+                                "bottom": 10,
                                 "left": 150,
                                 "right": 0,
-                                "top": 0
+                                "top": 100
                             },
                             "entity": "sensor.xiaomi_map",
+                            "icon_scale": 1,
                             "map_scale": 3,
                             "min_height": 300,
                             "rotate": 0,
-                            "type": "custom:valetudo-map-card"
+                            "show_dock": true,
+                            "show_path": true,
+                            "show_vacuum": true,
+                            "type": "custom:valetudo-map-card",
+                            "vacuum_entity": "vacuum.xiaomi_vacuum"
                         }
                     ],
                     "icon": "mdi:robot-vacuum",
                     "path": "",
+                    "theme": "dark-mode",
                     "title": "\u0423\u0431\u043e\u0440\u043a\u0430"
                 },
                 {
@@ -195,6 +207,7 @@
                     "icon": "mdi:weather-partly-snowy-rainy",
                     "id": "weather",
                     "panel": false,
+                    "theme": "dark-mode",
                     "title": "\u041f\u043e\u0433\u043e\u0434\u0430"
                 },
                 {
@@ -281,6 +294,7 @@
                     "title": "\u041f\u043b\u0430\u043d"
                 },
                 {
+                    "background": "radial-gradient(crimson, skyblue)",
                     "badges": [],
                     "cards": [
                         {
@@ -368,6 +382,7 @@
                     "icon": "mdi:settings-outline",
                     "id": "config",
                     "panel": false,
+                    "theme": "dark-mode",
                     "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438"
                 },
                 {
@@ -406,6 +421,7 @@
                         }
                     ],
                     "path": "history",
+                    "theme": "dark-mode",
                     "title": "History"
                 }
             ]

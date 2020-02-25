@@ -44,6 +44,7 @@ frontend:
 config:
 
 # default_config:
+mobile_app:
 
 http:
   # api_password: !secret http_password
@@ -246,6 +247,10 @@ recorder:
       - vacuum.rockrobo
       - sensor.time
 
+tuya:
+  username: !secret tuya_username
+  password: !secret tuya_password
+  country_code: 7
 
 # logger:
   # default: error
@@ -267,6 +272,8 @@ yandex_smart_home:
       - switch.kitchen_plants
       - switch.kitchen_plants
       - switch.hall_warmfloor
+      - switch.51015521d8f15b078555
+      - switch.31110200d8f15b07853e
       - fan.laundry_fan
       - fan.bathroom_fan
       - vacuum.rockrobo
@@ -284,6 +291,10 @@ yandex_smart_home:
       room: 'Кухня'
     switch.hall_warmfloor:
       room: 'Ванная'
+    switch.51015521d8f15b078555:
+      room: 'Гостиная'
+    switch.31110200d8f15b07853e:
+      room: 'Гостиная'
     fan.laundry_fan:
       room: 'Прачечная'
     fan.bathroom_fan:

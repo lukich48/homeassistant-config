@@ -1,10 +1,11 @@
 {
     "data": {
-        "persons": [
+        "items": [
             {
                 "device_trackers": [
                     "device_tracker.phone_alesha_snmp",
-                    "device_tracker.google_maps_114601646161770081243"
+                    "device_tracker.google_maps_114601646161770081243",
+                    "device_tracker.sm_g9730"
                 ],
                 "id": "54df184f3d8e404ca5787a4b15e17df2",
                 "name": "Lesha",
@@ -13,7 +14,8 @@
             {
                 "device_trackers": [
                     "device_tracker.phone_polina_snmp",
-                    "device_tracker.phone_polina"
+                    "device_tracker.phone_polina",
+                    "device_tracker.sm_g960f"
                 ],
                 "id": "e3cc711d968047558fd7300dc4ddede2",
                 "name": "Polina",
@@ -22,5 +24,5 @@
         ]
     },
     "key": "person",
-    "version": 1
+    "version": 2
 }
