@@ -111,6 +111,8 @@ About
 
 
 !/.storage/lovelace
+!/.storage/lovelace_resources
 !/.storage/person
 !/.storage/core.entity_registry
+!/.storage/core.device_registry
 /.google_maps_location_sharing.cookies.rodal2807_home_gmail_com

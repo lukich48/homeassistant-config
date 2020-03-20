@@ -2,24 +2,6 @@
     "data": {
         "config": {
             "background": "center / cover no-repeat url(\"/background.png\") fixed",
-            "resources": [
-                {
-                    "type": "js",
-                    "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
-                },
-                {
-                    "type": "module",
-                    "url": "/local/custom_ui/lovelace-weather-card-chart/custom-weather-card-chart.js?v=0.2.4"
-                },
-                {
-                    "type": "module",
-                    "url": "/local/custom_ui/config-template-card/config-template-card.js"
-                },
-                {
-                    "type": "js",
-                    "url": "/community_plugin/lovelace-valetudo-map-card/valetudo-map-card.js"
-                }
-            ],
             "title": "Home",
             "views": [
                 {

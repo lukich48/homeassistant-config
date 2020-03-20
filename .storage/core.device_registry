@@ -1,0 +1,108 @@
+{
+    "data": {
+        "devices": [
+            {
+                "area_id": null,
+                "config_entries": [
+                    "07b2831341bd4976a1e5fe148daea50d"
+                ],
+                "connections": [],
+                "id": "d9dfe472016d47bbb0dd2e310edfd392",
+                "identifiers": [
+                    [
+                        "gpslogger",
+                        "phone_polina"
+                    ]
+                ],
+                "manufacturer": null,
+                "model": null,
+                "name": "phone_polina",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "07b2831341bd4976a1e5fe148daea50d"
+                ],
+                "connections": [],
+                "id": "7317688c8ce64f52a212d3fc0055131d",
+                "identifiers": [
+                    [
+                        "gpslogger",
+                        "phone_alesha"
+                    ]
+                ],
+                "manufacturer": null,
+                "model": null,
+                "name": "phone_alesha",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "3a6255aac0fd4183a5b9925d21487f38"
+                ],
+                "connections": [],
+                "id": "e92c54204cd24fb6bd7a1d61ef5787de",
+                "identifiers": [
+                    [
+                        "hacs",
+                        "0717a0cd-745c-48fd-9b16-c8534c9704f9-bc944b0f-fd42-4a58-a072-ade38d1444cd"
+                    ]
+                ],
+                "manufacturer": "hacs.xyz",
+                "model": "",
+                "name": "HACS",
+                "name_by_user": null,
+                "sw_version": "0.23.2",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "800a919323304fd1954922b5bbe8bc17"
+                ],
+                "connections": [],
+                "id": "63303004d06a467690a9a3167a26f8db",
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "a007d9fd3d3e0dd4"
+                    ]
+                ],
+                "manufacturer": "samsung",
+                "model": "SM-G9730",
+                "name": "SM-G9730",
+                "name_by_user": null,
+                "sw_version": "29",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "8e012d2e9f8142afb9e2883d088d4c6c"
+                ],
+                "connections": [],
+                "id": "8f9644582abd46818eb88e8f6ca6815b",
+                "identifiers": [
+                    [
+                        "mobile_app",
+                        "0c45e717e3f5884f"
+                    ]
+                ],
+                "manufacturer": "samsung",
+                "model": "SM-G960F",
+                "name": "SM-G960F",
+                "name_by_user": null,
+                "sw_version": "28",
+                "via_device_id": null
+            }
+        ]
+    },
+    "key": "core.device_registry",
+    "version": 1
+}

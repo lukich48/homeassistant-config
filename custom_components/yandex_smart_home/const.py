@@ -14,20 +14,23 @@ from homeassistant.components import (
     script,
     switch,
     vacuum,
+    water_heater
 )
 DOMAIN = 'yandex_smart_home'
 
 CONF_ENTITY_CONFIG = 'entity_config'
 CONF_FILTER = 'filter'
 CONF_ROOM = 'room'
+CONF_TYPE = 'type'
 CONF_CHANNEL_SET_VIA_MEDIA_CONTENT_ID = 'channel_set_via_media_content_id'
 CONF_RELATIVE_VOLUME_ONLY = 'relative_volume_only'
 
-
+# https://yandex.ru/dev/dialogs/alice/doc/smart-home/concepts/device-types-docpage/
 PREFIX_TYPES = 'devices.types.'
 TYPE_LIGHT = PREFIX_TYPES + 'light'
 TYPE_SOCKET = PREFIX_TYPES + 'socket'
 TYPE_SWITCH = PREFIX_TYPES + 'switch'
+TYPE_KETTLE = PREFIX_TYPES + 'cooking.kettle'
 TYPE_THERMOSTAT = PREFIX_TYPES + 'thermostat'
 TYPE_THERMOSTAT_AC = PREFIX_TYPES + 'thermostat.ac'
 TYPE_MEDIA_DEVICE = PREFIX_TYPES + 'media_device'
@@ -62,12 +65,13 @@ DOMAIN_TO_YANDEX_TYPES = {
     group.DOMAIN: TYPE_SWITCH,
     input_boolean.DOMAIN: TYPE_SWITCH,
     light.DOMAIN: TYPE_LIGHT,
-    lock.DOMAIN: TYPE_OTHER,
+    lock.DOMAIN: TYPE_OPENABLE,
     media_player.DOMAIN: TYPE_MEDIA_DEVICE,
     scene.DOMAIN: TYPE_OTHER,
     script.DOMAIN: TYPE_OTHER,
     switch.DOMAIN: TYPE_SWITCH,
     vacuum.DOMAIN: TYPE_VACUUM_CLEANER,
+    water_heater.DOMAIN: TYPE_KETTLE,
 }
 
 DEVICE_CLASS_TO_YANDEX_TYPES = {

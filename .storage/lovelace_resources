@@ -1,0 +1,28 @@
+{
+    "data": {
+        "items": [
+            {
+                "id": "51f6a5c590b245d9a839e87b6c2d6f82",
+                "type": "js",
+                "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
+            },
+            {
+                "id": "06748692f1ec49f3b9d7c174373a7260",
+                "type": "module",
+                "url": "/local/custom_ui/lovelace-weather-card-chart/custom-weather-card-chart.js?v=0.2.4"
+            },
+            {
+                "id": "16dc23bc04694aa290225680ce74407c",
+                "type": "module",
+                "url": "/local/custom_ui/config-template-card/config-template-card.js"
+            },
+            {
+                "id": "b27c8ba210d948e6a261d99910862135",
+                "type": "js",
+                "url": "/community_plugin/lovelace-valetudo-map-card/valetudo-map-card.js"
+            }
+        ]
+    },
+    "key": "lovelace_resources",
+    "version": 1
+}
