@@ -34,6 +34,8 @@ light.kitchen_worktop:
   friendly_name: Подсветка кухни
 light.bathroom_mirror:
   friendly_name: Свет в ванной
+light.hall_lamp:
+  friendly_name: Свет в коридоре
 switch.hall_warmfloor:
   friendly_name: Теплый пол
 switch.autowatering:

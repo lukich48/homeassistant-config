@@ -15,7 +15,8 @@
                 "device_trackers": [
                     "device_tracker.phone_polina_snmp",
                     "device_tracker.phone_polina",
-                    "device_tracker.sm_g960f"
+                    "device_tracker.sm_g960f",
+                    "device_tracker.google_maps_118419221494309494729"
                 ],
                 "id": "e3cc711d968047558fd7300dc4ddede2",
                 "name": "Polina",

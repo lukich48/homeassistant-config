@@ -165,7 +165,15 @@ light:
     command_topic: "home/bathroom/switch/mirror"
     payload_on: 1
     payload_off: 0
-    qos: 0    
+    qos: 0   
+# свет в коридоре
+  - platform: mqtt
+    name: hall_lamp
+    state_topic: "home/hall/switch/lamp/state"
+    command_topic: "home/hall/switch/lamp"
+    payload_on: 1
+    payload_off: 0
+    qos: 0  
 
 switch:
 # подсветка растений
@@ -269,6 +277,7 @@ yandex_smart_home:
       - light.kitchen_worktop
       - light.kitchen_table
       - light.bathroom_mirror
+      - light.hall_lamp
       - switch.kitchen_plants
       - switch.kitchen_plants
       - switch.hall_warmfloor
@@ -287,6 +296,8 @@ yandex_smart_home:
       room: 'Кухня'
     light.bathroom_mirror:
       room: 'Ванная'
+    light.hall_lamp:
+      room: 'Коридор'
     switch.kitchen_plants:
       room: 'Кухня'
     switch.hall_warmfloor:

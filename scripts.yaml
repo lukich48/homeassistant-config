@@ -1,43 +1,53 @@
-  light_plants_on:
-    alias: light_plants_on
-    sequence:
-      - service: switch.turn_on
-        data:
-          entity_id: group.light_plants
-
-  light_plants_off:
-    alias: light_plants_off
-    sequence:
-      - service: switch.turn_off
-        data:
-          entity_id: group.light_plants
-        
-  vacuum_kitchen:
-    alias: "vacuum_kitchen"
-    sequence:
-      - service: vacuum.send_command
-        data:
-          entity_id: vacuum.rockrobo
-          command: zoned_cleanup
-          params:
-            zone_ids: ['kitchen']
-            
-  vacuum_guest_room:
-    alias: "vacuum_guest_room"
-    sequence:
-      - service: vacuum.send_command
-        data:
-          entity_id: vacuum.rockrobo
-          command: zoned_cleanup
-          params:
-            zone_ids: ['guest room']
-            
-  vacuum_hall:
-    alias: "vacuum_hall"
-    sequence:
-      - service: vacuum.send_command
-        data:
-          entity_id: vacuum.rockrobo
-          command: zoned_cleanup
-          params:
-            zone_ids: ['hall']
+light_plants_on:
+  alias: light_plants_on
+  sequence:
+  - service: switch.turn_on
+    data:
+      entity_id: group.light_plants
+light_plants_off:
+  alias: light_plants_off
+  sequence:
+  - service: switch.turn_off
+    data:
+      entity_id: group.light_plants
+vacuum_kitchen:
+  alias: vacuum_kitchen
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.rockrobo
+      command: zoned_cleanup
+      params:
+        zone_ids:
+        - kitchen
+vacuum_guest_room:
+  alias: vacuum_guest_room
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.rockrobo
+      command: zoned_cleanup
+      params:
+        zone_ids:
+        - guest room
+vacuum_hall:
+  alias: vacuum_hall
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.rockrobo
+      command: zoned_cleanup
+      params:
+        zone_ids:
+        - hall
+'1582710303820':
+  alias: test
+  sequence:
+  - data:
+      data:
+        image: https://i.pinimg.com/originals/0f/7b/fa/0f7bfa4e6775b5977694a6036fc85b48.png
+        priority: high
+        ttl: 0
+      message: тестовое сообщение
+      title: Alert
+    service: notify.mobile_app_sm_g9730
