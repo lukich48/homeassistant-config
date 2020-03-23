@@ -37,8 +37,8 @@ scene: !include scenes.yaml
 # Enables the frontend
 frontend:
 
-# lovelace:
-#   mode: yaml
+lovelace:
+  mode: storage
 
 # Enables configuration UI
 config:

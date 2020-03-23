@@ -112,6 +112,7 @@ About
 
 !/.storage/lovelace
 !/.storage/lovelace_resources
+!/.storage/lovelace_dashboards
 !/.storage/person
 !/.storage/core.entity_registry
 !/.storage/core.device_registry

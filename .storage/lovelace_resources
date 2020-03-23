@@ -4,7 +4,7 @@
             {
                 "id": "51f6a5c590b245d9a839e87b6c2d6f82",
                 "type": "js",
-                "url": "/community_plugin/lovelace-auto-entities/auto-entities.js"
+                "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js"
             },
             {
                 "id": "06748692f1ec49f3b9d7c174373a7260",
@@ -19,7 +19,12 @@
             {
                 "id": "b27c8ba210d948e6a261d99910862135",
                 "type": "js",
-                "url": "/community_plugin/lovelace-valetudo-map-card/valetudo-map-card.js"
+                "url": "/hacsfiles/lovelace-valetudo-map-card/valetudo-map-card.js"
+            },
+            {
+                "id": "268f2e1be531487ba25db35635fc64a1",
+                "type": "module",
+                "url": "/hacsfiles/lovelace-card-preloader/lovelace-card-preloader.js"
             }
         ]
     },

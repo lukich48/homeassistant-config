@@ -1,7 +1,9 @@
 {
     "data": {
         "config": {
-            "background": "center / cover no-repeat url(\"/background.png\") fixed",
+            "preload": [
+                "map"
+            ],
             "title": "Home",
             "views": [
                 {
