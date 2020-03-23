@@ -209,16 +209,16 @@ fan:
 # вытяжка в прачечной
   - platform: mqtt
     name: laundry_fan
-    state_topic: "home/bathroom/switch/fan1/state"
-    command_topic: "home/trigger/bathroom/switch/fan1"
+    state_topic: "home/bathroom/switch/laundry-fan/state"
+    command_topic: "home/trigger/bathroom/switch/laundry-fan"
     payload_on: 1
     payload_off: 0
     qos: 0    
 # вытяжка в ванной
   - platform: mqtt
     name: bathroom_fan
-    state_topic: "home/bathroom/switch/fan2/state"
-    command_topic: "home/trigger/bathroom/switch/fan2"
+    state_topic: "home/bathroom/switch/fan/state"
+    command_topic: "home/trigger/bathroom/switch/fan"
     payload_on: 1
     payload_off: 0
     qos: 0      
@@ -271,54 +271,7 @@ google_assistant:
   project_id: homeassistant-2807
   # api_key: !secret google_assistant_api_key
 
-yandex_smart_home:   
-  filter:
-    include_entities:
-      - light.kitchen_worktop
-      - light.kitchen_table
-      - light.bathroom_mirror
-      - light.hall_lamp
-      - switch.kitchen_plants
-      - switch.kitchen_plants
-      - switch.hall_warmfloor
-      - switch.51015521d8f15b078555
-      - switch.31110200d8f15b07853e
-      - fan.laundry_fan
-      - fan.bathroom_fan
-      - vacuum.rockrobo
-      - script.vacuum_kitchen
-      - script.vacuum_guest_room
-      - script.vacuum_hall
-  entity_config:
-    light.kitchen_worktop:
-      room: 'Кухня'
-    light.kitchen_table:
-      room: 'Кухня'
-    light.bathroom_mirror:
-      room: 'Ванная'
-    light.hall_lamp:
-      room: 'Коридор'
-    switch.kitchen_plants:
-      room: 'Кухня'
-    switch.hall_warmfloor:
-      room: 'Ванная'
-    switch.51015521d8f15b078555:
-      room: 'Гостиная'
-    switch.31110200d8f15b07853e:
-      room: 'Гостиная'
-    fan.laundry_fan:
-      room: 'Прачечная'
-    fan.bathroom_fan:
-      room: 'Ванная'
-    vacuum.rockrobo:
-      room: 'Гостиная'
-      name: 'Пылесос'
-    script.vacuum_kitchen:
-      room: 'Кухня'
-    script.vacuum_guest_room:
-      room: 'Гостиная'  
-    script.vacuum_hall:
-      room: 'Коридор'  
+yandex_smart_home: !include yandex_smart_home.yaml   
     
     
     

@@ -119,12 +119,12 @@
   - condition: template
     value_template: '{{states.vacuum.xiaomi_vacuum.attributes.clean_start.date() <
       now().date()}}'
-  - after: '10:00'
+  - after: 09:00
     before: '19:00'
     condition: time
   action:
   - entity_id: vacuum.rockrobo
-    service: vacuum.start
+    service: script.vacuum_all_zones
 - id: test1
   alias: Webhook test
   description: Тестовая автоматизация
@@ -156,13 +156,13 @@
   trigger:
   - payload: '1'
     platform: mqtt
-    topic: home/trigger/bathroom/switch/fan2
+    topic: home/trigger/bathroom/switch/fan
   condition: []
   action:
   - data_template:
       payload: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
         | int)*1000}}}'
-      topic: home/bathroom/switch/fan2
+      topic: home/bathroom/switch/fan
     service: mqtt.publish
 - id: '1577020078919'
   alias: turn_on_laundry_fan_trigger
@@ -170,13 +170,13 @@
   trigger:
   - payload: '1'
     platform: mqtt
-    topic: home/trigger/bathroom/switch/fan1
+    topic: home/trigger/bathroom/switch/laundry-fan
   condition: []
   action:
   - data_template:
       payload: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
         | int)*1000}}}'
-      topic: home/bathroom/switch/fan1
+      topic: home/bathroom/switch/laundry-fan
     service: mqtt.publish
 - id: '1578853794098'
   alias: turn_off_bathroom_fan_trigger
@@ -184,12 +184,12 @@
   trigger:
   - payload: '0'
     platform: mqtt
-    topic: home/trigger/bathroom/switch/fan2
+    topic: home/trigger/bathroom/switch/fan
   condition: []
   action:
   - data:
       payload: 0
-      topic: home/bathroom/switch/fan2
+      topic: home/bathroom/switch/fan
     service: mqtt.publish
 - id: '1578854936442'
   alias: turn_off_laundry_fan_trigger
@@ -197,12 +197,12 @@
   trigger:
   - payload: '0'
     platform: mqtt
-    topic: home/trigger/bathroom/switch/fan1
+    topic: home/trigger/bathroom/switch/laundry-fan
   condition: []
   action:
   - data:
       payload: 0
-      topic: home/bathroom/switch/fan1
+      topic: home/bathroom/switch/laundry-fan
     service: mqtt.publish
 - id: '1578855208958'
   alias: turn_off_autowatering_trigger

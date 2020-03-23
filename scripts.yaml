@@ -40,6 +40,19 @@ vacuum_hall:
       params:
         zone_ids:
         - hall
+vacuum_all_zones:
+  alias: vacuum_all_zones
+  sequence:
+  - service: vacuum.send_command
+    data:
+      entity_id: vacuum.rockrobo
+      command: zoned_cleanup
+      params:
+        zone_ids:
+        - guest room
+        - hall
+        - bathroom
+        - kitchen
 '1582710303820':
   alias: test
   sequence:
