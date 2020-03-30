@@ -85,10 +85,10 @@
                                     "entity": "light.bathroom_mirror"
                                 },
                                 {
-                                    "entity": "switch.31110200d8f15b07853e"
+                                    "entity": "light.livingroom_lamp_warm"
                                 },
                                 {
-                                    "entity": "switch.51015521d8f15b078555"
+                                    "entity": "light.livingroom_lamp_cold"
                                 }
                             ],
                             "title": "\u0421\u0432\u0435\u0442",
@@ -120,6 +120,7 @@
                                     "entity": "fan.bathroom_fan"
                                 }
                             ],
+                            "title": "\u0412\u044b\u0442\u044f\u0436\u043a\u0430",
                             "type": "entities"
                         }
                     ],
@@ -133,42 +134,47 @@
                     "badges": [],
                     "cards": [
                         {
-                            "entities": [
+                            "cards": [
                                 {
-                                    "entity": "vacuum.xiaomi_vacuum"
+                                    "entities": [
+                                        {
+                                            "entity": "vacuum.xiaomi_vacuum"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_all_zones"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_kitchen"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_guest_room"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_hall"
+                                        }
+                                    ],
+                                    "type": "entities"
                                 },
                                 {
-                                    "entity": "script.vacuum_all_zones"
-                                },
-                                {
-                                    "entity": "script.vacuum_kitchen"
-                                },
-                                {
-                                    "entity": "script.vacuum_guest_room"
-                                },
-                                {
-                                    "entity": "script.vacuum_hall"
+                                    "crop": {
+                                        "bottom": 10,
+                                        "left": 150,
+                                        "right": 0,
+                                        "top": 100
+                                    },
+                                    "entity": "sensor.xiaomi_map",
+                                    "icon_scale": 1,
+                                    "map_scale": 3,
+                                    "min_height": 300,
+                                    "rotate": 0,
+                                    "show_dock": true,
+                                    "show_path": true,
+                                    "show_vacuum": true,
+                                    "type": "custom:valetudo-map-card",
+                                    "vacuum_entity": "vacuum.xiaomi_vacuum"
                                 }
                             ],
-                            "type": "entities"
-                        },
-                        {
-                            "crop": {
-                                "bottom": 10,
-                                "left": 150,
-                                "right": 0,
-                                "top": 100
-                            },
-                            "entity": "sensor.xiaomi_map",
-                            "icon_scale": 1,
-                            "map_scale": 3,
-                            "min_height": 300,
-                            "rotate": 0,
-                            "show_dock": true,
-                            "show_path": true,
-                            "show_vacuum": true,
-                            "type": "custom:valetudo-map-card",
-                            "vacuum_entity": "vacuum.xiaomi_vacuum"
+                            "type": "vertical-stack"
                         }
                     ],
                     "icon": "mdi:robot-vacuum",
@@ -375,17 +381,6 @@
                 {
                     "badges": [],
                     "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.temperature"
-                                }
-                            ],
-                            "hours_to_show": 240,
-                            "refresh_interval": 0,
-                            "title": "\u0422\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
-                            "type": "history-graph"
-                        },
                         {
                             "entities": [
                                 {

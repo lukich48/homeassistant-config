@@ -7,8 +7,8 @@
       - switch.kitchen_plants
       - switch.kitchen_plants
       - switch.hall_warmfloor
-      - switch.51015521d8f15b078555
-      - switch.31110200d8f15b07853e
+      - light.livingroom_lamp_warm
+      - light.livingroom_lamp_cold
       - fan.laundry_fan
       - fan.bathroom_fan
       - vacuum.rockrobo
@@ -29,9 +29,9 @@
       room: 'Кухня'
     switch.hall_warmfloor:
       room: 'Ванная'
-    switch.51015521d8f15b078555:
+    light.livingroom_lamp_warm:
       room: 'Гостиная'
-    switch.31110200d8f15b07853e:
+    light.livingroom_lamp_cold:
       room: 'Гостиная'
     fan.laundry_fan:
       room: 'Прачечная'

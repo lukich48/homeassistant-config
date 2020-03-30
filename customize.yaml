@@ -16,10 +16,6 @@ group.all_scripts:
   hidden: false
   friendly_name: Scripts
   order: 2
-#device_tracker.ce011711d451ca0f05:
-#  friendly_name: Леша
-#device_tracker.iphone_polina:
-#  friendly_name: Полина
 person.lesha:
   friendly_name: Леша
   entity_picture: /local/lesha.jpg
@@ -98,4 +94,7 @@ zone.work_alesha:
   friendly_name: Work
 zone.work_polina:
   friendly_name: Work
-
+light.livingroom_lamp_warm:
+  friendly_name: Теплый свет в зале
+light.livingroom_lamp_cold:
+  friendly_name: Холодный свет в зале

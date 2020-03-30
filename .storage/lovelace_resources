@@ -3,7 +3,7 @@
         "items": [
             {
                 "id": "51f6a5c590b245d9a839e87b6c2d6f82",
-                "type": "js",
+                "type": "module",
                 "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js"
             },
             {
@@ -18,7 +18,7 @@
             },
             {
                 "id": "b27c8ba210d948e6a261d99910862135",
-                "type": "js",
+                "type": "module",
                 "url": "/hacsfiles/lovelace-valetudo-map-card/valetudo-map-card.js"
             },
             {

@@ -174,6 +174,21 @@ light:
     payload_on: 1
     payload_off: 0
     qos: 0  
+# свет в зале
+  - platform: mqtt
+    name: livingroom_lamp_warm
+    state_topic: "home/livingroom/lamp/warm/state"
+    command_topic: "home/livingroom/lamp/warm"
+    payload_on: 1
+    payload_off: 0
+    qos: 0  
+  - platform: mqtt
+    name: livingroom_lamp_cold
+    state_topic: "home/livingroom/lamp/cold/state"
+    command_topic: "home/livingroom/lamp/cold"
+    payload_on: 1
+    payload_off: 0
+    qos: 0  
 
 switch:
 # подсветка растений
@@ -255,10 +270,10 @@ recorder:
       - vacuum.rockrobo
       - sensor.time
 
-tuya:
-  username: !secret tuya_username
-  password: !secret tuya_password
-  country_code: 7
+# tuya:
+  # username: !secret tuya_username
+  # password: !secret tuya_password
+  # country_code: 7
 
 # logger:
   # default: error

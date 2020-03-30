@@ -554,7 +554,7 @@
                 "entity_id": "sensor.battery_level",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-60",
+                "original_icon": "mdi:battery-40",
                 "original_name": "SM-G9730 Battery Level",
                 "platform": "mobile_app",
                 "supported_features": 0,

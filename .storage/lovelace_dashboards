@@ -5,7 +5,7 @@
                 "id": "lovelace_test",
                 "mode": "storage",
                 "require_admin": true,
-                "show_in_sidebar": true,
+                "show_in_sidebar": false,
                 "title": "all-entities-dashboard",
                 "url_path": "lovelace-test"
             }
