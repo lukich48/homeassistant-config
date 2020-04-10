@@ -16,6 +16,8 @@
       - script.vacuum_guest_room
       - script.vacuum_hall
       - script.vacuum_all_zones
+      - sensor.temperature
+      - sensor.humidity
   entity_config:
     light.kitchen_worktop:
       room: 'Кухня'
@@ -48,3 +50,7 @@
       room: 'Коридор'  
     script.vacuum_all_zones:
       room: 'Гостиная'  
+    sensor.temperature:
+      room: 'Гостиная'
+    sensor.humidity:
+      room: 'Гостиная'

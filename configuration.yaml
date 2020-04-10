@@ -113,12 +113,14 @@ sensor:
   
   - platform: mqtt
     state_topic: 'home/livingroom/dht'
+    device_class: temperature
     name: temperature
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
     
   - platform: mqtt
     state_topic: 'home/livingroom/dht'
+    device_class: humidity
     name: humidity
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'

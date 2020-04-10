@@ -1,9 +1,6 @@
 {
     "data": {
         "config": {
-            "preload": [
-                "map"
-            ],
             "title": "Home",
             "views": [
                 {
@@ -410,11 +407,29 @@
                                     "entity": "device_tracker.sm_g9730"
                                 },
                                 {
-                                    "entity": "device_tracker.phone_alesha_snmp"
+                                    "entity": "device_tracker.phone_lesha_snmp"
                                 }
                             ],
                             "show_header_toggle": false,
                             "type": "entities"
+                        },
+                        {
+                            "card": {
+                                "default_zoom": 14,
+                                "hours_to_show": 24,
+                                "type": "map"
+                            },
+                            "filter": {
+                                "include": [
+                                    {
+                                        "domain": "person"
+                                    },
+                                    {
+                                        "domain": "zone"
+                                    }
+                                ]
+                            },
+                            "type": "custom:auto-entities"
                         }
                     ],
                     "path": "history",
