@@ -8,6 +8,24 @@
                 "show_in_sidebar": false,
                 "title": "all-entities-dashboard",
                 "url_path": "lovelace-test"
+            },
+            {
+                "icon": "mdi:map",
+                "id": "lovelace_location",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Location",
+                "url_path": "lovelace-location"
+            },
+            {
+                "icon": "mdi:floor-plan",
+                "id": "lovelace_plan",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Plan",
+                "url_path": "lovelace-plan"
             }
         ]
     },

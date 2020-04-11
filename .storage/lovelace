@@ -10,42 +10,6 @@
                         {
                             "cards": [
                                 {
-                                    "card": {
-                                        "default_zoom": 14,
-                                        "type": "map"
-                                    },
-                                    "filter": {
-                                        "include": [
-                                            {
-                                                "domain": "person"
-                                            },
-                                            {
-                                                "domain": "zone"
-                                            }
-                                        ]
-                                    },
-                                    "type": "custom:auto-entities"
-                                },
-                                {
-                                    "card": {
-                                        "type": "glance"
-                                    },
-                                    "filter": {
-                                        "include": [
-                                            {
-                                                "domain": "person"
-                                            }
-                                        ]
-                                    },
-                                    "id": "main-people",
-                                    "type": "custom:auto-entities"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        },
-                        {
-                            "cards": [
-                                {
                                     "entity": "sensor.humidity",
                                     "name": "\u0412\u043b\u0430\u0436\u043d\u043e\u0441\u0442\u044c",
                                     "severity": {
@@ -119,6 +83,20 @@
                             ],
                             "title": "\u0412\u044b\u0442\u044f\u0436\u043a\u0430",
                             "type": "entities"
+                        },
+                        {
+                            "card": {
+                                "type": "glance"
+                            },
+                            "filter": {
+                                "include": [
+                                    {
+                                        "domain": "person"
+                                    }
+                                ]
+                            },
+                            "id": "main-people",
+                            "type": "custom:auto-entities"
                         }
                     ],
                     "icon": "mdi:home",
@@ -199,89 +177,6 @@
                     "panel": false,
                     "theme": "dark-mode",
                     "title": "\u041f\u043e\u0433\u043e\u0434\u0430"
-                },
-                {
-                    "cards": [
-                        {
-                            "elements": [
-                                {
-                                    "entity": "light.kitchen_worktop",
-                                    "style": {
-                                        "left": "94%",
-                                        "top": "19.5%"
-                                    },
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "state-icon"
-                                },
-                                {
-                                    "entity": "light.kitchen_table",
-                                    "state_image": {
-                                        "off": "/local/lamp_off.png",
-                                        "on": "/local/lamp_on.png"
-                                    },
-                                    "style": {
-                                        "left": "57.5%",
-                                        "top": "17%",
-                                        "width": "5%"
-                                    },
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "image"
-                                },
-                                {
-                                    "entity": "light.bathroom_mirror",
-                                    "style": {
-                                        "left": "94%",
-                                        "top": "71.5%"
-                                    },
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "state-icon"
-                                },
-                                {
-                                    "entity": "switch.kitchen_plants",
-                                    "state_image": {
-                                        "off": "/local/led-light_off.png",
-                                        "on": "/local/led-light_on.png"
-                                    },
-                                    "style": {
-                                        "left": "54%",
-                                        "top": "10%",
-                                        "width": "6%"
-                                    },
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "image"
-                                },
-                                {
-                                    "entity": "switch.hall_warmfloor",
-                                    "state_image": {
-                                        "off": "/local/heater_off.png",
-                                        "on": "/local/heater_on.png"
-                                    },
-                                    "style": {
-                                        "left": "80%",
-                                        "top": "92%",
-                                        "width": "5%"
-                                    },
-                                    "tap_action": {
-                                        "action": "toggle"
-                                    },
-                                    "type": "image"
-                                }
-                            ],
-                            "image": "/local/home_plan_2d.jpg",
-                            "type": "picture-elements"
-                        }
-                    ],
-                    "icon": "mdi:floor-plan",
-                    "id": "plan",
-                    "title": "\u041f\u043b\u0430\u043d"
                 },
                 {
                     "background": "radial-gradient(crimson, skyblue)",
@@ -374,67 +269,6 @@
                     "panel": false,
                     "theme": "dark-mode",
                     "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438"
-                },
-                {
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "person.polina"
-                                },
-                                {
-                                    "entity": "device_tracker.google_maps_118419221494309494729"
-                                },
-                                {
-                                    "entity": "device_tracker.sm_g960f"
-                                },
-                                {
-                                    "entity": "device_tracker.phone_polina_snmp"
-                                }
-                            ],
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "person.lesha"
-                                },
-                                {
-                                    "entity": "device_tracker.google_maps_114601646161770081243"
-                                },
-                                {
-                                    "entity": "device_tracker.sm_g9730"
-                                },
-                                {
-                                    "entity": "device_tracker.phone_lesha_snmp"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "type": "entities"
-                        },
-                        {
-                            "card": {
-                                "default_zoom": 14,
-                                "hours_to_show": 24,
-                                "type": "map"
-                            },
-                            "filter": {
-                                "include": [
-                                    {
-                                        "domain": "person"
-                                    },
-                                    {
-                                        "domain": "zone"
-                                    }
-                                ]
-                            },
-                            "type": "custom:auto-entities"
-                        }
-                    ],
-                    "path": "history",
-                    "theme": "dark-mode",
-                    "title": "History"
                 }
             ]
         }

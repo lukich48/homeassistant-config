@@ -1,0 +1,96 @@
+{
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "default_zoom": 14,
+                            "entities": [
+                                {
+                                    "entity": "person.polina"
+                                },
+                                {
+                                    "entity": "person.lesha"
+                                },
+                                {
+                                    "entity": "zone.home"
+                                },
+                                {
+                                    "entity": "zone.work_alesha"
+                                },
+                                {
+                                    "entity": "zone.work_polina"
+                                }
+                            ],
+                            "hours_to_show": 12,
+                            "type": "map"
+                        }
+                    ],
+                    "panel": true,
+                    "title": "Map"
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "person.polina"
+                                },
+                                {
+                                    "entity": "device_tracker.google_maps_118419221494309494729"
+                                },
+                                {
+                                    "entity": "device_tracker.sm_g960f"
+                                },
+                                {
+                                    "entity": "device_tracker.phone_polina_snmp"
+                                }
+                            ],
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "person.lesha"
+                                },
+                                {
+                                    "entity": "device_tracker.google_maps_114601646161770081243"
+                                },
+                                {
+                                    "entity": "device_tracker.sm_g9730"
+                                },
+                                {
+                                    "entity": "device_tracker.phone_lesha_snmp"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.google_maps_114601646161770081243"
+                                },
+                                {
+                                    "entity": "device_tracker.sm_g9730"
+                                },
+                                {
+                                    "entity": "group.all_person"
+                                }
+                            ],
+                            "hours_to_show": 12,
+                            "type": "map"
+                        }
+                    ],
+                    "path": "details",
+                    "title": "Details"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_location",
+    "version": 1
+}

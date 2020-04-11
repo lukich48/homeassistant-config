@@ -1,0 +1,153 @@
+{
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "elements": [
+                                {
+                                    "entity": "light.kitchen_worktop",
+                                    "style": {
+                                        "left": "94%",
+                                        "top": "19.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.kitchen_table",
+                                    "state_image": {
+                                        "off": "/local/lamp_off.png",
+                                        "on": "/local/lamp_on.png"
+                                    },
+                                    "style": {
+                                        "left": "57.5%",
+                                        "top": "17%",
+                                        "width": "5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "light.bathroom_mirror",
+                                    "style": {
+                                        "left": "94%",
+                                        "top": "71.5%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "switch.kitchen_plants",
+                                    "state_image": {
+                                        "off": "/local/led-light_off.png",
+                                        "on": "/local/led-light_on.png"
+                                    },
+                                    "style": {
+                                        "left": "54%",
+                                        "top": "10%",
+                                        "width": "6%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "image"
+                                },
+                                {
+                                    "entity": "switch.hall_warmfloor",
+                                    "icon": "mdi:radiator",
+                                    "style": {
+                                        "left": "80%",
+                                        "top": "92%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "vacuum.xiaomi_vacuum",
+                                    "style": {
+                                        "left": "46.5%",
+                                        "top": "25.5%"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.hall_lamp",
+                                    "style": {
+                                        "left": "63%",
+                                        "top": "70%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "fan.bathroom_fan",
+                                    "style": {
+                                        "left": "83%",
+                                        "top": "72%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "fan.laundry_fan",
+                                    "style": {
+                                        "left": "83%",
+                                        "top": "64%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.livingroom_lamp_warm",
+                                    "style": {
+                                        "left": "25%",
+                                        "top": "50%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                },
+                                {
+                                    "entity": "light.livingroom_lamp_cold",
+                                    "style": {
+                                        "left": "32%",
+                                        "top": "50%"
+                                    },
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "type": "state-icon"
+                                }
+                            ],
+                            "image": "/local/home_plan_2d.jpg",
+                            "type": "picture-elements"
+                        }
+                    ],
+                    "panel": false,
+                    "path": "main",
+                    "title": "Main"
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_plan",
+    "version": 1
+}

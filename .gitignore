@@ -110,9 +110,7 @@ About
 /.storage/*
 
 
-!/.storage/lovelace
-!/.storage/lovelace_resources
-!/.storage/lovelace_dashboards
+!/.storage/lovelace*
 !/.storage/person
 !/.storage/core.entity_registry
 !/.storage/core.device_registry
