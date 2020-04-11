@@ -262,6 +262,25 @@
                             "show_header_toggle": false,
                             "title": "\u0412\u0435\u043d\u0442\u0438\u043b\u044f\u0442\u043e\u0440\u044b",
                             "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.nut_ups_status"
+                                },
+                                {
+                                    "entity": "sensor.nut_ups_battery_voltage"
+                                },
+                                {
+                                    "entity": "sensor.nut_ups_input_voltage"
+                                },
+                                {
+                                    "entity": "sensor.nut_ups_output_voltage"
+                                }
+                            ],
+                            "show_header_toggle": false,
+                            "title": "UPS",
+                            "type": "entities"
                         }
                     ],
                     "icon": "mdi:settings-outline",

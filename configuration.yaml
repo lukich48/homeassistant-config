@@ -131,7 +131,14 @@ sensor:
     name: xiaomi_map
     value_template: 'OK'
     scan_interval: 5
-    
+   
+  - platform: nut 
+    resources:
+      - battery.voltage
+      - input.voltage
+      - output.voltage
+      - ups.status.display
+      
   # - platform: filter
     # name: "filtered humidity"
     # entity_id: sensor.Humidity

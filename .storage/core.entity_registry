@@ -602,7 +602,7 @@
                 "entity_id": "sensor.battery_level_2",
                 "icon": null,
                 "name": null,
-                "original_icon": "mdi:battery-90",
+                "original_icon": "mdi:battery-charging-wireless",
                 "original_name": "SM-G960F Battery Level",
                 "platform": "mobile_app",
                 "supported_features": 0,
