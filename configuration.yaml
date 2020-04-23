@@ -55,9 +55,9 @@ http:
 # updater:
 
 # Discover some devices automatically
-discovery:
-  ignore:
-  - igd
+# discovery:
+  # ignore:
+  # - igd
 
 # Allows you to issue voice commands from the frontend in enabled browsers
 conversation:
@@ -131,13 +131,6 @@ sensor:
     name: xiaomi_map
     value_template: 'OK'
     scan_interval: 5
-   
-  - platform: nut 
-    resources:
-      - battery.voltage
-      - input.voltage
-      - output.voltage
-      - ups.status.display
       
   # - platform: filter
     # name: "filtered humidity"
@@ -198,6 +191,11 @@ light:
     payload_on: 1
     payload_off: 0
     qos: 0  
+  - platform: group
+    name: livingroom lamp
+    entities:
+      - light.livingroom_lamp_warm
+      - light.livingroom_lamp_cold
 
 switch:
 # подсветка растений
@@ -219,33 +217,37 @@ switch:
     qos: 0
     retain: true
 #автополив
-  - platform: mqtt
+  - platform: mqtt_template
     name: autowatering  
     state_topic: "home/kitchen/switch2/waterpump/state"
-    command_topic: "home/trigger/kitchen/switch2/waterpump"
-    payload_on: 1
+    command_topic: "home/kitchen/switch2/waterpump"
+    payload_template_on: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state
+        | int)*1000}}}'
+    payload_off: 0
+    state_on: 1
+    state_off: 0 
+ 
+ # вытяжка
+  - platform: mqtt_template
+    name: laundry_fan
+    state_topic: "home/bathroom/switch/laundry-fan/state"
+    command_topic: "home/bathroom/switch/laundry-fan"
+    payload_template_on: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
+        | int)*1000}}}'
     payload_off: 0
     state_on: 1
     state_off: 0
-    qos: 0  
     
-fan:
-# вытяжка в прачечной
-  - platform: mqtt
-    name: laundry_fan
-    state_topic: "home/bathroom/switch/laundry-fan/state"
-    command_topic: "home/trigger/bathroom/switch/laundry-fan"
-    payload_on: 1
-    payload_off: 0
-    qos: 0    
-# вытяжка в ванной
-  - platform: mqtt
+  - platform: mqtt_template
     name: bathroom_fan
     state_topic: "home/bathroom/switch/fan/state"
-    command_topic: "home/trigger/bathroom/switch/fan"
-    payload_on: 1
+    command_topic: "home/bathroom/switch/fan"
+    payload_template_on: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
+            | int)*1000}}}'
     payload_off: 0
-    qos: 0      
+    state_on: 1
+    state_off: 0     
+     
 
 vacuum:
   - platform: xiaomi_miio

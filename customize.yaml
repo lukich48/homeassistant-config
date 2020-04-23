@@ -36,10 +36,13 @@ switch.hall_warmfloor:
   friendly_name: Теплый пол
 switch.autowatering:
   friendly_name: Автополив
-fan.laundry_fan:
+  icon: mdi:water-pump
+switch.laundry_fan:
   friendly_name: Вытяжка в прачечной
-fan.bathroom_fan:
+  icon: mdi:fan
+switch.bathroom_fan:
   friendly_name: Вытяжка в ванной
+  icon: mdi:fan
 vacuum.xiaomi_vacuum:
   friendly_name: пылесос
 automation.turn_on_light_plants:
@@ -98,3 +101,5 @@ light.livingroom_lamp_warm:
   friendly_name: Теплый свет в зале
 light.livingroom_lamp_cold:
   friendly_name: Холодный свет в зале
+light.livingroom_lamp:
+  friendly_name: Люстра в зале

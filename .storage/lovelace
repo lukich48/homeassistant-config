@@ -62,11 +62,6 @@
                                 },
                                 {
                                     "entity": "switch.hall_warmfloor"
-                                },
-                                {
-                                    "entity": "switch.autowatering",
-                                    "icon": "mdi:shower-head",
-                                    "name": "\u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432"
                                 }
                             ],
                             "title": "\u0412\u044b\u043a\u043b\u044e\u0447\u0430\u0442\u0435\u043b\u0438",
@@ -75,10 +70,27 @@
                         {
                             "entities": [
                                 {
-                                    "entity": "fan.laundry_fan"
+                                    "entity": "input_datetime.last_autowatering",
+                                    "name": "\u0412\u0440\u0435\u043c\u044f \u0437\u0430\u043f\u0443\u0441\u043a\u0430"
+                                }
+                            ],
+                            "footer": {
+                                "entities": [
+                                    "switch.autowatering"
+                                ],
+                                "type": "buttons"
+                            },
+                            "show_header_toggle": false,
+                            "title": "\u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432",
+                            "type": "entities"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "switch.bathroom_fan"
                                 },
                                 {
-                                    "entity": "fan.bathroom_fan"
+                                    "entity": "switch.laundry_fan"
                                 }
                             ],
                             "title": "\u0412\u044b\u0442\u044f\u0436\u043a\u0430",

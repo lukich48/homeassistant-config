@@ -58,7 +58,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.23.2",
+                "sw_version": "0.24.1",
                 "via_device_id": null
             },
             {
@@ -99,6 +99,26 @@
                 "name": "SM-G960F",
                 "name_by_user": null,
                 "sw_version": "28",
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "00d5722386564f71a162bedb023873ec"
+                ],
+                "connections": [],
+                "id": "fba06c1486c941e6895e1b7dff718479",
+                "identifiers": [
+                    [
+                        "nut",
+                        "00d5722386564f71a162bedb023873ec"
+                    ]
+                ],
+                "manufacturer": "CPS",
+                "model": "BS650E",
+                "name": "NUT UPS",
+                "name_by_user": null,
+                "sw_version": null,
                 "via_device_id": null
             }
         ]

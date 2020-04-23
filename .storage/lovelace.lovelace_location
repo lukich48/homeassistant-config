@@ -6,6 +6,7 @@
                     "badges": [],
                     "cards": [
                         {
+                            "dark_mode": false,
                             "default_zoom": 14,
                             "entities": [
                                 {

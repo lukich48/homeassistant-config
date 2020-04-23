@@ -29,22 +29,6 @@
   - condition: template
     value_template: '{{ (as_timestamp(now()) - as_timestamp(states.input_datetime.last_autowatering.state))
       /3600 > (states.input_number.autowatering_interval.state | int)}}'
-- id: turn_on_autowatering_trigger
-  alias: turn_on_autowatering_trigger
-  trigger:
-    platform: mqtt
-    topic: home/trigger/kitchen/switch2/waterpump
-  action:
-  - service: mqtt.publish
-    data_template:
-      topic: home/kitchen/switch2/waterpump
-      payload: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state
-        | int)*1000}}}'
-  - service: input_datetime.set_datetime
-    data_template:
-      entity_id: input_datetime.last_autowatering
-      time: '{{ (as_timestamp(now()) | timestamp_custom("%H:%M:%S", true)) }}'
-      date: '{{ (as_timestamp(now()) | timestamp_custom("%Y-%m-%d", true)) }}'
 - id: turn_on_warm_flow_morning
   alias: turn_on_warm_flow_morning
   action:
@@ -150,73 +134,6 @@
         '
       name: started
     service: logbook.log
-- id: '1577019676885'
-  alias: turn_on_bathroom_fan_trigger
-  description: ''
-  trigger:
-  - payload: '1'
-    platform: mqtt
-    topic: home/trigger/bathroom/switch/fan
-  condition: []
-  action:
-  - data_template:
-      payload: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
-        | int)*1000}}}'
-      topic: home/bathroom/switch/fan
-    service: mqtt.publish
-- id: '1577020078919'
-  alias: turn_on_laundry_fan_trigger
-  description: ''
-  trigger:
-  - payload: '1'
-    platform: mqtt
-    topic: home/trigger/bathroom/switch/laundry-fan
-  condition: []
-  action:
-  - data_template:
-      payload: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
-        | int)*1000}}}'
-      topic: home/bathroom/switch/laundry-fan
-    service: mqtt.publish
-- id: '1578853794098'
-  alias: turn_off_bathroom_fan_trigger
-  description: ''
-  trigger:
-  - payload: '0'
-    platform: mqtt
-    topic: home/trigger/bathroom/switch/fan
-  condition: []
-  action:
-  - data:
-      payload: 0
-      topic: home/bathroom/switch/fan
-    service: mqtt.publish
-- id: '1578854936442'
-  alias: turn_off_laundry_fan_trigger
-  description: ''
-  trigger:
-  - payload: '0'
-    platform: mqtt
-    topic: home/trigger/bathroom/switch/laundry-fan
-  condition: []
-  action:
-  - data:
-      payload: 0
-      topic: home/bathroom/switch/laundry-fan
-    service: mqtt.publish
-- id: '1578855208958'
-  alias: turn_off_autowatering_trigger
-  description: ''
-  trigger:
-  - payload: '0'
-    platform: mqtt
-    topic: home/trigger/kitchen/switch2/waterpump
-  condition: []
-  action:
-  - data:
-      payload: 0
-      topic: home/kitchen/switch2/waterpump
-    service: mqtt.publish
 - id: '1581284354574'
   alias: Test
   description: Test

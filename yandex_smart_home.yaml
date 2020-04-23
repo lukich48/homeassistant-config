@@ -4,13 +4,14 @@
       - light.kitchen_table
       - light.bathroom_mirror
       - light.hall_lamp
+      - light.livingroom_lamp_warm
+      - light.livingroom_lamp_cold
+      # - light.livingroom_lamp
       - switch.kitchen_plants
       - switch.kitchen_plants
       - switch.hall_warmfloor
-      - light.livingroom_lamp_warm
-      - light.livingroom_lamp_cold
-      - fan.laundry_fan
-      - fan.bathroom_fan
+      - switch.laundry_fan
+      - switch.bathroom_fan
       - vacuum.rockrobo
       - script.vacuum_kitchen
       - script.vacuum_guest_room
@@ -32,25 +33,27 @@
     switch.hall_warmfloor:
       room: 'Ванная'
     light.livingroom_lamp_warm:
-      room: 'Гостиная'
+      room: 'Зал'
     light.livingroom_lamp_cold:
-      room: 'Гостиная'
-    fan.laundry_fan:
+      room: 'Зал'
+    # light.livingroom_lamp:
+      # room: Зал
+    switch.laundry_fan:
       room: 'Прачечная'
-    fan.bathroom_fan:
+    switch.bathroom_fan:
       room: 'Ванная'
     vacuum.rockrobo:
-      room: 'Гостиная'
+      room: 'Зал'
       name: 'Пылесос'
     script.vacuum_kitchen:
       room: 'Кухня'
     script.vacuum_guest_room:
-      room: 'Гостиная'  
+      room: 'Зал'  
     script.vacuum_hall:
       room: 'Коридор'  
     script.vacuum_all_zones:
-      room: 'Гостиная'  
+      room: 'Зал'  
     sensor.temperature:
-      room: 'Гостиная'
+      room: 'Зал'
     sensor.humidity:
-      room: 'Гостиная'
+      room: 'Зал'
