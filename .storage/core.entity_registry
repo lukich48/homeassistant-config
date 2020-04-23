@@ -624,6 +624,22 @@
                 "supported_features": 0,
                 "unique_id": "00d5722386564f71a162bedb023873ec_ups.status.display",
                 "unit_of_measurement": ""
+            },
+            {
+                "capabilities": null,
+                "config_entry_id": null,
+                "device_class": null,
+                "device_id": null,
+                "disabled_by": null,
+                "entity_id": "automation.turn_on_autowatering_trigger",
+                "icon": null,
+                "name": null,
+                "original_icon": null,
+                "original_name": "turn_on_autowatering_trigger",
+                "platform": "automation",
+                "supported_features": 0,
+                "unique_id": "turn_on_autowatering_trigger",
+                "unit_of_measurement": null
             }
         ]
     },

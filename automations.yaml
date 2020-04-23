@@ -29,6 +29,17 @@
   - condition: template
     value_template: '{{ (as_timestamp(now()) - as_timestamp(states.input_datetime.last_autowatering.state))
       /3600 > (states.input_number.autowatering_interval.state | int)}}'
+- id: turn_on_autowatering_trigger
+  alias: turn_on_autowatering_trigger
+  trigger:
+    platform: mqtt
+    topic: home/kitchen/switch2/waterpump
+  action:
+  - service: input_datetime.set_datetime
+    data_template:
+      entity_id: input_datetime.last_autowatering
+      time: '{{ (as_timestamp(now()) | timestamp_custom("%H:%M:%S", true)) }}'
+      date: '{{ (as_timestamp(now()) | timestamp_custom("%Y-%m-%d", true)) }}'
 - id: turn_on_warm_flow_morning
   alias: turn_on_warm_flow_morning
   action:
