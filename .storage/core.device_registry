@@ -7,6 +7,7 @@
                     "07b2831341bd4976a1e5fe148daea50d"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "d9dfe472016d47bbb0dd2e310edfd392",
                 "identifiers": [
                     [
@@ -27,6 +28,7 @@
                     "07b2831341bd4976a1e5fe148daea50d"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "7317688c8ce64f52a212d3fc0055131d",
                 "identifiers": [
                     [
@@ -47,6 +49,7 @@
                     "3a6255aac0fd4183a5b9925d21487f38"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "e92c54204cd24fb6bd7a1d61ef5787de",
                 "identifiers": [
                     [
@@ -58,7 +61,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.5",
+                "sw_version": "1.0.3",
                 "via_device_id": null
             },
             {
@@ -67,6 +70,7 @@
                     "800a919323304fd1954922b5bbe8bc17"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "63303004d06a467690a9a3167a26f8db",
                 "identifiers": [
                     [
@@ -87,6 +91,7 @@
                     "8e012d2e9f8142afb9e2883d088d4c6c"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "8f9644582abd46818eb88e8f6ca6815b",
                 "identifiers": [
                     [
@@ -107,6 +112,7 @@
                     "00d5722386564f71a162bedb023873ec"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "fba06c1486c941e6895e1b7dff718479",
                 "identifiers": [
                     [
@@ -127,6 +133,7 @@
                     "b693a904588d465385469d478ac731b7"
                 ],
                 "connections": [],
+                "entry_type": null,
                 "id": "e62fe185d82c4efe8d46dc45fdc79a8c",
                 "identifiers": [
                     [

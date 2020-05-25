@@ -14,7 +14,7 @@
             {
                 "id": "c6e5901e72964107b1916065bcd2dcaf",
                 "type": "module",
-                "url": "/local/custom_ui/lovelace-valetudo-map-card-test/valetudo-map-card-test.js"
+                "url": "/hacsfiles/lovelace-valetudo-map-card/valetudo-map-card.js"
             },
             {
                 "id": "5c3c5c8f7e6841e4af3738596c9b5324",
