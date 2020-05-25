@@ -2,14 +2,6 @@
     "data": {
         "items": [
             {
-                "id": "lovelace_test",
-                "mode": "storage",
-                "require_admin": true,
-                "show_in_sidebar": false,
-                "title": "all-entities-dashboard",
-                "url_path": "lovelace-test"
-            },
-            {
                 "icon": "mdi:map",
                 "id": "lovelace_location",
                 "mode": "storage",
@@ -26,6 +18,14 @@
                 "show_in_sidebar": true,
                 "title": "Plan",
                 "url_path": "lovelace-plan"
+            },
+            {
+                "id": "lovelace_test",
+                "mode": "storage",
+                "require_admin": false,
+                "show_in_sidebar": false,
+                "title": "test",
+                "url_path": "lovelace-test"
             }
         ]
     },

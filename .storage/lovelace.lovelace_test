@@ -1,0 +1,87 @@
+{
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.bathroom_humidity",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "\u0412\u043b\u0430\u0436\u043d\u043e\u0441\u0442\u044c",
+                                    "severity": {
+                                        "green": 40,
+                                        "red": 0,
+                                        "yellow": 30
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.bathroom_temperature",
+                                    "max": 50,
+                                    "name": "\u0422\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
+                                    "severity": {
+                                        "green": 20,
+                                        "normal": 0,
+                                        "red": 30,
+                                        "yellow": 25
+                                    },
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "cards": [
+                                {
+                                    "entity": "sensor.humidity",
+                                    "max": 100,
+                                    "min": 0,
+                                    "name": "\u0412\u043b\u0430\u0436\u043d\u043e\u0441\u0442\u044c",
+                                    "severity": {
+                                        "green": 40,
+                                        "red": 0,
+                                        "yellow": 30
+                                    },
+                                    "type": "gauge"
+                                },
+                                {
+                                    "entity": "sensor.temperature",
+                                    "max": 50,
+                                    "name": "\u0422\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
+                                    "severity": {
+                                        "green": 20,
+                                        "normal": 0,
+                                        "red": 30,
+                                        "yellow": 25
+                                    },
+                                    "type": "gauge"
+                                }
+                            ],
+                            "type": "horizontal-stack"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "sensor.humidity"
+                                },
+                                {
+                                    "entity": "sensor.bathroom_humidity"
+                                }
+                            ],
+                            "hours_to_show": 1,
+                            "refresh_interval": 0,
+                            "type": "history-graph"
+                        }
+                    ],
+                    "panel": false
+                }
+            ]
+        }
+    },
+    "key": "lovelace.lovelace_test",
+    "version": 1
+}

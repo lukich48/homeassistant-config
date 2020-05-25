@@ -147,7 +147,7 @@
                                         "bottom": 10,
                                         "left": 150,
                                         "right": 0,
-                                        "top": 100
+                                        "top": 150
                                     },
                                     "entity": "sensor.xiaomi_map",
                                     "icon_scale": 1,
@@ -157,6 +157,7 @@
                                     "show_dock": true,
                                     "show_path": true,
                                     "show_vacuum": true,
+                                    "title": "",
                                     "type": "custom:valetudo-map-card",
                                     "vacuum_entity": "vacuum.xiaomi_vacuum"
                                 }

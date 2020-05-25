@@ -9,15 +9,15 @@
             {
                 "id": "06748692f1ec49f3b9d7c174373a7260",
                 "type": "module",
-                "url": "/local/custom_ui/lovelace-weather-card-chart/custom-weather-card-chart.js?v=0.2.4"
+                "url": "/local/custom_ui/lovelace-weather-card-chart/weather-card-chart.js?v=0.2.4"
             },
             {
-                "id": "16dc23bc04694aa290225680ce74407c",
+                "id": "c6e5901e72964107b1916065bcd2dcaf",
                 "type": "module",
-                "url": "/local/custom_ui/config-template-card/config-template-card.js"
+                "url": "/local/custom_ui/lovelace-valetudo-map-card-test/valetudo-map-card-test.js"
             },
             {
-                "id": "b27c8ba210d948e6a261d99910862135",
+                "id": "5c3c5c8f7e6841e4af3738596c9b5324",
                 "type": "module",
                 "url": "/hacsfiles/lovelace-valetudo-map-card/valetudo-map-card.js"
             }

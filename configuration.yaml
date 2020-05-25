@@ -124,6 +124,20 @@ sensor:
     name: humidity
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
+    
+  - platform: mqtt
+    state_topic: 'home/bathroom/switch'
+    device_class: temperature
+    name: bathroom_temperature
+    unit_of_measurement: '°C'
+    value_template: '{{ value_json.temperature }}'
+    
+  - platform: mqtt
+    state_topic: 'home/bathroom/switch'
+    device_class: humidity
+    name: bathroom_humidity
+    unit_of_measurement: '%'
+    value_template: '{{ value_json.humidity }}'
 
   - platform: mqtt
     state_topic: "valetudo/rockrobo/state"
@@ -252,7 +266,7 @@ switch:
 vacuum:
   - platform: xiaomi_miio
     host: 192.168.88.12
-    token: 7850526464756e5847514a6b414c346b
+    token: 745841624b3277734645306b45665058
     name: xiaomi_vacuum
 
 
@@ -298,6 +312,8 @@ google_assistant:
   # api_key: !secret google_assistant_api_key
 
 yandex_smart_home: !include yandex_smart_home.yaml   
+
+yandex_dialogs:
     
     
     

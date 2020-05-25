@@ -58,7 +58,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "0.24.1",
+                "sw_version": "0.24.5",
                 "via_device_id": null
             },
             {
@@ -116,7 +116,27 @@
                 ],
                 "manufacturer": "CPS",
                 "model": "BS650E",
-                "name": "NUT UPS",
+                "name": "Ups",
+                "name_by_user": null,
+                "sw_version": null,
+                "via_device_id": null
+            },
+            {
+                "area_id": null,
+                "config_entries": [
+                    "b693a904588d465385469d478ac731b7"
+                ],
+                "connections": [],
+                "id": "e62fe185d82c4efe8d46dc45fdc79a8c",
+                "identifiers": [
+                    [
+                        "mqtt",
+                        "rockrobo"
+                    ]
+                ],
+                "manufacturer": "Beijing Roborock Technology Co., Ltd.",
+                "model": "Xiaomi Mi SDJQR02RR",
+                "name": "rockrobo",
                 "name_by_user": null,
                 "sw_version": null,
                 "via_device_id": null

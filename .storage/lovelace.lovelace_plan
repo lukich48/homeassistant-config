@@ -93,7 +93,7 @@
                                     "type": "state-icon"
                                 },
                                 {
-                                    "entity": "fan.bathroom_fan",
+                                    "entity": "switch.bathroom_fan",
                                     "style": {
                                         "left": "83%",
                                         "top": "72%"
@@ -104,7 +104,7 @@
                                     "type": "state-icon"
                                 },
                                 {
-                                    "entity": "fan.laundry_fan",
+                                    "entity": "switch.laundry_fan",
                                     "style": {
                                         "left": "83%",
                                         "top": "64%"

@@ -23,13 +23,13 @@ vacuum_kitchen:
 vacuum_guest_room:
   alias: vacuum_guest_room
   sequence:
-  - service: vacuum.send_command
-    data:
-      entity_id: vacuum.rockrobo
+  - data:
       command: zoned_cleanup
+      entity_id: vacuum.rockrobo
       params:
         zone_ids:
-        - guest room
+        - livingroom
+    service: vacuum.send_command
 vacuum_hall:
   alias: vacuum_hall
   sequence:
@@ -43,16 +43,16 @@ vacuum_hall:
 vacuum_all_zones:
   alias: vacuum_all_zones
   sequence:
-  - service: vacuum.send_command
-    data:
-      entity_id: vacuum.rockrobo
+  - data:
       command: zoned_cleanup
+      entity_id: vacuum.rockrobo
       params:
         zone_ids:
-        - guest room
+        - livingroom
         - hall
         - bathroom
         - kitchen
+    service: vacuum.send_command
 '1582710303820':
   alias: test
   sequence:
