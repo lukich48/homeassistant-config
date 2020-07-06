@@ -157,3 +157,42 @@
     state: not_home
   action:
   - delay: '1'
+- id: bathroom_fan
+  alias: Вытяжка в ванной
+  description: Включать автоматическую вентиляцию
+  trigger:
+  - entity_id: sensor.bathroom_humidity
+    platform: state
+  condition:
+  - condition: template
+    value_template: '{{states.sensor.bathroom_humidity.state | int >= states.sensor.humidity.state
+      | int + 10}}'
+  - condition: state
+    entity_id: switch.bathroom_fan
+    state: 'off'
+  - condition: template
+    value_template: '{{(now() - states.sensor.humidity.last_changed).total_seconds()
+      < 180}}'
+  - condition: not
+    conditions:
+    - condition: state
+      entity_id: timer.stop_fan
+      state: active
+  action:
+  - data:
+      payload: '{"action":"hold","duration": 300000}'
+      topic: home/bathroom/switch/fan
+    service: mqtt.publish
+- id: '1593975121400'
+  alias: bathroom_fan_trigger
+  description: Блокировать вытяжку в ванной
+  trigger:
+  - payload: '0'
+    platform: mqtt
+    topic: home/bathroom/switch/fan/state/manual
+  condition: []
+  action:
+  - data:
+      duration: 00:10:00
+    entity_id: timer.stop_fan
+    service: timer.start

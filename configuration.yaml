@@ -112,28 +112,28 @@ sensor:
   - platform: yr
   
   - platform: mqtt
-    state_topic: 'home/livingroom/dht'
+    state_topic: 'home/hall/dht'
     device_class: temperature
     name: temperature
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
     
   - platform: mqtt
-    state_topic: 'home/livingroom/dht'
+    state_topic: 'home/hall/dht'
     device_class: humidity
     name: humidity
     unit_of_measurement: '%'
     value_template: '{{ value_json.humidity }}'
     
   - platform: mqtt
-    state_topic: 'home/bathroom/switch'
+    state_topic: 'home/bathroom/dht'
     device_class: temperature
     name: bathroom_temperature
     unit_of_measurement: '°C'
     value_template: '{{ value_json.temperature }}'
     
   - platform: mqtt
-    state_topic: 'home/bathroom/switch'
+    state_topic: 'home/bathroom/dht'
     device_class: humidity
     name: bathroom_humidity
     unit_of_measurement: '%'
@@ -144,7 +144,7 @@ sensor:
     json_attributes_topic: "valetudo/rockrobo/map_data"
     name: xiaomi_map
     value_template: 'OK'
-    scan_interval: 5
+    scan_interval: 5        
       
   # - platform: filter
     # name: "filtered humidity"
@@ -155,7 +155,7 @@ sensor:
         # radius: 4.0
       # - filter: lowpass
         # time_constant: 10
-        # precision: 2    
+        # precision: 2         
 
 light:
 # подсветка кухни
@@ -295,6 +295,10 @@ recorder:
       - vacuum.rockrobo
       - sensor.time
 
+timer:
+  stop_fan:
+    duration: '00:10:00'
+    
 # tuya:
   # username: !secret tuya_username
   # password: !secret tuya_password

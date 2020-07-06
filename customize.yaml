@@ -85,14 +85,10 @@ script.vacuum_hall:
 script.vacuum_all_zones:
   friendly_name: Убрать в квартире
   icon: mdi:robot-vacuum
-group.humidity:
-  friendly_name: Влажность
-group.temperature:
-  friendly_name: Температура
 sensor.humidity:
-  friendly_name: Влажность зал
+  friendly_name: Влажность в квартире
 sensor.temperature:
-  friendly_name: Температура зал
+  friendly_name: Температура в квартире
 zone.work_alesha:
   friendly_name: Work
 zone.work_polina:
@@ -103,3 +99,5 @@ light.livingroom_lamp_cold:
   friendly_name: Холодный свет в зале
 light.livingroom_lamp:
   friendly_name: Люстра в зале
+automation.bathroom_fan:
+  friendly_name: Автовытяжка в ванной

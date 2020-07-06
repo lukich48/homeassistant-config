@@ -2,11 +2,6 @@
   light_plants:
     - switch.kitchen_plants
 
-  humidity:
-    - sensor.humidity
-    
-  temperature:
-    - sensor.temperature
     
   all_person:
     - person.polina

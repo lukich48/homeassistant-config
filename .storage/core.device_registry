@@ -1,5 +1,6 @@
 {
     "data": {
+        "deleted_devices": [],
         "devices": [
             {
                 "area_id": null,
@@ -61,7 +62,7 @@
                 "model": "",
                 "name": "HACS",
                 "name_by_user": null,
-                "sw_version": "1.0.3",
+                "sw_version": "1.1.2",
                 "via_device_id": null
             },
             {
