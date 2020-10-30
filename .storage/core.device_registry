@@ -1,15 +1,13 @@
 {
+    "version": 1,
+    "key": "core.device_registry",
     "data": {
-        "deleted_devices": [],
         "devices": [
             {
-                "area_id": null,
                 "config_entries": [
                     "07b2831341bd4976a1e5fe148daea50d"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "d9dfe472016d47bbb0dd2e310edfd392",
                 "identifiers": [
                     [
                         "gpslogger",
@@ -19,18 +17,18 @@
                 "manufacturer": null,
                 "model": null,
                 "name": "phone_polina",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "d9dfe472016d47bbb0dd2e310edfd392",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "07b2831341bd4976a1e5fe148daea50d"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "7317688c8ce64f52a212d3fc0055131d",
                 "identifiers": [
                     [
                         "gpslogger",
@@ -40,18 +38,18 @@
                 "manufacturer": null,
                 "model": null,
                 "name": "phone_alesha",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "7317688c8ce64f52a212d3fc0055131d",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "3a6255aac0fd4183a5b9925d21487f38"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "e92c54204cd24fb6bd7a1d61ef5787de",
                 "identifiers": [
                     [
                         "hacs",
@@ -61,18 +59,18 @@
                 "manufacturer": "hacs.xyz",
                 "model": "",
                 "name": "HACS",
-                "name_by_user": null,
-                "sw_version": "1.1.2",
-                "via_device_id": null
+                "sw_version": "1.6.1",
+                "entry_type": "service",
+                "id": "e92c54204cd24fb6bd7a1d61ef5787de",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "800a919323304fd1954922b5bbe8bc17"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "63303004d06a467690a9a3167a26f8db",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -82,18 +80,18 @@
                 "manufacturer": "samsung",
                 "model": "SM-G9730",
                 "name": "SM-G9730",
-                "name_by_user": null,
                 "sw_version": "29",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "63303004d06a467690a9a3167a26f8db",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "8e012d2e9f8142afb9e2883d088d4c6c"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "8f9644582abd46818eb88e8f6ca6815b",
                 "identifiers": [
                     [
                         "mobile_app",
@@ -103,18 +101,18 @@
                 "manufacturer": "samsung",
                 "model": "SM-G960F",
                 "name": "SM-G960F",
-                "name_by_user": null,
                 "sw_version": "28",
-                "via_device_id": null
+                "entry_type": null,
+                "id": "8f9644582abd46818eb88e8f6ca6815b",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "00d5722386564f71a162bedb023873ec"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "fba06c1486c941e6895e1b7dff718479",
                 "identifiers": [
                     [
                         "nut",
@@ -124,18 +122,18 @@
                 "manufacturer": "CPS",
                 "model": "BS650E",
                 "name": "Ups",
-                "name_by_user": null,
                 "sw_version": null,
-                "via_device_id": null
+                "entry_type": null,
+                "id": "fba06c1486c941e6895e1b7dff718479",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             },
             {
-                "area_id": null,
                 "config_entries": [
                     "b693a904588d465385469d478ac731b7"
                 ],
                 "connections": [],
-                "entry_type": null,
-                "id": "e62fe185d82c4efe8d46dc45fdc79a8c",
                 "identifiers": [
                     [
                         "mqtt",
@@ -145,12 +143,14 @@
                 "manufacturer": "Beijing Roborock Technology Co., Ltd.",
                 "model": "Xiaomi Mi SDJQR02RR",
                 "name": "rockrobo",
-                "name_by_user": null,
-                "sw_version": null,
-                "via_device_id": null
+                "sw_version": "0.6.1",
+                "entry_type": null,
+                "id": "e62fe185d82c4efe8d46dc45fdc79a8c",
+                "via_device_id": null,
+                "area_id": null,
+                "name_by_user": null
             }
-        ]
-    },
-    "key": "core.device_registry",
-    "version": 1
+        ],
+        "deleted_devices": []
+    }
 }

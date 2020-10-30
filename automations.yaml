@@ -166,7 +166,7 @@
   condition:
   - condition: template
     value_template: '{{states.sensor.bathroom_humidity.state | int >= states.sensor.humidity.state
-      | int + 10}}'
+      | int + 12}}'
   - condition: state
     entity_id: switch.bathroom_fan
     state: 'off'
@@ -180,9 +180,10 @@
       state: active
   action:
   - data:
-      payload: '{"action":"hold","duration": 300000}'
+      payload: '{"action":"hold","duration": 370000}'
       topic: home/bathroom/switch/fan
     service: mqtt.publish
+  mode: single
 - id: '1593975121400'
   alias: bathroom_fan_trigger
   description: Блокировать вытяжку в ванной

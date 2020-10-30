@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_test",
     "data": {
         "config": {
             "views": [
@@ -78,10 +80,37 @@
                         }
                     ],
                     "panel": false
+                },
+                {
+                    "badges": [],
+                    "cards": [
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.google_maps_118419221494309494729"
+                                },
+                                {
+                                    "entity": "device_tracker.sm_g960f"
+                                }
+                            ],
+                            "hours_to_show": 12,
+                            "type": "map"
+                        },
+                        {
+                            "entities": [
+                                {
+                                    "entity": "device_tracker.sm_g9730"
+                                },
+                                {
+                                    "entity": "device_tracker.google_maps_114601646161770081243"
+                                }
+                            ],
+                            "hours_to_show": 12,
+                            "type": "map"
+                        }
+                    ]
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_test",
-    "version": 1
+    }
 }

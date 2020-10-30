@@ -19,6 +19,7 @@
       - script.vacuum_all_zones
       - sensor.temperature
       - sensor.humidity
+      - fan.humidifier
   entity_config:
     light.kitchen_worktop:
       room: 'Кухня'
@@ -56,4 +57,6 @@
     sensor.temperature:
       room: 'Зал'
     sensor.humidity:
+      room: 'Зал'
+    fan.humidifier:
       room: 'Зал'

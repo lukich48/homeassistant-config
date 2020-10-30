@@ -101,3 +101,5 @@ light.livingroom_lamp:
   friendly_name: Люстра в зале
 automation.bathroom_fan:
   friendly_name: Автовытяжка в ванной
+fan.humidifier:
+  friendly_name: Увлажнитель

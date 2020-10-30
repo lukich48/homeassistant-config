@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace_resources",
     "data": {
         "items": [
             {
@@ -20,9 +22,17 @@
                 "id": "5c3c5c8f7e6841e4af3738596c9b5324",
                 "type": "module",
                 "url": "/hacsfiles/lovelace-valetudo-map-card/valetudo-map-card.js"
+            },
+            {
+                "url": "/hacsfiles/secondaryinfo-entity-row/secondaryinfo-entity-row.js",
+                "type": "module",
+                "id": "e0fe0ff67e6e4bc29358d8bbe7801fec"
+            },
+            {
+                "url": "/hacsfiles/lovelace-card-tools/card-tools.js",
+                "type": "module",
+                "id": "fa35085a246c4adbab3f9618db35df52"
             }
         ]
-    },
-    "key": "lovelace_resources",
-    "version": 1
+    }
 }

@@ -1,11 +1,11 @@
 {
+    "version": 1,
+    "key": "lovelace",
     "data": {
         "config": {
             "title": "Home",
             "views": [
                 {
-                    "background": "radial-gradient(crimson, skyblue)",
-                    "badges": [],
                     "cards": [
                         {
                             "cards": [
@@ -144,16 +144,24 @@
                             },
                             "id": "main-people",
                             "type": "custom:auto-entities"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "fan.humidifier",
+                                    "type": "custom:secondaryinfo-entity-row",
+                                    "secondary_info": "<h3>[[ fan.humidifier.attributes.temperature ]]\u00b0C, [[ fan.humidifier.attributes.humidity ]]%</h3>"
+                                }
+                            ]
                         }
                     ],
                     "icon": "mdi:home",
                     "id": "index",
                     "panel": false,
-                    "theme": "dark-mode",
                     "title": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f"
                 },
                 {
-                    "badges": [],
                     "cards": [
                         {
                             "cards": [
@@ -179,23 +187,24 @@
                                 },
                                 {
                                     "crop": {
-                                        "bottom": 10,
-                                        "left": 150,
+                                        "bottom": 0,
+                                        "left": 0,
                                         "right": 0,
-                                        "top": 150
+                                        "top": 0
                                     },
                                     "entity": "sensor.xiaomi_map",
                                     "icon_scale": 1,
-                                    "map_scale": 3,
+                                    "map_scale": 2,
                                     "min_height": 300,
                                     "rotate": 0,
                                     "show_currently_cleaned_zones": false,
                                     "show_dock": true,
                                     "show_path": true,
+                                    "show_stop_button": false,
                                     "show_vacuum": true,
                                     "title": "",
                                     "type": "custom:valetudo-map-card",
-                                    "vacuum_entity": "vacuum.xiaomi_vacuum"
+                                    "vacuum_entity": "vacuum.rockrobo"
                                 }
                             ],
                             "type": "vertical-stack"
@@ -207,7 +216,6 @@
                     "title": "\u0423\u0431\u043e\u0440\u043a\u0430"
                 },
                 {
-                    "badges": [],
                     "cards": [
                         {
                             "sun": "sun.sun",
@@ -228,8 +236,6 @@
                     "title": "\u041f\u043e\u0433\u043e\u0434\u0430"
                 },
                 {
-                    "background": "radial-gradient(crimson, skyblue)",
-                    "badges": [],
                     "cards": [
                         {
                             "entities": [
@@ -335,15 +341,12 @@
                             "type": "entities"
                         }
                     ],
-                    "icon": "mdi:settings-outline",
+                    "icon": "mdi:cog-outline",
                     "id": "config",
                     "panel": false,
-                    "theme": "dark-mode",
                     "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438"
                 }
             ]
         }
-    },
-    "key": "lovelace",
-    "version": 1
+    }
 }

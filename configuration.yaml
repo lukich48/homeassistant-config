@@ -28,6 +28,10 @@ zone: !include zones.yaml
 
 input_datetime: !include input_datetime.yaml
 input_number: !include input_number.yaml
+input_boolean:
+input_text:
+input_select:
+counter:
 
 scene: !include scenes.yaml
 
@@ -94,10 +98,10 @@ device_tracker:
     username: rodal2807.home@gmail.com
 
 # Weather Prediction
-weather:
-  - platform: openweathermap
-    api_key: !secret openweather_apikey
-    mode: daily
+# weather:
+  # - platform: openweathermap
+    # api_key: !secret openweather_apikey
+    # mode: daily
 
 sensor:
   - platform: time_date
@@ -109,7 +113,7 @@ sensor:
     # - 'time_date'
     # - 'beat'
       
-  - platform: yr
+  # - platform: yr
   
   - platform: mqtt
     state_topic: 'home/hall/dht'
@@ -144,7 +148,7 @@ sensor:
     json_attributes_topic: "valetudo/rockrobo/map_data"
     name: xiaomi_map
     value_template: 'OK'
-    scan_interval: 5        
+    scan_interval: 5    
       
   # - platform: filter
     # name: "filtered humidity"
@@ -235,7 +239,7 @@ switch:
     name: autowatering  
     state_topic: "home/kitchen/switch2/waterpump/state"
     command_topic: "home/kitchen/switch2/waterpump"
-    payload_template_on: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state
+    payload_on: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state
         | int)*1000}}}'
     payload_off: 0
     state_on: 1
@@ -246,7 +250,7 @@ switch:
     name: laundry_fan
     state_topic: "home/bathroom/switch/laundry-fan/state"
     command_topic: "home/bathroom/switch/laundry-fan"
-    payload_template_on: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
+    payload_on: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
         | int)*1000}}}'
     payload_off: 0
     state_on: 1
@@ -256,17 +260,23 @@ switch:
     name: bathroom_fan
     state_topic: "home/bathroom/switch/fan/state"
     command_topic: "home/bathroom/switch/fan"
-    payload_template_on: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
+    payload_on: '{"action":"hold","duration": {{(states.input_number.fan_duration.state
             | int)*1000}}}'
-    payload_off: 0
+    payload_off: '{"action":"off"}'
     state_on: 1
-    state_off: 0     
+    state_off: 0  
      
+fan:
+  - platform: xiaomi_miio
+    host: 192.168.88.210
+    token: 8427d94dcdd85e1672681637a48cfc13
+    name: humidifier
+    model: zhimi.humidifier.ca1
 
 vacuum:
   - platform: xiaomi_miio
     host: 192.168.88.12
-    token: 745841624b3277734645306b45665058
+    token: 66335a3779654c544f6944454a536a75
     name: xiaomi_vacuum
 
 
