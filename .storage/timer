@@ -1,0 +1,18 @@
+{
+    "version": 1,
+    "key": "timer",
+    "data": {
+        "items": [
+            {
+                "name": "bathroom_dht_healthcheck",
+                "duration": "0:10:00",
+                "id": "bathroom_dht_healthcheck"
+            },
+            {
+                "name": "hall_dht_healthcheck",
+                "duration": "0:10:00",
+                "id": "dht_healthcheck"
+            }
+        ]
+    }
+}

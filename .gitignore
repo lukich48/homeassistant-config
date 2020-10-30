@@ -117,4 +117,11 @@ About
 !/.storage/core.entity_registry
 !/.storage/core.device_registry
 !/.storage/hacs/
+!/.storage/timer
+!/.storage/counter
+!/.storage/input_boolean
+!/.storage/input_datetime
+!/.storage/input_number
+!/.storage/input_text
+!/.storage/input_select
 /.google_maps_location_sharing.cookies.rodal2807_home_gmail_com

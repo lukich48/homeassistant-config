@@ -170,9 +170,12 @@
   - condition: state
     entity_id: switch.bathroom_fan
     state: 'off'
-  - condition: template
-    value_template: '{{(now() - states.sensor.humidity.last_changed).total_seconds()
-      < 180}}'
+  - condition: state
+    entity_id: timer.bathroom_dht_healthcheck
+    state: active
+  - condition: state
+    entity_id: timer.hall_dht_healthcheck
+    state: active
   - condition: not
     conditions:
     - condition: state
@@ -197,3 +200,27 @@
       duration: 00:10:00
     entity_id: timer.stop_fan
     service: timer.start
+- id: '1604089961695'
+  alias: bathroom_dht_healthcheck
+  description: ''
+  trigger:
+  - platform: mqtt
+    topic: home/bathroom/dht
+  condition: []
+  action:
+  - service: timer.start
+    data: {}
+    entity_id: timer.bathroom_dht_healthcheck
+  mode: single
+- id: '1604090171999'
+  alias: hall_dht_healthcheck
+  description: ''
+  trigger:
+  - platform: mqtt
+    topic: home/hall/dht
+  condition: []
+  action:
+  - service: timer.start
+    data: {}
+    entity_id: timer.hall_dht_healthcheck
+  mode: single
