@@ -116,4 +116,5 @@ About
 !/.storage/person
 !/.storage/core.entity_registry
 !/.storage/core.device_registry
+!/.storage/hacs/
 /.google_maps_location_sharing.cookies.rodal2807_home_gmail_com
