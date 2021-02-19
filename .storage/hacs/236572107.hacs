@@ -1,0 +1,59 @@
+{
+    "version": "6",
+    "key": "hacs/236572107.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@AlexxIT"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": true,
+        "default_branch": "master",
+        "description": "\u0423\u043f\u0440\u0430\u0432\u043b\u0435\u043d\u0438\u0435 \u042f\u043d\u0434\u0435\u043a\u0441.\u0421\u0442\u0430\u043d\u0446\u0438\u0435\u0439 \u0438 \u0434\u0440\u0443\u0433\u0438\u043c\u0438 \u043a\u043e\u043b\u043e\u043d\u043a\u0430\u043c\u0438 \u0441 \u0410\u043b\u0438\u0441\u043e\u0439 \u0438\u0437 Home Assistant",
+        "domain": "yandex_station",
+        "domains": [],
+        "downloads": 0,
+        "etag_repository": "W/\"dc7bcf8fbc95382bfb4b17286458ca20bc850812f1f0981f95d12627bcad156a\"",
+        "file_name": "",
+        "filename": "",
+        "first_install": false,
+        "fork": false,
+        "full_name": "AlexxIT/YandexStation",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": null,
+        "id": "236572107",
+        "iot_class": null,
+        "installed": true,
+        "installed_commit": "a3702ba",
+        "installed_version": "v3.0.3",
+        "open_issues": 21,
+        "last_commit": "a3702ba",
+        "last_version": "v3.0.3",
+        "last_updated": "2021-02-18T10:08:12Z",
+        "manifest_name": "Yandex.Station",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2021-02-18T10:08:12",
+        "releases": true,
+        "render_readme": true,
+        "published_tags": [
+            "v3.0.3",
+            "v3.0.2",
+            "v3.0.1",
+            "v3.0.0",
+            "v2.4.0"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 408,
+        "topics": [
+            "home-assistant",
+            "yandex-station"
+        ],
+        "zip_release": false
+    }
+}

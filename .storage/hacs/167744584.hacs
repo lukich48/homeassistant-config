@@ -13,6 +13,7 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
+        "etag_repository": "W/\"cbfb5146541000c4a84d559b323fa5bf44c3cf88980180ed64fd320ba82d211d\"",
         "file_name": "auto-entities.js",
         "filename": "",
         "first_install": false,
@@ -25,30 +26,29 @@
         "id": "167744584",
         "iot_class": null,
         "installed": true,
-        "installed_commit": "e5a6b72",
-        "installed_version": "16",
+        "installed_commit": "f17fcc1",
+        "installed_version": "1.7.0",
         "open_issues": 36,
-        "last_commit": "fa66168",
-        "last_version": "16",
-        "last_updated": "2020-09-01T12:21:46Z",
+        "last_commit": "f17fcc1",
+        "last_version": "1.7.0",
+        "last_updated": "2021-02-19T10:52:54Z",
         "manifest_name": null,
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2020-09-01T12:21:46",
+        "pushed_at": "2021-02-19T10:52:54",
         "releases": true,
         "render_readme": true,
         "published_tags": [
+            "1.7.0",
             "16",
             "15",
             "14",
-            "13",
-            "12"
+            "13"
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 305,
+        "stargazers_count": 383,
         "topics": [],
-        "zip_release": false,
-        "full_name_lower": "thomasloven/lovelace-auto-entities"
+        "zip_release": false
     }
 }

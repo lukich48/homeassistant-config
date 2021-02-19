@@ -13,13 +13,15 @@
       - switch.laundry_fan
       - switch.bathroom_fan
       - vacuum.rockrobo
-      - script.vacuum_kitchen
-      - script.vacuum_guest_room
+      - script.vacuum_livingroom
       - script.vacuum_hall
+      - script.vacuum_bathroom
+      - script.vacuum_kitchen
       - script.vacuum_all_zones
       - sensor.temperature
       - sensor.humidity
       - fan.humidifier
+      - media_player.yandex_intents
   entity_config:
     light.kitchen_worktop:
       room: 'Кухня'
@@ -46,17 +48,19 @@
     vacuum.rockrobo:
       room: 'Зал'
       name: 'Пылесос'
-    script.vacuum_kitchen:
-      room: 'Кухня'
-    script.vacuum_guest_room:
+    script.vacuum_livingroom:
       room: 'Зал'  
     script.vacuum_hall:
-      room: 'Коридор'  
+      room: 'Коридор' 
+    script.vacuum_bathroom:
+      room: 'Ванная' 
+    script.vacuum_kitchen:
+      room: 'Кухня'
     script.vacuum_all_zones:
       room: 'Зал'  
     sensor.temperature:
-      room: 'Зал'
+      room: 'Квартира'
     sensor.humidity:
-      room: 'Зал'
+      room: 'Квартира'
     fan.humidifier:
-      room: 'Зал'
+      room: 'Кухня'

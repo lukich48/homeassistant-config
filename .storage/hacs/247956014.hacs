@@ -1,0 +1,54 @@
+{
+    "version": "6",
+    "key": "hacs/247956014.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@AlexxIT"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": false,
+        "default_branch": "master",
+        "description": "\u041a\u043e\u043c\u043f\u043e\u043d\u0435\u043d\u0442 Home Assistant \u0434\u043b\u044f \u0440\u0430\u0431\u043e\u0442\u044b \u0441 \u0447\u0438\u0441\u043b\u0438\u0442\u0435\u043b\u044c\u043d\u044b\u043c\u0438 \u0432 Jinja2",
+        "domain": "morph_numbers",
+        "domains": [],
+        "downloads": 0,
+        "etag_repository": "W/\"51354a12f284ab691e51d418238e762b69cb7d732394e339daf32d4168991671\"",
+        "file_name": "",
+        "filename": "",
+        "first_install": false,
+        "fork": false,
+        "full_name": "AlexxIT/MorphNumbers",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": null,
+        "id": "247956014",
+        "iot_class": null,
+        "installed": true,
+        "installed_commit": "8a4fda6",
+        "installed_version": "v1.0.0",
+        "open_issues": 6,
+        "last_commit": "8a4fda6",
+        "last_version": "v1.0.0",
+        "last_updated": "2020-09-22T11:06:57Z",
+        "manifest_name": "Morph Numbers",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2020-09-22T11:06:57",
+        "releases": true,
+        "render_readme": true,
+        "published_tags": [
+            "v1.0.0"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 36,
+        "topics": [
+            "home-assistant"
+        ],
+        "zip_release": false
+    }
+}

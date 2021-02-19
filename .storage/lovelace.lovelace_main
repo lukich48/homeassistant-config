@@ -1,0 +1,293 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_main",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "title": "Home",
+                    "path": "home",
+                    "icon": "mdi:home-outline",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "grid",
+                            "cards": [
+                                {
+                                    "type": "grid",
+                                    "columns": 2,
+                                    "cards": [
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "navigate",
+                                                "navigation_path": "light"
+                                            },
+                                            "entity": "light.all_light",
+                                            "show_name": false,
+                                            "show_icon": true,
+                                            "hold_action": {
+                                                "action": "call-service",
+                                                "service": "light.turn_off",
+                                                "service_data": {
+                                                    "entity_id": "light.all_light"
+                                                }
+                                            },
+                                            "name": "\u0421\u0432\u0435\u0442"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "switch.kitchen_plants",
+                                            "show_state": false,
+                                            "icon": "mdi:flower",
+                                            "show_name": false
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.livingroom_lamp"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.livingroom_lamp"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "\u0421\u0432\u0435\u0442",
+                    "path": "light",
+                    "icon": "mdi:lightbulb-group-outline",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "grid",
+                            "columns": 2,
+                            "square": false,
+                            "cards": [
+                                {
+                                    "type": "grid",
+                                    "columns": 1,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "markdown",
+                                            "content": "## \u041a\u0443\u0445\u043d\u044f"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.kitchen_light",
+                                            "show_name": false
+                                        },
+                                        {
+                                            "type": "grid",
+                                            "columns": 2,
+                                            "square": false,
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "light.kitchen_worktop",
+                                                    "show_name": true
+                                                },
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "light.kitchen_table",
+                                                    "show_name": true
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 1,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "markdown",
+                                            "content": "## \u0417\u0430\u043b"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.livingroom_lamp",
+                                            "show_name": false
+                                        },
+                                        {
+                                            "type": "grid",
+                                            "columns": 2,
+                                            "square": false,
+                                            "cards": [
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "light.livingroom_lamp_warm",
+                                                    "name": "\u0422\u0435\u043f\u043b\u044b\u0439",
+                                                    "show_name": true
+                                                },
+                                                {
+                                                    "type": "button",
+                                                    "tap_action": {
+                                                        "action": "toggle"
+                                                    },
+                                                    "entity": "light.livingroom_lamp_cold",
+                                                    "name": "\u0425\u043e\u043b\u043e\u0434\u043d\u044b\u0439",
+                                                    "show_name": true
+                                                }
+                                            ],
+                                            "show_name": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "type": "grid",
+                            "columns": 2,
+                            "square": false,
+                            "cards": [
+                                {
+                                    "type": "grid",
+                                    "columns": 1,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "markdown",
+                                            "content": "## \u041a\u043e\u0440\u0438\u0434\u043e\u0440"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.hall_lamp",
+                                            "show_name": false
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "grid",
+                                    "columns": 1,
+                                    "square": false,
+                                    "cards": [
+                                        {
+                                            "type": "markdown",
+                                            "content": "## \u0412\u0430\u043d\u043d\u0430\u044f"
+                                        },
+                                        {
+                                            "type": "button",
+                                            "tap_action": {
+                                                "action": "toggle"
+                                            },
+                                            "entity": "light.bathroom_mirror",
+                                            "show_name": false
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "",
+                    "icon": "mdi:flower",
+                    "path": "plants",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "markdown",
+                            "content": "## \u041f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0430 \u0440\u0430\u0441\u0442\u0435\u043d\u0438\u0439"
+                        },
+                        {
+                            "type": "custom:themable-grid",
+                            "columns": 6,
+                            "square": true,
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.kitchen_plants",
+                                    "icon": "mdi:lightbulb",
+                                    "show_name": false
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "automation.turn_on_light_plants",
+                                            "name": "\u0412\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0443\u0442\u0440\u043e\u043c"
+                                        },
+                                        {
+                                            "entity": "automation.turn_off_light_plants",
+                                            "name": "\u0412\u044b\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0432\u0435\u0447\u0435\u0440\u043e\u043c"
+                                        }
+                                    ],
+                                    "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438",
+                                    "show_header_toggle": true,
+                                    "grid": {
+                                        "grid-column": "2 / -1"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "markdown",
+                            "content": "## \u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432"
+                        },
+                        {
+                            "type": "custom:themable-grid",
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "switch.autowatering",
+                                    "show_name": false
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "automation.turn_on_autowatering"
+                                        }
+                                    ],
+                                    "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438",
+                                    "grid": {
+                                        "grid-column": "2 / -1"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

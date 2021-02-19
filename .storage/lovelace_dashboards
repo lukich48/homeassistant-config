@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace_dashboards",
     "data": {
         "items": [
             {
@@ -26,9 +28,24 @@
                 "show_in_sidebar": false,
                 "title": "test",
                 "url_path": "lovelace-test"
+            },
+            {
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "icon": "mdi:weather-partly-snowy-rainy",
+                "title": "Weather",
+                "url_path": "lovelace-weather",
+                "mode": "storage",
+                "id": "lovelace_weather"
+            },
+            {
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "title": "Main",
+                "url_path": "lovelace-main",
+                "mode": "storage",
+                "id": "lovelace_main"
             }
         ]
-    },
-    "key": "lovelace_dashboards",
-    "version": 1
+    }
 }

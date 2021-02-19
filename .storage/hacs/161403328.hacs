@@ -13,6 +13,7 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
+        "etag_repository": "W/\"ca2444b1c54950447b2ddc050155225f0e859ecb382190f3c3f6abdbb311231a\"",
         "file_name": "card-tools.js",
         "filename": "",
         "first_install": false,
@@ -27,14 +28,14 @@
         "installed": true,
         "installed_commit": "1272cf6",
         "installed_version": "11",
-        "open_issues": 10,
+        "open_issues": 12,
         "last_commit": "477f3d4",
         "last_version": "11",
-        "last_updated": "2020-10-28T12:01:32Z",
+        "last_updated": "2020-12-12T00:28:43Z",
         "manifest_name": null,
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2020-10-28T12:01:32",
+        "pushed_at": "2020-12-12T00:28:43",
         "releases": true,
         "render_readme": false,
         "published_tags": [
@@ -46,9 +47,8 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 130,
+        "stargazers_count": 146,
         "topics": [],
-        "zip_release": false,
-        "full_name_lower": "thomasloven/lovelace-card-tools"
+        "zip_release": false
     }
 }

@@ -1,4 +1,6 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_plan",
     "data": {
         "config": {
             "views": [
@@ -74,7 +76,7 @@
                                     "type": "state-icon"
                                 },
                                 {
-                                    "entity": "vacuum.xiaomi_vacuum",
+                                    "entity": "vacuum.rockrobo",
                                     "style": {
                                         "left": "46.5%",
                                         "top": "25.5%"
@@ -147,7 +149,5 @@
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_plan",
-    "version": 1
+    }
 }

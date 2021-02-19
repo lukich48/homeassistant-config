@@ -9,11 +9,6 @@
                 "url": "/hacsfiles/lovelace-auto-entities/auto-entities.js"
             },
             {
-                "id": "06748692f1ec49f3b9d7c174373a7260",
-                "type": "module",
-                "url": "/local/custom_ui/lovelace-weather-card-chart/weather-card-chart.js?v=0.2.4"
-            },
-            {
                 "id": "c6e5901e72964107b1916065bcd2dcaf",
                 "type": "module",
                 "url": "/hacsfiles/lovelace-valetudo-map-card/valetudo-map-card.js"
@@ -32,6 +27,36 @@
                 "url": "/hacsfiles/lovelace-card-tools/card-tools.js",
                 "type": "module",
                 "id": "fa35085a246c4adbab3f9618db35df52"
+            },
+            {
+                "url": "/hacsfiles/mini-humidifier/mini-humidifier-bundle.js",
+                "type": "module",
+                "id": "4c3bf7a17e274520b3b6dae0b3e553cf"
+            },
+            {
+                "url": "/local/custom_ui/lovelace-weather-card-chart/weather-card-chart.js",
+                "type": "module",
+                "id": "9317a50ea9a844f593e21512781690d4"
+            },
+            {
+                "url": "/hacsfiles/mini-media-player/mini-media-player-bundle.js",
+                "type": "module",
+                "id": "7e30f6e85b96477d90dc2ab04e93cf39"
+            },
+            {
+                "url": "/hacsfiles/ha-yandex-icons/yandex-icons.js",
+                "type": "module",
+                "id": "bd54243ebd32445183296386c1e600ac"
+            },
+            {
+                "url": "/hacsfiles/button-card/button-card.js",
+                "type": "module",
+                "id": "b2f144ded2bf4b1aa7e221146ac6d098"
+            },
+            {
+                "url": "/hacsfiles/themable-grid/themable-grid.js",
+                "type": "module",
+                "id": "6324c7b3308448a386f349b797b708b1"
             }
         ]
     }

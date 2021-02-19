@@ -161,12 +161,12 @@
   alias: Вытяжка в ванной
   description: Включать автоматическую вентиляцию
   trigger:
-  - entity_id: sensor.bathroom_humidity
-    platform: state
+  - platform: mqtt
+    topic: home/bathroom/dht
   condition:
   - condition: template
     value_template: '{{states.sensor.bathroom_humidity.state | int >= states.sensor.humidity.state
-      | int + 12}}'
+      | int + 20}}'
   - condition: state
     entity_id: switch.bathroom_fan
     state: 'off'
@@ -223,4 +223,38 @@
   - service: timer.start
     data: {}
     entity_id: timer.hall_dht_healthcheck
+  mode: single
+- id: '1606046099343'
+  alias: Яндекс влажность в доме
+  description: ''
+  trigger:
+  - platform: event
+    event_type: yandex_intent
+    event_data:
+      text: Какая влажность в доме?
+  condition: []
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.yandex_station
+      media_content_id: Влажность в доме {{ states("sensor.humidity")|round|format(morph='процент',
+        as_text=false) }}
+      media_content_type: text
+  mode: single
+- id: '1606387908769'
+  alias: Яндекс температура в доме
+  description: ''
+  trigger:
+  - platform: event
+    event_type: yandex_intent
+    event_data:
+      text: Какая температура в доме?
+  condition: []
+  action:
+  - service: media_player.play_media
+    data:
+      entity_id: media_player.yandex_station
+      media_content_id: Температура в доме {{ states("sensor.temperature")|round|format(morph='градус',
+        as_text=false) }}
+      media_content_type: text
   mode: single

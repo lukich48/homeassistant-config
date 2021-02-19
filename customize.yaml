@@ -28,6 +28,7 @@ light.kitchen_table:
   friendly_name: Лампа на кухне
 light.kitchen_worktop:
   friendly_name: Подсветка кухни
+  icon: mdi:led-strip
 light.bathroom_mirror:
   friendly_name: Свет в ванной
 light.hall_lamp:
@@ -43,8 +44,6 @@ switch.laundry_fan:
 switch.bathroom_fan:
   friendly_name: Вытяжка в ванной
   icon: mdi:fan
-vacuum.xiaomi_vacuum:
-  friendly_name: пылесос
 automation.turn_on_light_plants:
   friendly_name: Включать  подсветку растений
   icon: mdi:flower-tulip-outline
@@ -73,18 +72,6 @@ script.light_plants_on:
   friendly_name: Включить подсветку растений
 script.light_plants_off:
   friendly_name: Выключить подсветку растений
-script.vacuum_kitchen:
-  friendly_name: Убрать на кухне
-  icon: mdi:robot-vacuum
-script.vacuum_guest_room:
-  friendly_name: Убрать в зале
-  icon: mdi:robot-vacuum
-script.vacuum_hall:
-  friendly_name: Убрать в корридоре
-  icon: mdi:robot-vacuum
-script.vacuum_all_zones:
-  friendly_name: Убрать в квартире
-  icon: mdi:robot-vacuum
 sensor.humidity:
   friendly_name: Влажность в квартире
 sensor.temperature:
@@ -103,3 +90,5 @@ automation.bathroom_fan:
   friendly_name: Автовытяжка в ванной
 fan.humidifier:
   friendly_name: Увлажнитель
+media_player.yandex_station:
+  icon: yandex:station-mini

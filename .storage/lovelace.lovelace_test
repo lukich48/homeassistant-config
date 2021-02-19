@@ -77,6 +77,29 @@
                             "hours_to_show": 12,
                             "refresh_interval": 0,
                             "type": "history-graph"
+                        },
+                        {
+                            "entity": "media_player.yandex_station",
+                            "artwork": "cover",
+                            "shortcuts": {
+                                "attribute": "sound_mode",
+                                "buttons": [
+                                    {
+                                        "icon": "mdi:headset",
+                                        "id": "\u041f\u0440\u043e\u0438\u0437\u043d\u0435\u0441\u0438 \u0442\u0435\u043a\u0441\u0442",
+                                        "type": "sound_mode"
+                                    },
+                                    {
+                                        "icon": "mdi:microphone-settings",
+                                        "id": "\u0412\u044b\u043f\u043e\u043b\u043d\u0438 \u043a\u043e\u043c\u0430\u043d\u0434\u0443",
+                                        "type": "sound_mode"
+                                    }
+                                ]
+                            },
+                            "tts": {
+                                "platform": "yandex_station"
+                            },
+                            "type": "custom:mini-media-player"
                         }
                     ],
                     "panel": false

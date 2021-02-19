@@ -52,8 +52,8 @@ mobile_app:
 
 http:
   # api_password: !secret http_password
-  ssl_certificate: /ssl/fullchain.pem
-  ssl_key: /ssl/privkey.pem
+  # ssl_certificate: /ssl/fullchain.pem
+  # ssl_key: /ssl/privkey.pem
 
 # Checks for available updates
 # updater:
@@ -141,14 +141,7 @@ sensor:
     device_class: humidity
     name: bathroom_humidity
     unit_of_measurement: '%'
-    value_template: '{{ value_json.humidity }}'
-
-  - platform: mqtt
-    state_topic: "valetudo/rockrobo/state"
-    json_attributes_topic: "valetudo/rockrobo/map_data"
-    name: xiaomi_map
-    value_template: 'OK'
-    scan_interval: 5    
+    value_template: '{{ value_json.humidity }}'  
       
   # - platform: filter
     # name: "filtered humidity"
@@ -210,8 +203,22 @@ light:
     payload_off: 0
     qos: 0  
   - platform: group
-    name: livingroom lamp
+    name: livingroom_lamp
     entities:
+      - light.livingroom_lamp_warm
+      - light.livingroom_lamp_cold
+  - platform: group
+    name: kitchen_light
+    entities:
+      - light.kitchen_worktop
+      - light.kitchen_table
+  - platform: group
+    name: all_light
+    entities:
+      - light.kitchen_worktop
+      - light.kitchen_table
+      - light.bathroom_mirror
+      - light.hall_lamp
       - light.livingroom_lamp_warm
       - light.livingroom_lamp_cold
 
@@ -243,7 +250,7 @@ switch:
         | int)*1000}}}'
     payload_off: 0
     state_on: 1
-    state_off: 0 
+    state_off: 0
  
  # вытяжка
   - platform: mqtt_template
@@ -264,28 +271,28 @@ switch:
             | int)*1000}}}'
     payload_off: '{"action":"off"}'
     state_on: 1
-    state_off: 0  
+    state_off: 0
      
 fan:
   - platform: xiaomi_miio
     host: 192.168.88.210
-    token: 8427d94dcdd85e1672681637a48cfc13
+    token: 8685c9cc2554950f0279c28603198656
     name: humidifier
     model: zhimi.humidifier.ca1
 
-vacuum:
-  - platform: xiaomi_miio
-    host: 192.168.88.12
-    token: 66335a3779654c544f6944454a536a75
-    name: xiaomi_vacuum
+# vacuum:
+  # - platform: xiaomi_miio
+    # host: 192.168.88.12
+    # token: 66335a3779654c544f6944454a536a75
+    # name: xiaomi_vacuum
 
 
-tts:
-  platform: google_translate
-  language: 'ru'
-  cache: true
-  cache_dir: /tmp/tts
-  time_memory: 300
+# tts:
+  # platform: google_translate
+  # language: 'ru'
+  # cache: true
+  # cache_dir: /tmp/tts
+  # time_memory: 300
   
 
 mqtt:
@@ -301,9 +308,9 @@ mqtt:
 recorder:
   exclude:
     entities:
-      - sensor.xiaomi_map
-      - vacuum.rockrobo
       - sensor.time
+      - automation.bathroom_dht_healthcheck
+      - automation.hall_dht_healthcheck
 
 timer:
   stop_fan:
@@ -319,13 +326,23 @@ timer:
   # logs:
    # homeassistant.components.device_tracker: debug
   
-dialogflow:
+#dialogflow:
 
 google_assistant:
   project_id: homeassistant-2807
   # api_key: !secret google_assistant_api_key
 
 yandex_smart_home: !include yandex_smart_home.yaml   
+#yandex_smart_home_fix: #https://github.com/dmitry-k/yandex_smart_home/issues/116
+morph_numbers:
+
+yandex_station:
+  username: rodal48@yandex.ru
+  password: !secret yandex_password
+  intents:
+    Какая влажность в доме?:
+    Какая температура в доме?:
+    Тестовое сообщение: ага
 
 yandex_dialogs:
     

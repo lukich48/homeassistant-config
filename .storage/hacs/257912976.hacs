@@ -15,6 +15,7 @@
             "switch"
         ],
         "downloads": 0,
+        "etag_repository": "W/\"11e9a11d38ec8aa8cd4baaa74d6251a6dad15817ed4df11011c9b420689b0edc\"",
         "file_name": "",
         "filename": "",
         "first_install": false,
@@ -27,19 +28,20 @@
         "id": "257912976",
         "iot_class": null,
         "installed": true,
-        "installed_commit": "6a83bdf",
-        "installed_version": "2.0",
+        "installed_commit": "c68da72",
+        "installed_version": "2.1",
         "open_issues": 0,
-        "last_commit": "6a83bdf",
-        "last_version": "2.0",
-        "last_updated": "2020-09-24T20:04:33Z",
+        "last_commit": "c68da72",
+        "last_version": "2.1",
+        "last_updated": "2020-12-13T14:19:55Z",
         "manifest_name": "mqtt template switch",
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2020-09-24T20:04:33",
+        "pushed_at": "2020-12-13T14:19:55",
         "releases": true,
         "render_readme": true,
         "published_tags": [
+            "2.1",
             "2.0",
             "1.1",
             "1.0"
@@ -48,7 +50,6 @@
         "show_beta": false,
         "stargazers_count": 1,
         "topics": [],
-        "zip_release": false,
-        "full_name_lower": "lukich48/hass_mqtt_template_switch"
+        "zip_release": false
     }
 }
