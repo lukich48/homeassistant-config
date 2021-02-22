@@ -12,54 +12,36 @@
                     "cards": [
                         {
                             "type": "grid",
+                            "columns": 4,
                             "cards": [
                                 {
-                                    "type": "grid",
-                                    "columns": 2,
-                                    "cards": [
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "navigate",
-                                                "navigation_path": "light"
-                                            },
-                                            "entity": "light.all_light",
-                                            "show_name": false,
-                                            "show_icon": true,
-                                            "hold_action": {
-                                                "action": "call-service",
-                                                "service": "light.turn_off",
-                                                "service_data": {
-                                                    "entity_id": "light.all_light"
-                                                }
-                                            },
-                                            "name": "\u0421\u0432\u0435\u0442"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "switch.kitchen_plants",
-                                            "show_state": false,
-                                            "icon": "mdi:flower",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.livingroom_lamp"
-                                        },
-                                        {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.livingroom_lamp"
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "light"
+                                    },
+                                    "entity": "light.all_light",
+                                    "show_name": false,
+                                    "show_icon": true,
+                                    "hold_action": {
+                                        "action": "call-service",
+                                        "service": "light.turn_off",
+                                        "service_data": {
+                                            "entity_id": "light.all_light"
                                         }
-                                    ]
+                                    },
+                                    "name": "\u0421\u0432\u0435\u0442"
+                                },
+                                {
+                                    "type": "button",
+                                    "entity": "switch.kitchen_plants",
+                                    "show_state": false,
+                                    "icon": "mdi:flower",
+                                    "show_name": false,
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "plants"
+                                    }
                                 }
                             ]
                         }
@@ -96,7 +78,7 @@
                                         {
                                             "type": "grid",
                                             "columns": 2,
-                                            "square": false,
+                                            "square": true,
                                             "cards": [
                                                 {
                                                     "type": "button",
@@ -138,7 +120,7 @@
                                         {
                                             "type": "grid",
                                             "columns": 2,
-                                            "square": false,
+                                            "square": true,
                                             "cards": [
                                                 {
                                                     "type": "button",
@@ -219,14 +201,17 @@
                     "badges": [],
                     "cards": [
                         {
-                            "type": "markdown",
-                            "content": "## \u041f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0430 \u0440\u0430\u0441\u0442\u0435\u043d\u0438\u0439"
-                        },
-                        {
                             "type": "custom:themable-grid",
-                            "columns": 6,
+                            "columns": 3,
                             "square": true,
                             "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "## \u041f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0430 \u0440\u0430\u0441\u0442\u0435\u043d\u0438\u0439",
+                                    "grid": {
+                                        "grid-column": "1 / span 3"
+                                    }
+                                },
                                 {
                                     "type": "button",
                                     "tap_action": {
@@ -238,6 +223,10 @@
                                 },
                                 {
                                     "type": "entities",
+                                    "grid": {
+                                        "grid-column": "2 / span 2"
+                                    },
+                                    "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438",
                                     "entities": [
                                         {
                                             "entity": "automation.turn_on_light_plants",
@@ -247,22 +236,21 @@
                                             "entity": "automation.turn_off_light_plants",
                                             "name": "\u0412\u044b\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0432\u0435\u0447\u0435\u0440\u043e\u043c"
                                         }
-                                    ],
-                                    "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438",
-                                    "show_header_toggle": true,
-                                    "grid": {
-                                        "grid-column": "2 / -1"
-                                    }
+                                    ]
                                 }
                             ]
                         },
                         {
-                            "type": "markdown",
-                            "content": "## \u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432"
-                        },
-                        {
                             "type": "custom:themable-grid",
+                            "columns": 3,
                             "cards": [
+                                {
+                                    "type": "markdown",
+                                    "content": "## \u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432",
+                                    "grid": {
+                                        "grid-column": "1 / span 3"
+                                    }
+                                },
                                 {
                                     "type": "button",
                                     "tap_action": {
@@ -273,15 +261,36 @@
                                 },
                                 {
                                     "type": "entities",
+                                    "grid": {
+                                        "grid-column": "2 / span 2"
+                                    },
+                                    "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438",
                                     "entities": [
                                         {
                                             "entity": "automation.turn_on_autowatering"
                                         }
-                                    ],
-                                    "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438",
+                                    ]
+                                },
+                                {
+                                    "type": "custom:fold-entity-row",
                                     "grid": {
-                                        "grid-column": "2 / -1"
-                                    }
+                                        "grid-column": "1 / span 3"
+                                    },
+                                    "head": {
+                                        "type": "section",
+                                        "label": "\u0414\u043e\u043f\u043e\u043b\u043d\u0438\u0442\u0435\u043b\u044c\u043d\u043e"
+                                    },
+                                    "entities": [
+                                        {
+                                            "entity": "input_number.autowatering_interval"
+                                        },
+                                        {
+                                            "entity": "input_number.autowatering_duration"
+                                        },
+                                        {
+                                            "entity": "input_datetime.last_autowatering"
+                                        }
+                                    ]
                                 }
                             ]
                         }

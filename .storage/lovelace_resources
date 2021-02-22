@@ -57,6 +57,11 @@
                 "url": "/hacsfiles/themable-grid/themable-grid.js",
                 "type": "module",
                 "id": "6324c7b3308448a386f349b797b708b1"
+            },
+            {
+                "url": "/hacsfiles/lovelace-fold-entity-row/fold-entity-row.js",
+                "type": "module",
+                "id": "1857a5db739345169c1689b5e1dd551f"
             }
         ]
     }

@@ -13,7 +13,7 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"4bb83babf0458e7c8509a2b6a2bd9a4d5f06bc356d79088b2e7fb6090294b4f9\"",
+        "etag_repository": "W/\"e9924491ba9b1c30d51cdd5bf3b3b018757c67b13b4788c40aafe01b1f9f692d\"",
         "file_name": "secondaryinfo-entity-row.js",
         "filename": "",
         "first_install": false,
@@ -41,7 +41,7 @@
         "published_tags": [],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 95,
+        "stargazers_count": 96,
         "topics": [],
         "zip_release": false
     }

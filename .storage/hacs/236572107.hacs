@@ -15,7 +15,7 @@
         "domain": "yandex_station",
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"dc7bcf8fbc95382bfb4b17286458ca20bc850812f1f0981f95d12627bcad156a\"",
+        "etag_repository": "W/\"37c30932c552530766c4c5f0413f5a65831622dada26e94f86bdf76442d18436\"",
         "file_name": "",
         "filename": "",
         "first_install": false,
@@ -30,7 +30,7 @@
         "installed": true,
         "installed_commit": "a3702ba",
         "installed_version": "v3.0.3",
-        "open_issues": 21,
+        "open_issues": 22,
         "last_commit": "a3702ba",
         "last_version": "v3.0.3",
         "last_updated": "2021-02-18T10:08:12Z",
@@ -49,7 +49,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 408,
+        "stargazers_count": 411,
         "topics": [
             "home-assistant",
             "yandex-station"

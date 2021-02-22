@@ -14,8 +14,8 @@
         "domains": [
             "fan"
         ],
-        "downloads": 1229,
-        "etag_repository": "W/\"bd40dd7177eed3b8897978498e70af45e5d8f39e2440a683c0b7d8e80dcdb40c\"",
+        "downloads": 1295,
+        "etag_repository": "W/\"89b280ca8cd8252ee831b9d8e7bc280ce780c6a1879d55f75a331c6d4cee601d\"",
         "file_name": "mini-humidifier-bundle.js",
         "filename": "mini-humidifier-bundle.js",
         "first_install": false,
@@ -30,7 +30,7 @@
         "installed": true,
         "installed_commit": "4560d91",
         "installed_version": "v2.3.2",
-        "open_issues": 5,
+        "open_issues": 6,
         "last_commit": "4560d91",
         "last_version": "v2.3.2",
         "last_updated": "2021-01-19T13:19:45Z",
