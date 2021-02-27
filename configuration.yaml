@@ -16,9 +16,9 @@ homeassistant:
   auth_providers:
     - type: homeassistant
     # - type: legacy_api_password
-    - type: trusted_networks
-      trusted_networks:
-        - 192.168.88.0/24
+    # - type: trusted_networks
+      # trusted_networks:
+        # - 192.168.88.0/24
 
 group: !include groups.yaml
 script: !include scripts.yaml

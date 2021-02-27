@@ -15,7 +15,7 @@
         "domain": "morph_numbers",
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"51354a12f284ab691e51d418238e762b69cb7d732394e339daf32d4168991671\"",
+        "etag_repository": "W/\"7b98f06e586857a7d99abb9b1ecc420098aa6ae1563265f870aa9a1b6ba20b46\"",
         "file_name": "",
         "filename": "",
         "first_install": false,
@@ -45,7 +45,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 36,
+        "stargazers_count": 37,
         "topics": [
             "home-assistant"
         ],

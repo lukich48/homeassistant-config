@@ -1,14 +1,3 @@
-# автоматизация освещения растений
-  turn_on_light_plants:
-    name: 'Включать подсветку растений'
-    has_date: false
-    has_time: true
-    # initial: '7:00:00'
-  turn_off_light_plants:
-    name: 'Выключать подсветку растений'
-    has_date: false
-    has_time: true
-    # initial: '23:00:00'
 
 # автоматизация теплого пола
   turn_on_warm_flow_morning:

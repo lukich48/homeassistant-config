@@ -426,7 +426,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "SM-G9730 Battery Level",
-                "original_icon": "mdi:battery-70"
+                "original_icon": "mdi:battery-30"
             },
             {
                 "entity_id": "sensor.wifi_connection",
@@ -477,7 +477,7 @@
                 "device_class": "battery",
                 "unit_of_measurement": "%",
                 "original_name": "SM-G960F Battery Level",
-                "original_icon": "mdi:battery-30"
+                "original_icon": "mdi:battery-50"
             },
             {
                 "entity_id": "sensor.wifi_connection_2",

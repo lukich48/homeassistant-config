@@ -1,21 +1,21 @@
 - id: turn_on_light_plants
   alias: turn_on_light_plants
+  trigger:
+  - platform: time
+    at: 07:00
+  condition: []
   action:
   - service: script.light_plants_on
-  condition: []
-  trigger:
-  - platform: template
-    value_template: '{{ states.sensor.time.state == states.input_datetime.turn_on_light_plants.state[0:5]
-      }}'
+  mode: single
 - id: turn_off_light_plants
   alias: turn_off_light_plants
+  trigger:
+  - platform: time
+    at: '23:00'
+  condition: []
   action:
   - service: script.light_plants_off
-  condition: []
-  trigger:
-  - platform: template
-    value_template: '{{ states.sensor.time.state == states.input_datetime.turn_off_light_plants.state[0:5]
-      }}'
+  mode: single
 - id: turn_on_autowatering
   alias: turn_on_autowatering
   action:

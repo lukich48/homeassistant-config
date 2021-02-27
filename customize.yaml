@@ -45,10 +45,10 @@ switch.bathroom_fan:
   friendly_name: Вытяжка в ванной
   icon: mdi:fan
 automation.turn_on_light_plants:
-  friendly_name: Включать  подсветку растений
+  friendly_name: Включать подсветку утром
   icon: mdi:flower-tulip-outline
 automation.turn_off_light_plants:
-  friendly_name: Выключать подсветку растений
+  friendly_name: Выключать подсветку вечером
   icon: mdi:flower-tulip
 automation.turn_off_warm_flow_night:
   friendly_name: Выключать теплый пол на ночь

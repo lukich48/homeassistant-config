@@ -29,7 +29,7 @@ vacuum_hall:
       command: zoned_cleanup
       params:
         zone_ids:
-        - 78d15422-f079-47e9-9764-5f0dceba7a60    
+        - 78d15422-f079-47e9-9764-5f0dceba7a60
 vacuum_bathroom:
   alias: пропылесосить в ванной
   sequence:
@@ -97,16 +97,17 @@ call_yandex_station:
 update_shopping_list:
   alias: Яндекс Станция. Обновить список покупок
   sequence:
-    - service: media_player.play_media
-      entity_id: media_player.yandex_station  # замените на вашу колонку
-      data:
-        media_content_id: update
-        media_content_type: shopping_list
+  - service: media_player.play_media
+    entity_id: media_player.yandex_station
+    data:
+      media_content_id: update
+      media_content_type: shopping_list
 yandex_beta:
   alias: Яндекс Станция. Включить режим Бета
   sequence:
-    - service: media_player.play_media
-      entity_id: media_player.yandex_station  # поменяйте на вашу колонку
-      data:
-        media_content_id: True
-        media_content_type: beta
+  - service: media_player.play_media
+    entity_id: media_player.yandex_station
+    data:
+      media_content_id: true
+      media_content_type: beta
+  mode: single

@@ -13,7 +13,7 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"8b837f6d016f66851558a13b26c3c7866194cf1d5d91d9b9d2d9a3e37d07f08d\"",
+        "etag_repository": "W/\"930f911d8312bd67969fbc2b9686d1411e8b6e477f0f1e6ca604ed65d5fa0a49\"",
         "file_name": "auto-entities.js",
         "filename": "",
         "first_install": false,
@@ -47,7 +47,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 383,
+        "stargazers_count": 384,
         "topics": [],
         "zip_release": false
     }

@@ -3,6 +3,493 @@
     "key": "lovelace.lovelace_main",
     "data": {
         "config": {
+            "button_card_templates": {
+                "default": {
+                    "tap_action": {
+                        "action": "toggle"
+                    },
+                    "hold_action": {
+                        "action": "more-info"
+                    },
+                    "show_state": true,
+                    "size": "30%",
+                    "state": [
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "filter": "opacity(100%)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "filter": "grayscale(100%)"
+                                    }
+                                ]
+                            },
+                            "value": "off"
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "filter": "opacity(25%)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "filter": "grayscale(100%)"
+                                    }
+                                ]
+                            },
+                            "value": "unavailable"
+                        }
+                    ],
+                    "styles": {
+                        "card": [
+                            {
+                                "width": "130px"
+                            },
+                            {
+                                "height": "130px"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i\" \"n\" \"s\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "img_cell": [
+                            {
+                                "justify-content": "start"
+                            },
+                            {
+                                "margin-left": "20px"
+                            },
+                            {
+                                "margin-bottom": "30px"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            },
+                            {
+                                "font-weight": "lighter"
+                            }
+                        ]
+                    }
+                },
+                "weather": {
+                    "label": "[[[ return `${entity.attributes.temperature}\u00b0C` ]]]",
+                    "show_label": true,
+                    "show_state": true,
+                    "size": "70%",
+                    "state": [
+                        {
+                            "icon": "mdi:weather-night",
+                            "value": "clear-night"
+                        },
+                        {
+                            "icon": "mdi:weather-cloudy",
+                            "value": "cloudy"
+                        },
+                        {
+                            "icon": "mdi:weather-fog",
+                            "value": "fog"
+                        },
+                        {
+                            "icon": "mdi:weather-hail",
+                            "value": "hail"
+                        },
+                        {
+                            "icon": "mdi:weather-lightning",
+                            "value": "lightning"
+                        },
+                        {
+                            "icon": "mdi:weather-lightning-rainy",
+                            "value": "lightning-rainy"
+                        },
+                        {
+                            "icon": "mdi:weather-partly-cloudy",
+                            "value": "partlycloudy"
+                        },
+                        {
+                            "icon": "mdi:weather-pouring",
+                            "value": "pouring"
+                        },
+                        {
+                            "icon": "mdi:weather-rainy",
+                            "value": "rainy"
+                        },
+                        {
+                            "icon": "mdi:weather-snowy",
+                            "value": "snowy"
+                        },
+                        {
+                            "icon": "mdi:weather-snowy-rainy",
+                            "value": "snowy-rainy"
+                        },
+                        {
+                            "icon": "mdi:weather-sunny",
+                            "value": "sunny"
+                        },
+                        {
+                            "icon": "mdi:weather-windy",
+                            "value": "windy"
+                        },
+                        {
+                            "icon": "mdi:weather-windy-variant",
+                            "value": "windy-variant"
+                        },
+                        {
+                            "icon": "mdi:weather-cloudy-alert",
+                            "value": "exceptional"
+                        }
+                    ],
+                    "styles": {
+                        "card": [
+                            {
+                                "width": "270px"
+                            },
+                            {
+                                "height": "130px"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i l\" \"n n\" \"s s\""
+                            },
+                            {
+                                "grid-template-columns": "1fr 2fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "img_cell": [
+                            {
+                                "align-content": "start"
+                            },
+                            {
+                                "justify-content": "start"
+                            },
+                            {
+                                "margin-left": "20px"
+                            }
+                        ],
+                        "label": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-size": "250%"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            },
+                            {
+                                "margin-bottom": "-6px"
+                            },
+                            {
+                                "font-weight": "lighter"
+                            }
+                        ]
+                    }
+                },
+                "media": {
+                    "tap_action": {
+                        "action": "call-service",
+                        "service": "media_player.toggle",
+                        "service_data": {
+                            "entity_id": "entity"
+                        }
+                    },
+                    "show_state": true,
+                    "show_label": true,
+                    "state": [
+                        {
+                            "value": "idle",
+                            "label": " "
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "filter": "opacity(50%)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "filter": "grayscale(100%)"
+                                    }
+                                ]
+                            },
+                            "label": " ",
+                            "value": "off"
+                        },
+                        {
+                            "styles": {
+                                "card": [
+                                    {
+                                        "filter": "opacity(25%)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "filter": "grayscale(100%)"
+                                    }
+                                ]
+                            },
+                            "label": " ",
+                            "value": "unavailable"
+                        }
+                    ],
+                    "label": "[[[ if (entity.attributes.media_title == undefined) return \" \"; else if (entity.attributes.media_artist == undefined) return `${entity.attributes.media_title}`; else return `${entity.attributes.media_title} - ${entity.attributes.media_artist}` ]]]",
+                    "size": "12%",
+                    "styles": {
+                        "card": [
+                            {
+                                "width": "270px"
+                            },
+                            {
+                                "height": "130px"
+                            },
+                            {
+                                "background-size": "cover"
+                            },
+                            {
+                                "background-image": "[[[ return `url(\"${entity.attributes.entity_picture}\")` ]]]"
+                            },
+                            {
+                                "background-position": "center center"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i i\" \"n n\" \"s l\""
+                            },
+                            {
+                                "grid-template-columns": "1fr 2fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            },
+                            {
+                                "background-image": "[[[ return `linear-gradient(to top, var(--paper-card-background-color), var(--paper-card-background-color-transparent))` ]]]\n"
+                            },
+                            {
+                                "margin-bottom": "-25px"
+                            }
+                        ],
+                        "img_cell": [
+                            {
+                                "align-content": "start"
+                            },
+                            {
+                                "justify-content": "start"
+                            },
+                            {
+                                "margin-left": "0px"
+                            },
+                            {
+                                "margin-bottom": "50px"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "filter": "drop-shadow(0px 0px 10px var(--paper-card-background-color))"
+                            },
+                            {
+                                "padding-left": "15px"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            },
+                            {
+                                "margin-bottom": "6px"
+                            },
+                            {
+                                "font-weight": "lighter"
+                            }
+                        ],
+                        "label": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "-20px"
+                            },
+                            {
+                                "margin-bottom": "6px"
+                            },
+                            {
+                                "font-weight": "lighter"
+                            }
+                        ]
+                    }
+                },
+                "temperature": {
+                    "label": "Temperature",
+                    "show_label": true,
+                    "show_state": true,
+                    "size": "80%",
+                    "styles": {
+                        "card": [
+                            {
+                                "width": "130px"
+                            },
+                            {
+                                "height": "130px"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i s\" \"n n\" \"l l\""
+                            },
+                            {
+                                "grid-template-columns": "1fr 2fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content"
+                            }
+                        ],
+                        "img_cell": [
+                            {
+                                "margin-bottom": "30px"
+                            }
+                        ],
+                        "label": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            },
+                            {
+                                "font-weight": "lighter"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "margin-bottom": "30px"
+                            },
+                            {
+                                "margin-right": "40px"
+                            },
+                            {
+                                "font-size": "x-large"
+                            }
+                        ]
+                    }
+                },
+                "sensor": {
+                    "show_state": true,
+                    "size": "30%",
+                    "styles": {
+                        "card": [
+                            {
+                                "width": "130px"
+                            },
+                            {
+                                "height": "130px"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i\" \"n\" \"s\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "img_cell": [
+                            {
+                                "justify-content": "start"
+                            },
+                            {
+                                "margin-left": "20px"
+                            },
+                            {
+                                "margin-bottom": "30px"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "margin-left": "10px"
+                            },
+                            {
+                                "font-weight": "lighter"
+                            }
+                        ]
+                    }
+                }
+            },
             "views": [
                 {
                     "title": "Home",
@@ -44,6 +531,42 @@
                                     }
                                 }
                             ]
+                        },
+                        {
+                            "type": "markdown",
+                            "content": " "
+                        },
+                        {
+                            "type": "grid",
+                            "columns": 4,
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "livingroom"
+                                    },
+                                    "entity": "light.livingroom_lamp",
+                                    "show_name": false,
+                                    "icon": "mdi:sofa-outline",
+                                    "hold_action": {
+                                        "action": "toggle"
+                                    }
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "kitchen"
+                                    },
+                                    "entity": "light.kitchen_light",
+                                    "show_name": false,
+                                    "icon": "mdi:table-chair",
+                                    "hold_action": {
+                                        "action": "toggle"
+                                    }
+                                }
+                            ]
                         }
                     ]
                 },
@@ -54,94 +577,69 @@
                     "badges": [],
                     "cards": [
                         {
-                            "type": "grid",
-                            "columns": 2,
+                            "type": "custom:themable-grid",
+                            "columns": 3,
                             "square": false,
                             "cards": [
                                 {
-                                    "type": "grid",
-                                    "columns": 1,
-                                    "square": false,
-                                    "cards": [
+                                    "type": "markdown",
+                                    "content": "## \u041a\u0443\u0445\u043d\u044f",
+                                    "grid": {
+                                        "grid-column": "1 / span 3"
+                                    }
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.kitchen_light",
+                                    "show_name": false
+                                },
+                                {
+                                    "type": "entities",
+                                    "grid": {
+                                        "grid-column": "2 / span 2"
+                                    },
+                                    "entities": [
                                         {
-                                            "type": "markdown",
-                                            "content": "## \u041a\u0443\u0445\u043d\u044f"
+                                            "entity": "light.kitchen_worktop",
+                                            "name": "\u041f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0430 \u043a\u0443\u0445\u043d\u0438"
                                         },
                                         {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.kitchen_light",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "grid",
-                                            "columns": 2,
-                                            "square": true,
-                                            "cards": [
-                                                {
-                                                    "type": "button",
-                                                    "tap_action": {
-                                                        "action": "toggle"
-                                                    },
-                                                    "entity": "light.kitchen_worktop",
-                                                    "show_name": true
-                                                },
-                                                {
-                                                    "type": "button",
-                                                    "tap_action": {
-                                                        "action": "toggle"
-                                                    },
-                                                    "entity": "light.kitchen_table",
-                                                    "show_name": true
-                                                }
-                                            ]
+                                            "entity": "light.kitchen_table",
+                                            "name": "\u041b\u0430\u043c\u043f\u0430 \u043d\u0430 \u043a\u0443\u0445\u043d\u0435"
                                         }
                                     ]
                                 },
                                 {
-                                    "type": "grid",
-                                    "columns": 1,
-                                    "square": false,
-                                    "cards": [
+                                    "type": "markdown",
+                                    "content": "## \u0417\u0430\u043b",
+                                    "grid": {
+                                        "grid-column": "1 / span 3"
+                                    }
+                                },
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.livingroom_lamp",
+                                    "show_name": false
+                                },
+                                {
+                                    "type": "entities",
+                                    "grid": {
+                                        "grid-column": "2 / span 2"
+                                    },
+                                    "entities": [
                                         {
-                                            "type": "markdown",
-                                            "content": "## \u0417\u0430\u043b"
+                                            "entity": "light.livingroom_lamp_warm",
+                                            "name": "\u0422\u0435\u043f\u043b\u044b\u0439 \u0441\u0432\u0435\u0442"
                                         },
                                         {
-                                            "type": "button",
-                                            "tap_action": {
-                                                "action": "toggle"
-                                            },
-                                            "entity": "light.livingroom_lamp",
-                                            "show_name": false
-                                        },
-                                        {
-                                            "type": "grid",
-                                            "columns": 2,
-                                            "square": true,
-                                            "cards": [
-                                                {
-                                                    "type": "button",
-                                                    "tap_action": {
-                                                        "action": "toggle"
-                                                    },
-                                                    "entity": "light.livingroom_lamp_warm",
-                                                    "name": "\u0422\u0435\u043f\u043b\u044b\u0439",
-                                                    "show_name": true
-                                                },
-                                                {
-                                                    "type": "button",
-                                                    "tap_action": {
-                                                        "action": "toggle"
-                                                    },
-                                                    "entity": "light.livingroom_lamp_cold",
-                                                    "name": "\u0425\u043e\u043b\u043e\u0434\u043d\u044b\u0439",
-                                                    "show_name": true
-                                                }
-                                            ],
-                                            "show_name": false
+                                            "entity": "light.livingroom_lamp_cold",
+                                            "name": "\u0425\u043e\u043b\u043e\u0434\u043d\u044b\u0439 \u0441\u0432\u0435\u0442"
                                         }
                                     ]
                                 }
@@ -203,7 +701,6 @@
                         {
                             "type": "custom:themable-grid",
                             "columns": 3,
-                            "square": true,
                             "cards": [
                                 {
                                     "type": "markdown",
@@ -230,20 +727,14 @@
                                     "entities": [
                                         {
                                             "entity": "automation.turn_on_light_plants",
-                                            "name": "\u0412\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0443\u0442\u0440\u043e\u043c"
+                                            "name": "\u0412\u043a. \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0443\u0442\u0440\u043e\u043c"
                                         },
                                         {
                                             "entity": "automation.turn_off_light_plants",
-                                            "name": "\u0412\u044b\u043a\u043b\u044e\u0447\u0430\u0442\u044c \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0432\u0435\u0447\u0435\u0440\u043e\u043c"
+                                            "name": "\u0412\u044b\u043a. \u043f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0443 \u0432\u0435\u0447\u0435\u0440\u043e\u043c"
                                         }
                                     ]
-                                }
-                            ]
-                        },
-                        {
-                            "type": "custom:themable-grid",
-                            "columns": 3,
-                            "cards": [
+                                },
                                 {
                                     "type": "markdown",
                                     "content": "## \u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432",
@@ -267,7 +758,8 @@
                                     "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438",
                                     "entities": [
                                         {
-                                            "entity": "automation.turn_on_autowatering"
+                                            "entity": "automation.turn_on_autowatering",
+                                            "name": "\u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432 \u0432\u043a\u043b\u044e\u0447\u0435\u043d"
                                         }
                                     ]
                                 },
@@ -291,6 +783,258 @@
                                             "entity": "input_datetime.last_autowatering"
                                         }
                                     ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "icon": "mdi:sofa-outline",
+                    "path": "livingroom",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:themable-grid",
+                            "columns": 3,
+                            "square": false,
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.livingroom_lamp",
+                                    "show_name": false
+                                },
+                                {
+                                    "type": "entities",
+                                    "grid": {
+                                        "grid-column": "2 / span 2"
+                                    },
+                                    "entities": [
+                                        {
+                                            "entity": "light.livingroom_lamp_warm",
+                                            "name": "\u0422\u0435\u043f\u043b\u044b\u0439 \u0441\u0432\u0435\u0442"
+                                        },
+                                        {
+                                            "entity": "light.livingroom_lamp_cold",
+                                            "name": "\u0425\u043e\u043b\u043e\u0434\u043d\u044b\u0439 \u0441\u0432\u0435\u0442"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "custom:fold-entity-row",
+                                    "grid": {
+                                        "grid-column": "1 / span 3"
+                                    },
+                                    "head": "vacuum.rockrobo",
+                                    "entities": [
+                                        {
+                                            "entity": "script.vacuum_all_zones"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_kitchen"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_livingroom"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_hall"
+                                        },
+                                        {
+                                            "entity": "script.vacuum_bathroom"
+                                        },
+                                        {
+                                            "entity": "automation.vacuum_cleaning"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "crop": {
+                                        "bottom": 0,
+                                        "left": 0,
+                                        "right": 0,
+                                        "top": 0
+                                    },
+                                    "entity": "camera.map",
+                                    "icon_scale": 1,
+                                    "map_scale": 2,
+                                    "min_height": 300,
+                                    "rotate": 0,
+                                    "show_currently_cleaned_zones": true,
+                                    "show_dock": true,
+                                    "show_path": true,
+                                    "show_stop_button": false,
+                                    "show_vacuum": true,
+                                    "title": "",
+                                    "type": "custom:valetudo-map-card",
+                                    "vacuum_entity": "vacuum.rockrobo",
+                                    "grid": {
+                                        "grid-column": "1 / span 3"
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "path": "kitchen",
+                    "icon": "mdi:table-chair",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:themable-grid",
+                            "columns": 3,
+                            "square": false,
+                            "cards": [
+                                {
+                                    "type": "button",
+                                    "tap_action": {
+                                        "action": "toggle"
+                                    },
+                                    "entity": "light.kitchen_light",
+                                    "show_name": false
+                                },
+                                {
+                                    "type": "entities",
+                                    "grid": {
+                                        "grid-column": "2 / span 2"
+                                    },
+                                    "entities": [
+                                        {
+                                            "entity": "light.kitchen_worktop",
+                                            "name": "\u041f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0430 \u043a\u0443\u0445\u043d\u0438"
+                                        },
+                                        {
+                                            "entity": "light.kitchen_table",
+                                            "name": "\u041b\u0430\u043c\u043f\u0430 \u043d\u0430 \u043a\u0443\u0445\u043d\u0435"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "custom:button-card",
+                                    "name": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430",
+                                    "show_name": false,
+                                    "icon": "mdi:cog-outline",
+                                    "card": [
+                                        {
+                                            "width": "100px"
+                                        },
+                                        {
+                                            "height": "100%"
+                                        }
+                                    ],
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "plants"
+                                    }
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "switch.kitchen_plants",
+                                            "icon": "mdi:lightbulb"
+                                        },
+                                        {
+                                            "entity": "switch.autowatering"
+                                        }
+                                    ],
+                                    "grid": {
+                                        "grid-column": "2 / span 2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "type": "horizontal-stack",
+                            "columns": 3,
+                            "square": false,
+                            "cards": [
+                                {
+                                    "type": "custom:button-card",
+                                    "name": "\u041d\u0430\u0441\u0442\u0440\u043e\u0439\u043a\u0430",
+                                    "show_name": false,
+                                    "icon": "mdi:cog-outline",
+                                    "card": [
+                                        {
+                                            "width": "50px"
+                                        },
+                                        {
+                                            "height": "100%"
+                                        }
+                                    ],
+                                    "tap_action": {
+                                        "action": "navigate",
+                                        "navigation_path": "plants"
+                                    }
+                                },
+                                {
+                                    "type": "entities",
+                                    "entities": [
+                                        {
+                                            "entity": "switch.kitchen_plants",
+                                            "icon": "mdi:lightbulb"
+                                        },
+                                        {
+                                            "entity": "switch.autowatering"
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "test",
+                    "path": "test",
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "custom:layout-card",
+                            "layout": "grid",
+                            "gridcols": "140px 140px 140px 140px",
+                            "gridrows": "140px 140px 140px",
+                            "cards": [
+                                {
+                                    "type": "custom:button-card",
+                                    "entity": "light.livingroom_lamp",
+                                    "name": "TV Lamp",
+                                    "template": "default",
+                                    "gridcol": 1,
+                                    "gridrow": 1
+                                },
+                                {
+                                    "type": "custom:button-card",
+                                    "entity": "weather.openweathermap",
+                                    "name": "\u041f\u043e\u0433\u043e\u0434\u0430",
+                                    "template": "weather",
+                                    "gridcol": 2,
+                                    "gridrow": 1
+                                },
+                                {
+                                    "type": "custom:button-card",
+                                    "entity": "media_player.yandex_station",
+                                    "name": "",
+                                    "template": "media",
+                                    "gridcol": 1,
+                                    "gridrow": 2
+                                },
+                                {
+                                    "type": "custom:button-card",
+                                    "entity": "sensor.temperature",
+                                    "name": "\u043a\u043e\u0440\u0438\u0434\u043e\u0440",
+                                    "template": "temperature",
+                                    "gridcol": 3,
+                                    "gridrow": 2
+                                },
+                                {
+                                    "type": "custom:button-card",
+                                    "entity": "sensor.humidity",
+                                    "name": "\u043a\u043e\u0440\u0438\u0434\u043e\u0440",
+                                    "template": "sensor",
+                                    "gridcol": 1,
+                                    "gridrow": 3
                                 }
                             ]
                         }
