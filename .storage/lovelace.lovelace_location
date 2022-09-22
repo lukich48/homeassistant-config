@@ -1,8 +1,12 @@
 {
+    "version": 1,
+    "key": "lovelace.lovelace_location",
     "data": {
         "config": {
             "views": [
                 {
+                    "panel": false,
+                    "title": "Map",
                     "badges": [],
                     "cards": [
                         {
@@ -26,15 +30,23 @@
                                 }
                             ],
                             "hours_to_show": 12,
-                            "type": "map"
+                            "type": "map",
+                            "aspect_ratio": "10:16"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "script.update_location_lesha"
+                                },
+                                {
+                                    "entity": "script.update_location_polina"
+                                }
+                            ]
                         }
-                    ],
-                    "panel": true,
-                    "title": "Map"
+                    ]
                 }
             ]
         }
-    },
-    "key": "lovelace.lovelace_location",
-    "version": 1
+    }
 }

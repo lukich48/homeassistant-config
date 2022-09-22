@@ -1,0 +1,25 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "input_number",
+    "data": {
+        "items": [
+            {
+                "min": 0.0,
+                "max": 1.0,
+                "name": "yandex_station_white_volume",
+                "mode": "slider",
+                "step": 0.1,
+                "id": "yandex_station_white_volume"
+            },
+            {
+                "min": 0.0,
+                "max": 1.0,
+                "name": "yandex_station_volume",
+                "step": 0.1,
+                "mode": "slider",
+                "id": "yandex_station_volume"
+            }
+        ]
+    }
+}

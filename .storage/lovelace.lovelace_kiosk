@@ -1,0 +1,1053 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_kiosk",
+    "data": {
+        "config": {
+            "kiosk_mode": {
+                "user_settings": [
+                    {
+                        "users": [
+                            "ipad"
+                        ],
+                        "kiosk": true
+                    }
+                ]
+            },
+            "custom_header": {
+                "hide_header": true
+            },
+            "button_card_templates": {
+                "sidebar_button": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-right": "40px"
+                            },
+                            {
+                                "justify-content": "right"
+                            }
+                        ],
+                        "size": "100%",
+                        "card": [
+                            {
+                                "width": "225px"
+                            },
+                            {
+                                "height": "100px"
+                            },
+                            {
+                                "margin": "-5px"
+                            },
+                            {
+                                "border-radius": "15px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--primary-text-color)"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"n i\" \"n s\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-columns": "1fr min-content min-content"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "left"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "25px"
+                            },
+                            {
+                                "padding-left": "15px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding": "0 15px 10px"
+                            }
+                        ]
+                    }
+                },
+                "media": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-left": "25px"
+                            },
+                            {
+                                "justify-content": "start"
+                            }
+                        ],
+                        "size": "30%",
+                        "card": [
+                            {
+                                "width": "135px"
+                            },
+                            {
+                                "height": "135px"
+                            },
+                            {
+                                "margin": "12px"
+                            },
+                            {
+                                "border-radius": "20px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i\" \"n\" \"s\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "18px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding-left": "10px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding": "0 10px 10px"
+                            }
+                        ]
+                    },
+                    "show_state": true,
+                    "state": [
+                        {
+                            "value": "on",
+                            "styles": {
+                                "name": [
+                                    {
+                                        "font-weight": "normal"
+                                    },
+                                    {
+                                        "--text-color-sensor": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    }
+                                ],
+                                "card": [
+                                    {
+                                        "box-shadow": "var(--soft-ui-pressed)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "font-weight": "bold"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "tap_action": {
+                        "action": "toggle",
+                        "haptic": "light"
+                    },
+                    "hold_action": {
+                        "action": "more-info",
+                        "haptic": "medium"
+                    }
+                },
+                "hue_sync": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-right": "50px"
+                            },
+                            {
+                                "justify-content": "start"
+                            }
+                        ],
+                        "size": "100%",
+                        "card": [
+                            {
+                                "width": "300px"
+                            },
+                            {
+                                "height": "75px"
+                            },
+                            {
+                                "margin": "12px"
+                            },
+                            {
+                                "border-radius": "20px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"n i\" \"s i\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "18px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding-left": "10px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding": "0 10px 10px"
+                            }
+                        ]
+                    },
+                    "show_state": true
+                },
+                "plex": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-right": "60px"
+                            },
+                            {
+                                "justify-content": "start"
+                            }
+                        ],
+                        "size": "30%",
+                        "card": [
+                            {
+                                "width": "470px"
+                            },
+                            {
+                                "height": "100px"
+                            },
+                            {
+                                "margin": "12px"
+                            },
+                            {
+                                "border-radius": "20px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"n i\" \"s i\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "18px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding-left": "20px"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding": "0 10px 10px 20px"
+                            }
+                        ]
+                    },
+                    "show_state": true,
+                    "state": [
+                        {
+                            "value": "on",
+                            "styles": {
+                                "name": [
+                                    {
+                                        "font-weight": "normal"
+                                    },
+                                    {
+                                        "--text-color-sensor": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    }
+                                ],
+                                "card": [
+                                    {
+                                        "box-shadow": "var(--soft-ui-pressed)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "font-weight": "bold"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    }
+                                ]
+                            }
+                        }
+                    ]
+                },
+                "light": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-left": "15px"
+                            },
+                            {
+                                "justify-content": "start"
+                            }
+                        ],
+                        "size": "30%",
+                        "card": [
+                            {
+                                "width": "135px"
+                            },
+                            {
+                                "height": "135px"
+                            },
+                            {
+                                "margin": "12px"
+                            },
+                            {
+                                "border-radius": "30px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i\" \"n\" \"s\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal;"
+                            },
+                            {
+                                "font-size": "20px"
+                            },
+                            {
+                                "padding-left": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding": "0 15px 10px"
+                            }
+                        ]
+                    },
+                    "show_state": true,
+                    "state": [
+                        {
+                            "value": "on",
+                            "styles": {
+                                "name": [
+                                    {
+                                        "font-weight": "normal"
+                                    },
+                                    {
+                                        "--text-color-sensor": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    }
+                                ],
+                                "card": [
+                                    {
+                                        "box-shadow": "var(--soft-ui-pressed)"
+                                    }
+                                ],
+                                "icon": [
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "font-weight": "bold"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    }
+                                ]
+                            }
+                        }
+                    ],
+                    "hold_action": {
+                        "action": "more-info",
+                        "haptic": "medium"
+                    }
+                },
+                "irobot": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-left": "10px"
+                            },
+                            {
+                                "justify-content": "start"
+                            }
+                        ],
+                        "size": "30%",
+                        "card": [
+                            {
+                                "width": "135px"
+                            },
+                            {
+                                "height": "135px"
+                            },
+                            {
+                                "margin": "12px"
+                            },
+                            {
+                                "border-radius": "30px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"i\" \"n\" \"s\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal;"
+                            },
+                            {
+                                "font-size": "20px"
+                            },
+                            {
+                                "padding-left": "10px"
+                            },
+                            {
+                                "padding-bottom": "none"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding": "0 10px 10px"
+                            }
+                        ]
+                    }
+                },
+                "irobot_bin_empty": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-right": "70px"
+                            },
+                            {
+                                "justify-content": "start"
+                            }
+                        ],
+                        "size": "80%",
+                        "card": [
+                            {
+                                "width": "320px"
+                            },
+                            {
+                                "height": "185px"
+                            },
+                            {
+                                "margin": "0px"
+                            },
+                            {
+                                "border-radius": "30px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "icon": [
+                            {
+                                "color": "var(--primary-text-color)"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding-bottom": "10px"
+                            }
+                        ],
+                        "grid": [
+                            {
+                                "grid-template-areas": "\"n i\""
+                            },
+                            {
+                                "grid-template-columns": "1fr"
+                            },
+                            {
+                                "grid-template-rows": "1fr min-content min-content"
+                            }
+                        ],
+                        "name": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal;"
+                            },
+                            {
+                                "font-size": "30px"
+                            },
+                            {
+                                "padding-left": "30px"
+                            },
+                            {
+                                "padding-bottom": "none"
+                            },
+                            {
+                                "opacity": 0.7
+                            }
+                        ]
+                    }
+                },
+                "server_status": {
+                    "style": "* {\n  --soft-ui-pressed: {% if is_state('sun.sun', 'above_horizon') %}\n         inset -6px -6px 10px rgba(255,255,255,.8), inset 6px 6px 10px rgba(0,0,0,.035);\n       {% elif is_state('sun.sun', 'below_horizon') %}\n         inset -4px -4px 5px rgba(60, 60, 60,.6), inset 4px 4px 5px rgba(0,0,0,.5);\n       {% endif %}\n  --soft-ui-shadow: {% if is_state('sun.sun', 'above_horizon') %}\n        -10px -10px 16px rgba(255,255,255,.5),10px 10px 16px rgba(0,0,0,.03);\n      {% elif is_state('sun.sun', 'below_horizon') %}\n        -5px -5px 10px rgba(50, 50, 50,.2),6px 6px 10px rgba(0,0,0,.08);\n      {% endif %}\n}\n",
+                    "show_icon": false,
+                    "show_name": false,
+                    "show_entity_picture": true,
+                    "styles": {
+                        "img_cell": [
+                            {
+                                "padding-left": "40px"
+                            },
+                            {
+                                "padding-top": "10px"
+                            },
+                            {
+                                "justify-content": "start"
+                            }
+                        ],
+                        "size": "75%",
+                        "card": [
+                            {
+                                "width": "100px"
+                            },
+                            {
+                                "height": "100px"
+                            },
+                            {
+                                "margin": "8px"
+                            },
+                            {
+                                "border-radius": "20px"
+                            },
+                            {
+                                "box-shadow": "var(--soft-ui-shadow)"
+                            },
+                            {
+                                "background-color": "var(--primary-background-color)"
+                            }
+                        ],
+                        "state": [
+                            {
+                                "justify-self": "start"
+                            },
+                            {
+                                "font-weight": "normal"
+                            },
+                            {
+                                "font-size": "15px"
+                            },
+                            {
+                                "opacity": 0.7
+                            },
+                            {
+                                "padding": "10px 10px 2px 27px"
+                            }
+                        ]
+                    },
+                    "show_state": true,
+                    "state": [
+                        {
+                            "value": "Online",
+                            "styles": {
+                                "card": [
+                                    {
+                                        "box-shadow": "var(--soft-ui-pressed)"
+                                    }
+                                ],
+                                "state": [
+                                    {
+                                        "font-weight": "bold"
+                                    },
+                                    {
+                                        "opacity": 1
+                                    },
+                                    {
+                                        "color": "var(--paper-item-icon-active-color)"
+                                    }
+                                ],
+                                "show_name": false,
+                                "show_entity_picture": true
+                            }
+                        }
+                    ]
+                }
+            },
+            "title": "Home",
+            "icon": "mdi:home",
+            "sidebar": {
+                "width": {
+                    "desktop": 20
+                },
+                "date": true,
+                "digitalClock": true,
+                "twelveHourVersion": false,
+                "bottomCard": {
+                    "type": "vertical-stack",
+                    "cardOptions": {
+                        "cards": [
+                            {
+                                "tap_action": {
+                                    "action": "call-service",
+                                    "service": "light.turn_off",
+                                    "service_data": {
+                                        "entity_id": "light.all_lights"
+                                    }
+                                },
+                                "icon": "mdi:lightbulb-group-off",
+                                "name": "Lights Off",
+                                "template": "sidebar_button",
+                                "type": "custom:button-card"
+                            }
+                        ]
+                    }
+                },
+                "sidebarMenu": [
+                    {
+                        "action": "navigate",
+                        "active": true,
+                        "icon": "mdi:home",
+                        "name": "Home",
+                        "navigation_path": "home"
+                    },
+                    {
+                        "action": "navigate",
+                        "active": true,
+                        "icon": "mdi:plex",
+                        "name": "Plex",
+                        "navigation_path": "/lovelace/1"
+                    },
+                    {
+                        "action": "navigate",
+                        "active": true,
+                        "icon": "mdi:weather-cloudy",
+                        "name": "Weather",
+                        "navigation_path": "weather"
+                    },
+                    {
+                        "action": "navigate",
+                        "active": true,
+                        "icon": "mdi:robot-vacuum",
+                        "name": "Vacuum",
+                        "navigation_path": "/lovelace/2"
+                    },
+                    {
+                        "action": "navigate",
+                        "active": true,
+                        "icon": "mdi:hockey-sticks",
+                        "name": "Hockey",
+                        "navigation_path": "/lovelace/3"
+                    },
+                    {
+                        "action": "navigate",
+                        "active": true,
+                        "icon": "mdi:calendar",
+                        "name": "Calendar",
+                        "navigation_path": "/lovelace/4"
+                    },
+                    {
+                        "action": "navigate",
+                        "active": true,
+                        "icon": "mdi:server",
+                        "name": "Server",
+                        "navigation_path": "/lovelace/6"
+                    }
+                ],
+                "style": ":host {\n    --sidebar-background: var(--third-background-color);\n    --sidebar-text-color: var(--primary-text-color);\n    --face-color: #21353E;\n    --face-border-color: #21353E;\n    --clock-hands-color: #fff;\n    --clock-seconds-hand-color: #fff;\n    --clock-middle-background: #21353E;\n    --clock-middle-border: #21353E;\n}\n.sidebarMenu li.active {\n background-color: var(--primary-background-color)!important;\n color: var(--paper-item-icon-active-color)!important;\n font-weight: 600!important;\n }\n \n.sidebarMenu {\n border-top: 1px solid var(--primary-text-color)!important;\n border-bottom: 1px solid var(--primary-text-color)!important;\n }\n \nh2 {\n font-size: 35px!important;\n line-height: 25px!important;\n font-weight: 200;\n color: #636B75;\n margin: 0px!important;\n text-align: center!important;\n padding-bottom: 10px!important;\n padding-top: 5px!important;\n }\n \n.sidebarMenu li.active ha-icon {\n color: var(--paper-item-icon-active-color)!important;\n }\n \n.digitalClock {\n text-align: center!important;\n padding-bottom: 10px;\n padding-top: 10px;\n font-size: 75px!important;\n line-height: 100px;\n font-weight: normal;\n color: var(--paper-item-icon-active-color)!important;\n}\n \n  \n"
+            },
+            "views": [
+                {
+                    "title": "Home",
+                    "panel": true,
+                    "icon": "mdi:home",
+                    "path": "home",
+                    "cards": [
+                        {
+                            "type": "custom:layout-card",
+                            "layout": "vertical",
+                            "column_num": 3,
+                            "cards": [
+                                {
+                                    "content": "# Kitchen\n",
+                                    "style": {
+                                        ".": "ha-card {\n  --ha-card-background: none !important;\n  box-shadow: none !important;\n}\n",
+                                        "ha-markdown": {
+                                            "$": "h1 {\n  font-size: 30px;\n  font-weight: normal;\n  font-family: Helvetica;\n  letter-spacing: '-0.01em';\n}\n"
+                                        }
+                                    },
+                                    "type": "markdown"
+                                },
+                                {
+                                    "type": "vertical-stack",
+                                    "cards": [
+                                        {
+                                            "type": "horizontal-stack",
+                                            "cards": [
+                                                {
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "light.toggle",
+                                                        "service_data": {
+                                                            "entity_id": "light.kitchen_worktop"
+                                                        }
+                                                    },
+                                                    "entity": "light.kitchen_worktop",
+                                                    "icon": "mdi:ceiling-light",
+                                                    "name": "\u041f\u043e\u0434\u0441\u0432\u0435\u0442\u043a\u0430",
+                                                    "template": "light",
+                                                    "type": "custom:button-card"
+                                                },
+                                                {
+                                                    "tap_action": {
+                                                        "action": "call-service",
+                                                        "service": "light.toggle",
+                                                        "service_data": {
+                                                            "entity_id": "light.kitchen_table"
+                                                        }
+                                                    },
+                                                    "entity": "light.kitchen_table",
+                                                    "icon": "mdi:led-strip-variant",
+                                                    "name": "\u041b\u0430\u043c\u043f\u0430",
+                                                    "template": "light",
+                                                    "type": "custom:button-card"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "title": "Weather",
+                    "icon": "mdi:weather-cloudy",
+                    "panel": true,
+                    "path": "weather",
+                    "cards": [
+                        {
+                            "type": "vertical-stack",
+                            "cards": [
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "type": "weather-forecast",
+                                            "entity": "weather.openweathermap",
+                                            "style": "ha-card {\nbackground-color: var(--primary-background-color);\nborder-radius: 30px;\nmargin: 10px;\nbox-shadow:\n  {% if is_state('sun.sun', 'above_horizon') %}\n    -4px -4px 8px rgba(255,255,255,.5),5px 5px 8px rgba(0,0,0,.03);\n  {% elif is_state('sun.sun', 'below_horizon') %}\n    -5px -5px 8px rgba(50, 50, 50,.2),5px 5px 8px rgba(0,0,0,.08);\n  {% endif %}\n}\n"
+                                        }
+                                    ]
+                                },
+                                {
+                                    "type": "horizontal-stack",
+                                    "cards": [
+                                        {
+                                            "aspect_ratio": "80%",
+                                            "type": "iframe",
+                                            "url": "https://embed.windy.com/embed2.html?rain,55.750,37.857,5"
+                                        },
+                                        {
+                                            "type": "vertical-stack",
+                                            "cards": [
+                                                {
+                                                    "type": "custom:mini-graph-card",
+                                                    "entities": [
+                                                        {
+                                                            "entity": "sensor.hue_motion_sensor_1_temperature",
+                                                            "name": "Living Room Temperature"
+                                                        }
+                                                    ],
+                                                    "style": "ha-card {\nbackground-color: var(--primary-background-color);\nborder-radius: 30px;\nmargin: 10px;\nbox-shadow:\n  {% if is_state('sun.sun', 'above_horizon') %}\n    -4px -4px 8px rgba(255,255,255,.5),5px 5px 8px rgba(0,0,0,.03);\n  {% elif is_state('sun.sun', 'below_horizon') %}\n    -5px -5px 8px rgba(50, 50, 50,.2),5px 5px 8px rgba(0,0,0,.08);\n  {% endif %}\n}\n"
+                                                },
+                                                {
+                                                    "type": "iframe",
+                                                    "url": "https://www.youtube.com/embed/xsRDTfuksyI?controls=0%22%20frameborder=%220%22&mute=1&autoplay=1",
+                                                    "aspect_ratio": "50%",
+                                                    "style": "ha-card {\nbackground-color: var(--primary-background-color);\nborder-radius: 30px;\nmargin: 10px;\nbox-shadow:\n  {% if is_state('sun.sun', 'above_horizon') %}\n    -4px -4px 8px rgba(255,255,255,.5),5px 5px 8px rgba(0,0,0,.03);\n  {% elif is_state('sun.sun', 'below_horizon') %}\n    -5px -5px 8px rgba(50, 50, 50,.2),5px 5px 8px rgba(0,0,0,.08);\n  {% endif %}\n}\n"
+                                                }
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

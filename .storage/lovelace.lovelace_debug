@@ -1,0 +1,61 @@
+{
+    "version": 1,
+    "key": "lovelace.lovelace_debug",
+    "data": {
+        "config": {
+            "views": [
+                {
+                    "title": "gateway",
+                    "path": "gateway",
+                    "panel": false,
+                    "badges": [],
+                    "cards": [
+                        {
+                            "type": "markdown",
+                            "content": "### <center> Bluetooth </center>"
+                        },
+                        {
+                            "type": "custom:flex-table-card",
+                            "clickable": false,
+                            "entities": {
+                                "include": [
+                                    "sensor.*_ble"
+                                ]
+                            },
+                            "sort_by": "mac",
+                            "columns": [
+                                {
+                                    "data": "friendly_name",
+                                    "name": "Friendly Name",
+                                    "modify": "x.replace(/ Ble$/,\"\")"
+                                },
+                                {
+                                    "data": "mac",
+                                    "name": "MAC",
+                                    "modify": "(x+'').replace(/(.{2}(?!$))/g,\"$1:\")"
+                                },
+                                {
+                                    "data": "msg_received",
+                                    "name": "Received",
+                                    "modify": "isNaN(parseInt(x, 10)) ? \"\" : parseInt(x, 10)"
+                                },
+                                {
+                                    "data": "state",
+                                    "name": "Last Seen",
+                                    "modify": "var dt = new Date(0,0,0,0,0,0,(Date.now()-Date.parse(x))); isFinite(dt) ? dt.toTimeString().split(\" \")[0] : \"\"\n"
+                                }
+                            ],
+                            "css": {
+                                "table+": "padding-top: 15px;",
+                                "tbody tr:nth-child(even)": "background-color: #a2542f6;",
+                                "td.left": "padding: 10px 10px 10px 10px",
+                                "th.left": "padding: 0px 0px 10px 10px",
+                                "type": ""
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

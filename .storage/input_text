@@ -1,0 +1,15 @@
+{
+    "version": 1,
+    "key": "input_text",
+    "data": {
+        "items": [
+            {
+                "name": "vacuum_zone_ids",
+                "max": 200,
+                "mode": "text",
+                "min": 0,
+                "id": "vacuum_zone_ids"
+            }
+        ]
+    }
+}

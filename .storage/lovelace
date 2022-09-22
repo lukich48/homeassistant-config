@@ -1,353 +1,1479 @@
 {
-    "version": 1,
-    "key": "lovelace",
-    "data": {
-        "config": {
-            "title": "Home",
-            "views": [
-                {
-                    "cards": [
-                        {
-                            "type": "grid",
-                            "columns": 2,
-                            "squire": false,
-                            "cards": [
-                                {
-                                    "entity": "sensor.humidity",
-                                    "name": "\u041a\u043e\u0440\u0438\u0434\u043e\u0440 \u0432\u043b\u0430\u0436\u043d\u043e\u0441\u0442\u044c",
-                                    "severity": {
-                                        "green": 40,
-                                        "red": 0,
-                                        "yellow": 30
-                                    },
-                                    "type": "gauge",
-                                    "min": 0,
-                                    "max": 100
-                                },
-                                {
-                                    "entity": "sensor.temperature",
-                                    "max": 50,
-                                    "name": "\u0442\u0435\u043c\u043f\u0435\u0440\u0430\u0442\u0443\u0440\u0430",
-                                    "severity": {
-                                        "green": 20,
-                                        "normal": 0,
-                                        "red": 30,
-                                        "yellow": 25
-                                    },
-                                    "type": "gauge"
-                                }
-                            ]
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "light.kitchen_worktop"
-                                },
-                                {
-                                    "entity": "light.kitchen_table"
-                                },
-                                {
-                                    "entity": "light.bathroom_mirror"
-                                },
-                                {
-                                    "entity": "light.livingroom_lamp_warm"
-                                },
-                                {
-                                    "entity": "light.livingroom_lamp_cold"
-                                },
-                                {
-                                    "entity": "light.hall_lamp"
-                                }
-                            ],
-                            "title": "\u0421\u0432\u0435\u0442",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.kitchen_plants"
-                                },
-                                {
-                                    "entity": "switch.hall_warmfloor"
-                                }
-                            ],
-                            "title": "\u0412\u044b\u043a\u043b\u044e\u0447\u0430\u0442\u0435\u043b\u0438",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "input_datetime.last_autowatering",
-                                    "name": "\u0412\u0440\u0435\u043c\u044f \u0437\u0430\u043f\u0443\u0441\u043a\u0430"
-                                }
-                            ],
-                            "footer": {
-                                "entities": [
-                                    "switch.autowatering"
-                                ],
-                                "type": "buttons"
-                            },
-                            "show_header_toggle": false,
-                            "title": "\u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "switch.bathroom_fan"
-                                },
-                                {
-                                    "entity": "switch.laundry_fan"
-                                }
-                            ],
-                            "title": "\u0412\u044b\u0442\u044f\u0436\u043a\u0430",
-                            "type": "entities"
-                        },
-                        {
-                            "card": {
-                                "type": "glance"
-                            },
-                            "filter": {
-                                "include": [
-                                    {
-                                        "domain": "person"
-                                    }
-                                ]
-                            },
-                            "id": "main-people",
-                            "type": "custom:auto-entities"
-                        },
-                        {
-                            "type": "custom:mini-humidifier",
-                            "entity": "fan.humidifier",
-                            "model": "zhimi.humidifier.cb1"
-                        }
-                    ],
-                    "icon": "mdi:home",
-                    "id": "index",
-                    "panel": false,
-                    "title": "\u0413\u043b\u0430\u0432\u043d\u0430\u044f"
-                },
-                {
-                    "cards": [
-                        {
-                            "cards": [
-                                {
-                                    "entities": [
-                                        {
-                                            "entity": "vacuum.rockrobo"
-                                        },
-                                        {
-                                            "entity": "script.vacuum_all_zones"
-                                        },
-                                        {
-                                            "entity": "script.vacuum_kitchen"
-                                        },
-                                        {
-                                            "entity": "script.vacuum_livingroom"
-                                        },
-                                        {
-                                            "entity": "script.vacuum_hall"
-                                        },
-                                        {
-                                            "entity": "script.vacuum_bathroom"
-                                        }
-                                    ],
-                                    "type": "entities"
-                                },
-                                {
-                                    "crop": {
-                                        "bottom": 0,
-                                        "left": 0,
-                                        "right": 0,
-                                        "top": 0
-                                    },
-                                    "entity": "camera.map",
-                                    "icon_scale": 1,
-                                    "map_scale": 2,
-                                    "min_height": 300,
-                                    "rotate": 0,
-                                    "show_currently_cleaned_zones": true,
-                                    "show_dock": true,
-                                    "show_path": true,
-                                    "show_stop_button": false,
-                                    "show_vacuum": true,
-                                    "title": "",
-                                    "type": "custom:valetudo-map-card",
-                                    "vacuum_entity": "vacuum.rockrobo"
-                                }
-                            ],
-                            "type": "vertical-stack"
-                        }
-                    ],
-                    "icon": "mdi:robot-vacuum",
-                    "path": "",
-                    "theme": "dark-mode",
-                    "title": "\u0423\u0431\u043e\u0440\u043a\u0430"
-                },
-                {
-                    "title": "Music",
-                    "path": "music",
-                    "icon": "mdi:music",
-                    "panel": false,
-                    "badges": [],
-                    "cards": [
-                        {
-                            "entity": "media_player.yandex_station",
-                            "artwork": "full-cover",
-                            "sound_mode": "icon",
-                            "volume_step": "10",
-                            "hide": {
-                                "power": true
-                            },
-                            "shortcuts": {
-                                "attribute": "sound_mode",
-                                "columns": 6,
-                                "buttons": [
-                                    {
-                                        "icon": "mdi:headset",
-                                        "id": "\u041f\u0440\u043e\u0438\u0437\u043d\u0435\u0441\u0438 \u0442\u0435\u043a\u0441\u0442",
-                                        "type": "sound_mode"
-                                    },
-                                    {
-                                        "icon": "yandex:alisa",
-                                        "id": "\u0412\u044b\u043f\u043e\u043b\u043d\u0438 \u043a\u043e\u043c\u0430\u043d\u0434\u0443",
-                                        "type": "sound_mode"
-                                    },
-                                    {
-                                        "icon": "mdi:heart",
-                                        "id": "\u043b\u0430\u0439\u043a",
-                                        "type": "command"
-                                    },
-                                    {
-                                        "icon": "mdi:heart-off",
-                                        "id": "\u0441\u043d\u044f\u0442\u044c \u043b\u0430\u0439\u043a",
-                                        "type": "command"
-                                    }
-                                ]
-                            },
-                            "tts": {
-                                "platform": "yandex_station"
-                            },
-                            "type": "custom:mini-media-player"
-                        },
-                        {
-                            "type": "custom:button-card",
-                            "name": "\u0417\u0432\u043e\u043d\u043e\u043a \u043d\u0430 \u0441\u0442\u0430\u043d\u0446\u0438\u044e",
-                            "icon": "mdi:phone-classic",
-                            "tap_action": {
-                                "action": "url",
-                                "url_path": "[[[  hass.callService(\"script\", \"call_yandex_station\"); return \"ya-search-app-open://path?uri=messenger://call/create/private?device_id=FF98F02970096DE564DD2B43\"]]]"
-                            }
-                        }
-                    ]
-                },
-                {
-                    "cards": [
-                        {
-                            "entities": [
-                                {
-                                    "entity": "automation.turn_on_light_plants"
-                                },
-                                {
-                                    "entity": "automation.turn_off_light_plants"
-                                }
-                            ],
-                            "show_header_toggle": true,
-                            "theme": "Backend-selected",
-                            "title": "\u041e\u0441\u0432\u0435\u0449\u0435\u043d\u0438\u0435 \u0440\u0430\u0441\u0442\u0435\u043d\u0438\u0439",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "automation.turn_on_autowatering"
-                                },
-                                {
-                                    "entity": "input_number.autowatering_interval"
-                                },
-                                {
-                                    "entity": "input_number.autowatering_duration"
-                                },
-                                {
-                                    "entity": "input_datetime.last_autowatering"
-                                }
-                            ],
-                            "title": "\u0410\u0432\u0442\u043e\u043f\u043e\u043b\u0438\u0432",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "automation.turn_on_warm_flow_morning"
-                                },
-                                {
-                                    "entity": "input_datetime.turn_on_warm_flow_morning"
-                                },
-                                {
-                                    "entity": "automation.turn_off_warm_flow_day"
-                                },
-                                {
-                                    "entity": "automation.turn_on_warm_flow_evening"
-                                },
-                                {
-                                    "entity": "automation.turn_off_warm_flow_night"
-                                },
-                                {
-                                    "entity": "input_datetime.turn_off_warm_flow_night"
-                                }
-                            ],
-                            "title": "\u0422\u0435\u043f\u043b\u044b\u0439 \u043f\u043e\u043b",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "automation.vacuum_cleaning"
-                                }
-                            ],
-                            "title": "\u0423\u0431\u043e\u0440\u043a\u0430",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "input_number.fan_duration"
-                                },
-                                {
-                                    "entity": "automation.bathroom_fan"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "\u0412\u0435\u043d\u0442\u0438\u043b\u044f\u0442\u043e\u0440\u044b",
-                            "type": "entities"
-                        },
-                        {
-                            "entities": [
-                                {
-                                    "entity": "sensor.nut_ups_status"
-                                },
-                                {
-                                    "entity": "sensor.nut_ups_battery_voltage"
-                                },
-                                {
-                                    "entity": "sensor.nut_ups_input_voltage"
-                                },
-                                {
-                                    "entity": "sensor.nut_ups_output_voltage"
-                                }
-                            ],
-                            "show_header_toggle": false,
-                            "title": "UPS",
-                            "type": "entities"
-                        }
-                    ],
-                    "icon": "mdi:cog-outline",
-                    "id": "config",
-                    "panel": false,
-                    "title": "\u0410\u0432\u0442\u043e\u043c\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438"
-                }
+  "version": 1,
+  "minor_version": 1,
+  "key": "lovelace",
+  "data": {
+    "config": {
+      "swipe_nav": null,
+      "button_card_templates": {
+        "simple": {
+          "aspect_ratio": "1/1",
+          "size": "40%",
+          "styles": {
+            "card": [
+              {
+                "height": "100%"
+              }
             ]
+          }
+        },
+        "default": {
+          "tap_action": {
+            "action": "toggle"
+          },
+          "hold_action": {
+            "action": "more-info"
+          },
+          "show_state": false,
+          "size": "30%",
+          "aspect_ratio": "1/1",
+          "state": [
+            {
+              "styles": {
+                "card": [
+                  {
+                    "filter": "opacity(100%)"
+                  }
+                ],
+                "icon": [
+                  {
+                    "filter": "grayscale(100%)"
+                  }
+                ]
+              },
+              "value": "off"
+            },
+            {
+              "styles": {
+                "card": [
+                  {
+                    "filter": "opacity(25%)"
+                  }
+                ],
+                "icon": [
+                  {
+                    "filter": "grayscale(100%)"
+                  }
+                ]
+              },
+              "value": "unavailable"
+            }
+          ],
+          "styles": {
+            "card": [
+              {
+                "height": "100%"
+              }
+            ],
+            "grid": [
+              {
+                "grid-template-areas": "\"i\" \"n\" \"s\""
+              },
+              {
+                "grid-template-columns": "1fr"
+              },
+              {
+                "grid-template-rows": "1fr 1fr"
+              }
+            ],
+            "img_cell": [
+              {
+                "justify-content": "start"
+              },
+              {
+                "margin-left": "20px"
+              }
+            ],
+            "name": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "5px"
+              }
+            ],
+            "state": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "5px"
+              },
+              {
+                "font-weight": "lighter"
+              }
+            ]
+          }
+        },
+        "weather": {
+          "label": "[[[ return `${entity.attributes.temperature}°C` ]]]",
+          "show_label": true,
+          "show_state": true,
+          "size": "70%",
+          "state": [
+            {
+              "icon": "mdi:weather-night",
+              "value": "clear-night"
+            },
+            {
+              "icon": "mdi:weather-cloudy",
+              "value": "cloudy"
+            },
+            {
+              "icon": "mdi:weather-fog",
+              "value": "fog"
+            },
+            {
+              "icon": "mdi:weather-hail",
+              "value": "hail"
+            },
+            {
+              "icon": "mdi:weather-lightning",
+              "value": "lightning"
+            },
+            {
+              "icon": "mdi:weather-lightning-rainy",
+              "value": "lightning-rainy"
+            },
+            {
+              "icon": "mdi:weather-partly-cloudy",
+              "value": "partlycloudy"
+            },
+            {
+              "icon": "mdi:weather-pouring",
+              "value": "pouring"
+            },
+            {
+              "icon": "mdi:weather-rainy",
+              "value": "rainy"
+            },
+            {
+              "icon": "mdi:weather-snowy",
+              "value": "snowy"
+            },
+            {
+              "icon": "mdi:weather-snowy-rainy",
+              "value": "snowy-rainy"
+            },
+            {
+              "icon": "mdi:weather-sunny",
+              "value": "sunny"
+            },
+            {
+              "icon": "mdi:weather-windy",
+              "value": "windy"
+            },
+            {
+              "icon": "mdi:weather-windy-variant",
+              "value": "windy-variant"
+            },
+            {
+              "icon": "mdi:weather-cloudy-alert",
+              "value": "exceptional"
+            }
+          ],
+          "styles": {
+            "card": [
+              {
+                "width": "272px"
+              },
+              {
+                "height": "130px"
+              }
+            ],
+            "grid": [
+              {
+                "grid-template-areas": "\"i l\" \"n n\" \"s s\""
+              },
+              {
+                "grid-template-columns": "1fr 2fr"
+              },
+              {
+                "grid-template-rows": "1fr min-content min-content"
+              }
+            ],
+            "img_cell": [
+              {
+                "align-content": "start"
+              },
+              {
+                "justify-content": "start"
+              },
+              {
+                "margin-left": "20px"
+              }
+            ],
+            "label": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "font-size": "250%"
+              }
+            ],
+            "name": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "10px"
+              }
+            ],
+            "state": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "10px"
+              },
+              {
+                "margin-bottom": "-6px"
+              },
+              {
+                "font-weight": "lighter"
+              }
+            ]
+          }
+        },
+        "media": {
+          "tap_action": {
+            "action": "call-service",
+            "service": "media_player.toggle",
+            "service_data": {
+              "entity_id": "entity"
+            }
+          },
+          "show_state": true,
+          "show_label": true,
+          "state": [
+            {
+              "value": "idle",
+              "label": " "
+            },
+            {
+              "styles": {
+                "card": [
+                  {
+                    "filter": "opacity(50%)"
+                  }
+                ],
+                "icon": [
+                  {
+                    "filter": "grayscale(100%)"
+                  }
+                ]
+              },
+              "label": " ",
+              "value": "off"
+            },
+            {
+              "styles": {
+                "card": [
+                  {
+                    "filter": "opacity(25%)"
+                  }
+                ],
+                "icon": [
+                  {
+                    "filter": "grayscale(100%)"
+                  }
+                ]
+              },
+              "label": " ",
+              "value": "unavailable"
+            }
+          ],
+          "label": "[[[ if (entity.attributes.media_title == undefined) return \" \"; else if (entity.attributes.media_artist == undefined) return `${entity.attributes.media_title}`; else return `${entity.attributes.media_title} - ${entity.attributes.media_artist}` ]]]",
+          "size": "12%",
+          "styles": {
+            "card": [
+              {
+                "width": "272px"
+              },
+              {
+                "height": "130px"
+              },
+              {
+                "background-size": "cover"
+              },
+              {
+                "background-image": "[[[ return `url(\"${entity.attributes.entity_picture}\")` ]]]"
+              },
+              {
+                "background-position": "center center"
+              }
+            ],
+            "grid": [
+              {
+                "grid-template-areas": "\"i i\" \"n n\" \"s l\""
+              },
+              {
+                "grid-template-columns": "1fr 2fr"
+              },
+              {
+                "grid-template-rows": "1fr min-content min-content"
+              },
+              {
+                "background-image": "[[[ return `linear-gradient(to top, var(--paper-card-background-color), var(--paper-card-background-color-transparent))` ]]]\n"
+              },
+              {
+                "margin-bottom": "-25px"
+              }
+            ],
+            "img_cell": [
+              {
+                "align-content": "start"
+              },
+              {
+                "justify-content": "start"
+              },
+              {
+                "margin-left": "0px"
+              },
+              {
+                "margin-bottom": "50px"
+              }
+            ],
+            "icon": [
+              {
+                "filter": "drop-shadow(0px 0px 10px var(--paper-card-background-color))"
+              },
+              {
+                "padding-left": "15px"
+              }
+            ],
+            "name": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "10px"
+              }
+            ],
+            "state": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "10px"
+              },
+              {
+                "margin-bottom": "6px"
+              },
+              {
+                "font-weight": "lighter"
+              }
+            ],
+            "label": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "-20px"
+              },
+              {
+                "margin-bottom": "6px"
+              },
+              {
+                "font-weight": "lighter"
+              }
+            ]
+          }
+        },
+        "sensor": {
+          "label": "",
+          "show_label": true,
+          "show_state": true,
+          "size": "80%",
+          "styles": {
+            "card": [
+              {
+                "height": "100%"
+              }
+            ],
+            "grid": [
+              {
+                "grid-template-areas": "\"i s\" \"n n\" \"l l\""
+              },
+              {
+                "grid-template-columns": "1fr 2fr"
+              },
+              {
+                "grid-template-rows": "1fr min-content"
+              }
+            ],
+            "img_cell": [
+              {
+                "margin-bottom": "30px"
+              }
+            ],
+            "label": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "10px"
+              },
+              {
+                "font-weight": "lighter"
+              }
+            ],
+            "name": [
+              {
+                "justify-self": "start"
+              },
+              {
+                "margin-left": "10px"
+              }
+            ],
+            "state": [
+              {
+                "margin-bottom": "30px"
+              },
+              {
+                "margin-right": "25px"
+              },
+              {
+                "font-size": "larger"
+              }
+            ]
+          }
+        },
+        "vacuum_zone_cleanup": {
+          "entity": "input_text.vacuum_zone_ids",
+          "show_name": false,
+          "variables": {
+            "zone_id": ""
+          },
+          "state": [
+            {
+              "color": "var(--paper-item-icon-active-color)",
+              "operator": "template",
+              "value": "[[[\n  let vacuumZoneIds = JSON.parse(entity.state || \"{}\");\n  return vacuumZoneIds[variables.zone_id];\n]]]\n"
+            }
+          ],
+          "tap_action": {
+            "action": "call-service",
+            "service": "input_text.set_value",
+            "service_data": "[[[ \n  let vacuumZoneIds = JSON.parse(entity.state || \"{}\");\n  vacuumZoneIds[variables.zone_id] = !vacuumZoneIds[variables.zone_id]; \n  return {entity_id: entity.entity_id, value: JSON.stringify(vacuumZoneIds)};\n  ]]]  \n"
+          }
         }
+      },
+      "views": [
+        {
+          "title": "Home",
+          "path": "home",
+          "icon": "mdi:home-outline",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "layout_type": "grid",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "light"
+                  },
+                  "entity": "light.all_light",
+                  "show_name": false,
+                  "show_icon": true,
+                  "hold_action": {
+                    "action": "call-service",
+                    "service": "light.turn_off",
+                    "service_data": {
+                      "entity_id": "light.all_light"
+                    }
+                  },
+                  "name": "Свет",
+                  "view_layout": {
+                    "grid-column": 1
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "entity": "switch.kitchen_plants",
+                  "show_state": false,
+                  "icon": "mdi:flower",
+                  "show_name": false,
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "plants"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "entity": "vacuum.rockrobo",
+                  "show_state": false,
+                  "show_name": false,
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "vacuum"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "livingroom"
+                  },
+                  "entity": "light.livingroom_lamp",
+                  "name": "Гостиная",
+                  "icon": "mdi:sofa-outline",
+                  "hold_action": {
+                    "action": "toggle"
+                  },
+                  "view_layout": {
+                    "grid-column": 1
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "kitchen"
+                  },
+                  "entity": "light.kitchen_light",
+                  "name": "Кухня",
+                  "icon": "mdi:table-chair",
+                  "hold_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "hall"
+                  },
+                  "entity": "light.hall_lamp",
+                  "name": "Коридор",
+                  "icon": "mdi:shoe-sneaker",
+                  "hold_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "bathroom"
+                  },
+                  "entity": "light.bathroom_mirror",
+                  "name": "Ванная",
+                  "icon": "mdi:shower",
+                  "hold_action": {
+                    "action": "toggle"
+                  }
+                },
+                {
+                  "type": "glance",
+                  "show_name": false,
+                  "entities": [
+                    "person.lesha"
+                  ]
+                },
+                {
+                  "type": "glance",
+                  "show_name": false,
+                  "entities": [
+                    "person.polina"
+                  ]
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "entity": "sensor.mi_humidity",
+                  "show_name": false,
+                  "show_state": true
+                },
+                {
+                  "type": "custom:button-card",
+                  "template": "simple",
+                  "entity": "sensor.mi_temperature",
+                  "show_name": false,
+                  "show_state": true
+                },
+                {
+                  "entity": "media_player.yandex_station_white",
+                  "artwork": "cover",
+                  "sound_mode": "icon",
+                  "info": "scroll",
+                  "volume_step": "10",
+                  "hide": {
+                    "power": true
+                  },
+                  "shortcuts": {
+                    "attribute": "sound_mode",
+                    "columns": 4,
+                    "buttons": [
+                      {
+                        "icon": "mdi:heart",
+                        "id": "лайк",
+                        "type": "command"
+                      },
+                      {
+                        "icon": "mdi:heart-off",
+                        "id": "снять лайк",
+                        "type": "command"
+                      }
+                    ]
+                  },
+                  "type": "custom:mini-media-player",
+                  "view_layout": {
+                    "grid-column": "1 / span 4"
+                  }
+                }
+              ],
+              "layout_options": {
+                "grid-template-columns": "repeat(4, 1fr)",
+                "grid-template-rows": "repeat(3, auto)"
+              }
+            }
+          ]
+        },
+        {
+          "icon": "mdi:sofa-outline",
+          "path": "livingroom",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp",
+                  "name": "Люстра",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp_warm",
+                  "name": "Теплый",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp_cold",
+                  "name": "Холодный",
+                  "template": "default"
+                },
+                {
+                  "entity": "sensor.mi_humidity",
+                  "name": "Влажность",
+                  "severity": {
+                    "green": 40,
+                    "red": 0,
+                    "yellow": 30
+                  },
+                  "type": "gauge",
+                  "min": 0,
+                  "max": 100
+                },
+                {
+                  "entity": "sensor.mi_temperature",
+                  "max": 50,
+                  "name": "температура",
+                  "severity": {
+                    "green": 20,
+                    "normal": 0,
+                    "red": 30,
+                    "yellow": 25
+                  },
+                  "type": "gauge"
+                },
+                {
+                  "entity": "media_player.yandex_station",
+                  "artwork": "cover",
+                  "sound_mode": "icon",
+                  "info": "scroll",
+                  "volume_step": "10",
+                  "hide": {
+                    "power": true
+                  },
+                  "shortcuts": {
+                    "attribute": "sound_mode",
+                    "columns": 4,
+                    "buttons": [
+                      {
+                        "icon": "mdi:heart",
+                        "id": "лайк",
+                        "type": "command"
+                      },
+                      {
+                        "icon": "mdi:heart-off",
+                        "id": "снять лайк",
+                        "type": "command"
+                      }
+                    ]
+                  },
+                  "type": "custom:mini-media-player",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                }
+              ],
+              "layout_type": "grid",
+              "layout_options": {
+                "grid-template-columns": "140px 140px 140px",
+                "grid-template-rows": "auto"
+              }
+            }
+          ]
+        },
+        {
+          "path": "kitchen",
+          "icon": "mdi:table-chair",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_light",
+                  "name": "Весь свет",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_evening_light",
+                  "name": "Вечерний",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_light_switch_2",
+                  "name": "Верхний",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_worktop",
+                  "name": "Подсветка",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_table",
+                  "name": "Лампа",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "switch.kitchen_plants",
+                  "name": "Подсветка <br />растений",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "switch.autowatering",
+                  "name": "Полить цветы",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "name": "Настройка",
+                  "show_name": false,
+                  "template": "default",
+                  "icon": "mdi:cog-outline",
+                  "tap_action": {
+                    "action": "navigate",
+                    "navigation_path": "plants"
+                  }
+                },
+                {
+                  "type": "custom:mini-humidifier",
+                  "entity": "humidifier.zhimi_humidifier_ca1",
+                  "model": "zhimi.humidifier.ca1",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                },
+                {
+                  "entity": "media_player.yandex_station_white",
+                  "artwork": "cover",
+                  "sound_mode": "icon",
+                  "info": "scroll",
+                  "volume_step": "10",
+                  "hide": {
+                    "power": true
+                  },
+                  "shortcuts": {
+                    "attribute": "sound_mode",
+                    "columns": 4,
+                    "buttons": [
+                      {
+                        "icon": "mdi:heart",
+                        "id": "лайк",
+                        "type": "command"
+                      },
+                      {
+                        "icon": "mdi:heart-off",
+                        "id": "снять лайк",
+                        "type": "command"
+                      }
+                    ]
+                  },
+                  "type": "custom:mini-media-player",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                }
+              ],
+              "layout_type": "grid",
+              "layout_options": {
+                "grid-template-columns": "140px 140px 140px",
+                "grid-template-rows": "auto",
+                "grid-align-items": "stretch",
+                "grid-justify-items": "stretch"
+              }
+            }
+          ]
+        },
+        {
+          "path": "vacuum",
+          "icon": "mdi:robot-vacuum",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "cards": [
+                {
+                  "type": "custom:fold-entity-row",
+                  "head": "vacuum.rockrobo",
+                  "entities": [
+                    {
+                      "entity": "automation.vacuum_cleaning"
+                    }
+                  ],
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                },
+                {
+                  "crop": {
+                    "bottom": 0,
+                    "left": 0,
+                    "right": 0,
+                    "top": 0
+                  },
+                  "entity": "camera.map",
+                  "icon_scale": 1,
+                  "map_scale": 2,
+                  "min_height": 300,
+                  "rotate": 0,
+                  "show_currently_cleaned_zones": true,
+                  "show_stop_button": false,
+                  "show_vacuum": true,
+                  "title": "",
+                  "type": "custom:valetudo-map-card",
+                  "vacuum_entity": "vacuum.rockrobo",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                }
+              ],
+              "layout_type": "grid",
+              "layout_options": {
+                "grid-template-columns": "1fr 1fr 1fr",
+                "grid-template-rows": "auto"
+              }
+            },
+            {
+              "type": "custom:layout-card",
+              "layout_type": "grid",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:sofa",
+                  "name": "Зал",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "ff0e10e4-499e-402b-9097-eddf1078dc28"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:shoe-sneaker",
+                  "name": "Коридор",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "78d15422-f079-47e9-9764-5f0dceba7a60"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:shower",
+                  "name": "Ванная",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "9ae6da32-9586-4ae9-8d70-68259f0d5bb2"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:table-chair",
+                  "name": "Кухня",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "40c69c3e-01ef-453f-ab78-a96a2f2cdabe"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:play-outline",
+                  "name": "Пропылесосить",
+                  "show_name": false,
+                  "entity": "vacuum.rockrobo",
+                  "tap_action": {
+                    "action": "url",
+                    "url_path": "[[[                   \n  let vacuumZoneIds = JSON.parse(states['input_text.vacuum_zone_ids'].state || \"{}\");\n  let ids = Object.entries(vacuumZoneIds).filter(([key, value]) => value).map(([key, value]) => key);\n  hass.callService('vacuum', 'send_command', {entity_id: entity.entity_id, command: 'zoned_cleanup', params: {zone_ids: ids}});\n  hass.callService('input_text', 'set_value', {entity_id: 'input_text.vacuum_zone_ids', value: ''});\n  return false;\n  ]]]  \n"
+                  },
+                  "view_layout": {
+                    "grid-column": "5 / span 1"
+                  }
+                }
+              ],
+              "layout_options": {
+                "grid-template-columns": "repeat(5, 1fr)",
+                "grid-template-rows": "auto",
+                "grid-align-items": "stretch",
+                "grid-justify-items": "stretch"
+              }
+            },
+            {
+              "type": "custom:layout-card",
+              "cards": [
+                {
+                  "type": "button",
+                  "tap_action": {
+                    "action": "url",
+                    "url_path": "http://192.168.88.12"
+                  },
+                  "name": "Управление зонами",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                }
+              ],
+              "layout_type": "grid",
+              "layout_options": {
+                "grid-template-columns": "1fr 1fr 1fr",
+                "grid-template-rows": "auto"
+              }
+            }
+          ]
+        },
+        {
+          "path": "bathroom",
+          "icon": "mdi:shower",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.bathroom_mirror",
+                  "name": "Свет",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "switch.bathroom_fan",
+                  "name": "Вытяжка",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "switch.laundry_fan",
+                  "name": "Вытяжка <br /> в прачечной",
+                  "template": "default"
+                },
+                {
+                  "entity": "sensor.bathroom_humidity",
+                  "name": "Влажность",
+                  "severity": {
+                    "green": 40,
+                    "red": 0,
+                    "yellow": 30
+                  },
+                  "type": "gauge",
+                  "min": 0,
+                  "max": 100
+                },
+                {
+                  "entity": "sensor.bathroom_temperature",
+                  "max": 50,
+                  "name": "температура",
+                  "severity": {
+                    "green": 20,
+                    "normal": 0,
+                    "red": 30,
+                    "yellow": 25
+                  },
+                  "type": "gauge"
+                }
+              ],
+              "layout_options": {
+                "grid-template-columns": "1fr 1fr 1fr",
+                "grid-template-rows": "auto"
+              },
+              "layout_type": "grid"
+            }
+          ]
+        },
+        {
+          "path": "hall",
+          "icon": "mdi:shoe-sneaker",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.hall_lamp",
+                  "name": "Свет",
+                  "template": "default"
+                },
+                {
+                  "entity": "sensor.humidity",
+                  "name": "Влажность",
+                  "severity": {
+                    "green": 40,
+                    "red": 0,
+                    "yellow": 30
+                  },
+                  "type": "gauge",
+                  "min": 0,
+                  "max": 100
+                },
+                {
+                  "entity": "sensor.temperature",
+                  "max": 50,
+                  "name": "температура",
+                  "severity": {
+                    "green": 20,
+                    "normal": 0,
+                    "red": 30,
+                    "yellow": 25
+                  },
+                  "type": "gauge"
+                }
+              ],
+              "layout_options": {
+                "grid-template-columns": "1fr 1fr 1fr",
+                "grid-template-rows": "auto"
+              },
+              "layout_type": "grid"
+            }
+          ]
+        },
+        {
+          "title": "Свет",
+          "path": "light",
+          "icon": "mdi:lightbulb-group-outline",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "layout_type": "grid",
+              "layout_options": {
+                "grid-template-columns": "repeat(3, 1fr)",
+                "grid-template-rows": "auto",
+                "grid-align-items": "stretch",
+                "grid-justify-items": "stretch"
+              },
+              "cards": [
+                {
+                  "type": "markdown",
+                  "content": "## Гостиная",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp",
+                  "name": "Люстра",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp_warm",
+                  "name": "Теплый",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp_cold",
+                  "name": "Холодный",
+                  "template": "default"
+                },
+                {
+                  "type": "markdown",
+                  "content": "## Кухня",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_light",
+                  "name": "Весь свет",
+                  "template": "default",
+                  "view_loyout": {
+                    "align-self": "stretch"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_worktop",
+                  "name": "Подсветка",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.kitchen_table",
+                  "name": "Лампа",
+                  "template": "default"
+                },
+                {
+                  "type": "markdown",
+                  "content": "## ",
+                  "view_layout": {
+                    "grid-column": "1 / span 3"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.hall_lamp",
+                  "name": "Коридор",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.bathroom_mirror",
+                  "name": "Ванная",
+                  "template": "default"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "",
+          "icon": "mdi:flower",
+          "path": "plants",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:themable-grid",
+              "columns": 3,
+              "cards": [
+                {
+                  "type": "markdown",
+                  "content": "## Подсветка растений",
+                  "grid": {
+                    "grid-column": "1 / span 3"
+                  }
+                },
+                {
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "switch.kitchen_plants",
+                  "icon": "mdi:lightbulb",
+                  "show_name": false
+                },
+                {
+                  "type": "entities",
+                  "grid": {
+                    "grid-column": "2 / span 2"
+                  },
+                  "title": "Автоматизации",
+                  "entities": [
+                    {
+                      "entity": "automation.turn_on_light_plants",
+                      "name": "Вк. подсветку утром"
+                    },
+                    {
+                      "entity": "automation.turn_off_light_plants",
+                      "name": "Вык. подсветку вечером"
+                    }
+                  ]
+                },
+                {
+                  "type": "markdown",
+                  "content": "## Автополив",
+                  "grid": {
+                    "grid-column": "1 / span 3"
+                  }
+                },
+                {
+                  "type": "button",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "entity": "switch.autowatering",
+                  "show_name": false
+                },
+                {
+                  "type": "entities",
+                  "grid": {
+                    "grid-column": "2 / span 2"
+                  },
+                  "title": "Автоматизации",
+                  "entities": [
+                    {
+                      "entity": "automation.turn_on_autowatering",
+                      "name": "Автополив включен"
+                    }
+                  ]
+                },
+                {
+                  "type": "custom:fold-entity-row",
+                  "grid": {
+                    "grid-column": "1 / span 3"
+                  },
+                  "head": {
+                    "type": "section",
+                    "label": "Дополнительно"
+                  },
+                  "entities": [
+                    {
+                      "entity": "input_number.autowatering_interval"
+                    },
+                    {
+                      "entity": "input_number.autowatering_duration"
+                    },
+                    {
+                      "entity": "input_datetime.last_autowatering"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "test",
+          "path": "test",
+          "badges": [],
+          "cards": [
+            {
+              "type": "custom:layout-card",
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp",
+                  "name": "Люстра",
+                  "template": "default",
+                  "aspect_ratio": "1/1"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp_warm",
+                  "name": "Теплый",
+                  "template": "default"
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp_cold",
+                  "name": "Холодный",
+                  "tap_action": {
+                    "action": "toggle"
+                  },
+                  "hold_action": {
+                    "action": "more-info"
+                  },
+                  "show_state": false,
+                  "aspect_ratio": "1/1",
+                  "size": "30%",
+                  "state": [
+                    {
+                      "styles": {
+                        "card": [
+                          {
+                            "filter": "opacity(100%)"
+                          }
+                        ],
+                        "icon": [
+                          {
+                            "filter": "grayscale(100%)"
+                          }
+                        ]
+                      },
+                      "value": "off"
+                    },
+                    {
+                      "styles": {
+                        "card": [
+                          {
+                            "filter": "opacity(25%)"
+                          }
+                        ],
+                        "icon": [
+                          {
+                            "filter": "grayscale(100%)"
+                          }
+                        ]
+                      },
+                      "value": "unavailable"
+                    }
+                  ],
+                  "styles": {
+                    "card": [
+                      {
+                        "height": "100%"
+                      }
+                    ],
+                    "grid": [
+                      {
+                        "grid-template-areas": "\"i\" \"n\" \"s\""
+                      },
+                      {
+                        "grid-template-columns": "1fr"
+                      },
+                      {
+                        "grid-template-rows": "1fr 1fr"
+                      }
+                    ],
+                    "img_cell": [
+                      {
+                        "justify-content": "start"
+                      },
+                      {
+                        "margin-left": "20px"
+                      }
+                    ],
+                    "name": [
+                      {
+                        "justify-self": "start"
+                      },
+                      {
+                        "margin-left": "5px"
+                      }
+                    ],
+                    "state": [
+                      {
+                        "justify-self": "start"
+                      },
+                      {
+                        "margin-left": "5px"
+                      },
+                      {
+                        "font-weight": "lighter"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "entity": "light.livingroom_lamp",
+                  "name": "TV Lamp",
+                  "aspect_ratio": "1/1",
+                  "size": "40%",
+                  "styles": {
+                    "card": [
+                      {
+                        "height": "100%"
+                      }
+                    ]
+                  }
+                },
+                {
+                  "type": "button",
+                  "entity": "light.livingroom_lamp",
+                  "name": "TV Lamp"
+                },
+                {
+                  "type": "button",
+                  "entity": "light.livingroom_lamp",
+                  "name": "TV Lamp"
+                }
+              ],
+              "layout_type": "grid",
+              "layout_options": {
+                "grid-template-columns": "1fr 1fr 1fr",
+                "grid-template-rows": "auto auto auto",
+                "grid-row-gap": "0pх"
+              }
+            },
+            {
+              "type": "custom:layout-card",
+              "layout_type": "grid",
+              "layout_options": {
+                "grid-template-columns": "1fr 1fr 1fr 1fr 1fr 1fr",
+                "grid-template-rows": "auto"
+              },
+              "cards": [
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:sofa",
+                  "name": "Зал",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "ff0e10e4-499e-402b-9097-eddf1078dc28"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:mirror",
+                  "name": "Коридор",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "78d15422-f079-47e9-9764-5f0dceba7a60"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:shower",
+                  "name": "Ванная",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "9ae6da32-9586-4ae9-8d70-68259f0d5bb2"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:table-chair",
+                  "name": "Кухня",
+                  "template": "vacuum_zone_cleanup",
+                  "variables": {
+                    "zone_id": "40c69c3e-01ef-453f-ab78-a96a2f2cdabe"
+                  }
+                },
+                {
+                  "type": "custom:button-card",
+                  "icon": "mdi:play-outline",
+                  "name": "Пропылесосить",
+                  "show_name": false,
+                  "entity": "vacuum.rockrobo",
+                  "tap_action": {
+                    "action": "url",
+                    "url_path": "[[[                   \n  let vacuumZoneIds = JSON.parse(states['input_text.vacuum_zone_ids'].state || \"{}\");\n  //debugger;\n  let ids = Object.entries(vacuumZoneIds).filter(([key, value]) => value).map(([key, value]) => key);\n  //hass.callService('vacuum', 'send_command', {entity_id: entity.entity_id, command: 'zoned_cleanup', params: {zone_ids: ids}};\n  return false;\n  ]]]  \n"
+                  },
+                  "view_layout": {
+                    "grid-column": "5 / span 1"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
     }
+  }
 }

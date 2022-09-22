@@ -1,5 +1,6 @@
 {
     "version": "6",
+    "minor_version": 1,
     "key": "hacs/161403328.hacs",
     "data": {
         "archived": false,
@@ -13,9 +14,9 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"ca2444b1c54950447b2ddc050155225f0e859ecb382190f3c3f6abdbb311231a\"",
+        "etag_repository": "W/\"1e863cc5bf9b7a9036a95fc07548640462dad70938b54480804f9db92bd1c71e\"",
         "file_name": "card-tools.js",
-        "filename": "",
+        "filename": null,
         "first_install": false,
         "fork": false,
         "full_name": "thomasloven/lovelace-card-tools",
@@ -28,14 +29,14 @@
         "installed": true,
         "installed_commit": "1272cf6",
         "installed_version": "11",
-        "open_issues": 12,
+        "open_issues": 18,
         "last_commit": "477f3d4",
         "last_version": "11",
-        "last_updated": "2020-12-12T00:28:43Z",
+        "last_updated": "2022-05-28T13:36:56Z",
         "manifest_name": null,
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2020-12-12T00:28:43",
+        "pushed_at": "2022-05-28T13:36:56",
         "releases": true,
         "render_readme": false,
         "published_tags": [
@@ -47,7 +48,7 @@
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 146,
+        "stargazers_count": 191,
         "topics": [],
         "zip_release": false
     }

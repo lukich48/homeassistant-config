@@ -1,0 +1,57 @@
+{
+    "version": "6",
+    "minor_version": 1,
+    "key": "hacs/351519214.hacs",
+    "data": {
+        "archived": false,
+        "authors": [
+            "@AlexxIT"
+        ],
+        "category": "integration",
+        "content_in_root": false,
+        "country": [],
+        "config_flow": false,
+        "default_branch": "master",
+        "description": "Control zone cleaning for Xiaomi vacuum cleaners from voice assistants and Home Assistant",
+        "domain": "vacuum_zones",
+        "domains": [],
+        "downloads": 0,
+        "etag_repository": "W/\"4da520fec677c4382a7af34d971cf2f5a520c4cbeeefc4c1d4389a8ec09df84f\"",
+        "file_name": "",
+        "filename": "",
+        "first_install": false,
+        "fork": false,
+        "full_name": "AlexxIT/VacuumZones",
+        "hacs": null,
+        "hide": false,
+        "hide_default_branch": false,
+        "homeassistant": null,
+        "id": "351519214",
+        "iot_class": null,
+        "installed": true,
+        "installed_commit": "1a4692d",
+        "installed_version": "v1.0.0",
+        "open_issues": 4,
+        "last_commit": "3cf5086",
+        "last_version": "v1.0.0",
+        "last_updated": "2021-06-09T11:07:07Z",
+        "manifest_name": "Vacuum Zones",
+        "new": false,
+        "persistent_directory": null,
+        "pushed_at": "2021-06-09T11:07:07",
+        "releases": true,
+        "render_readme": false,
+        "published_tags": [
+            "v1.0.0"
+        ],
+        "selected_tag": null,
+        "show_beta": false,
+        "stargazers_count": 38,
+        "topics": [
+            "home-assistant",
+            "vacuum-cleaner",
+            "xiaomi"
+        ],
+        "zip_release": false
+    }
+}

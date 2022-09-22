@@ -40,11 +40,38 @@
             },
             {
                 "require_admin": false,
-                "show_in_sidebar": true,
+                "show_in_sidebar": false,
                 "title": "Main",
                 "url_path": "lovelace-main",
                 "mode": "storage",
                 "id": "lovelace_main"
+            },
+            {
+                "require_admin": false,
+                "show_in_sidebar": false,
+                "icon": "mdi:radio-tower",
+                "title": "Debug",
+                "url_path": "lovelace-debug",
+                "mode": "storage",
+                "id": "lovelace_debug"
+            },
+            {
+                "require_admin": false,
+                "show_in_sidebar": false,
+                "icon": "mdi:delete",
+                "title": "backup",
+                "url_path": "lovelace-backup",
+                "mode": "storage",
+                "id": "lovelace_backup"
+            },
+            {
+                "require_admin": false,
+                "show_in_sidebar": true,
+                "icon": "mdi:tablet",
+                "title": "kiosk",
+                "url_path": "lovelace-kiosk",
+                "mode": "storage",
+                "id": "lovelace_kiosk"
             }
         ]
     }

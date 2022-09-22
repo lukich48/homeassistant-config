@@ -1,5 +1,6 @@
 {
     "version": "6",
+    "minor_version": 1,
     "key": "hacs/203036108.hacs",
     "data": {
         "archived": false,
@@ -13,7 +14,7 @@
         "domain": null,
         "domains": [],
         "downloads": 0,
-        "etag_repository": "W/\"0d18218a39daf02c6dbc9ca9abc1b8fcabe374cbc10fb07f0395be402bcba4cf\"",
+        "etag_repository": "W/\"4f6e71719f53d5badccc88e1404000e33370e3c052234367b6188ef5b8f9e55f\"",
         "file_name": "valetudo-map-card.js",
         "filename": "valetudo-map-card.js",
         "first_install": false,
@@ -26,28 +27,35 @@
         "id": "203036108",
         "iot_class": null,
         "installed": true,
-        "installed_commit": "fdbc594",
-        "installed_version": "v2021-02-20",
-        "open_issues": 6,
-        "last_commit": "fdbc594",
-        "last_version": "v2021-02-20",
-        "last_updated": "2021-02-20T21:20:45Z",
+        "installed_commit": "4065f4b",
+        "installed_version": "v2021.12.05",
+        "open_issues": 12,
+        "last_commit": "f9134ee",
+        "last_version": "v2022.01.2",
+        "last_updated": "2022-01-09T20:54:21Z",
         "manifest_name": null,
         "new": false,
         "persistent_directory": null,
-        "pushed_at": "2021-02-20T21:20:45",
+        "pushed_at": "2022-01-09T20:54:21",
         "releases": true,
         "render_readme": true,
         "published_tags": [
-            "v2021-02-20",
-            "v2021-02-17",
-            "v2020"
+            "v2022.01.2",
+            "v2022.01.1",
+            "v2022.01.0",
+            "v2021.12.05",
+            "v2021-11-25"
         ],
         "selected_tag": null,
         "show_beta": false,
-        "stargazers_count": 82,
+        "stargazers_count": 141,
         "topics": [
-            "hacktoberfest"
+            "hacktoberfest",
+            "hacs",
+            "home-assistant",
+            "homeassistant",
+            "lovelace",
+            "valetudo"
         ],
         "zip_release": false
     }
