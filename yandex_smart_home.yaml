@@ -1,7 +1,15 @@
+  notifier:
+    oauth_token: AQAAAAAH-cq_AAT7o4WTKw9-IUrjqaMeVc6pL1A
+    skill_id: 1509cd79-8e40-494e-8872-d4d2a8ba26f1
+    user_id: 65f72a95d10c442f8e05f1cf964cacba
   filter:
+    include_domains:
+      - vacuum
     include_entities:
       - light.kitchen_worktop
       - light.kitchen_table
+      - light.kitchen_light_switch_2
+      - light.kitchen_evening_light
       - light.bathroom_mirror
       - light.hall_lamp
       - light.livingroom_lamp_warm
@@ -12,21 +20,28 @@
       - switch.hall_warmfloor
       - switch.laundry_fan
       - switch.bathroom_fan
-      - vacuum.rockrobo
-      - script.vacuum_livingroom
-      - script.vacuum_hall
-      - script.vacuum_bathroom
-      - script.vacuum_kitchen
+      # - script.vacuum_livingroom
+      # - script.vacuum_hall
+      # - script.vacuum_bathroom
+      # - script.vacuum_kitchen
       - script.vacuum_all_zones
       - sensor.temperature
       - sensor.humidity
-      - fan.humidifier
+      - sensor.mi_temperature
+      - sensor.mi_humidity
+      - humidifier.zhimi_humidifier_ca1
       - media_player.yandex_intents
   entity_config:
     light.kitchen_worktop:
       room: 'Кухня'
     light.kitchen_table:
       room: 'Кухня'
+    light.kitchen_light_switch_2:
+      room: 'Кухня'
+      name: 'Верхний свет'
+    light.kitchen_evening_light:
+      room: 'Кухня'
+      name: 'Вечерний свет'
     light.bathroom_mirror:
       room: 'Ванная'
     light.hall_lamp:
@@ -59,8 +74,13 @@
     script.vacuum_all_zones:
       room: 'Зал'  
     sensor.temperature:
-      room: 'Квартира'
+      room: 'Коридор'
     sensor.humidity:
-      room: 'Квартира'
-    fan.humidifier:
+      room: 'Коридор'
+    sensor.mi_temperature:
+      room: 'Зал'
+    sensor.mi_humidity:
+      room: 'Зал'
+    humidifier.zhimi_humidifier_ca1:
       room: 'Кухня'
+      name: 'Увлажнитель'

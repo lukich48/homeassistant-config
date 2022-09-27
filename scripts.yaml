@@ -81,7 +81,11 @@ call_yandex_station:
     data:
       volume_level: 0
     entity_id: media_player.yandex_station
-  - delay: 00:00:04
+  - delay:
+      hours: 0
+      minutes: 0
+      seconds: 5
+      milliseconds: 0
   - service: media_player.play_media
     data:
       media_content_id: Сними трубку
@@ -90,8 +94,9 @@ call_yandex_station:
   - delay: 00:00:01
   - service: media_player.volume_set
     data:
-      volume_level: 0.5
-    entity_id: media_player.yandex_station
+      volume_level: 0.6
+    target:
+      entity_id: media_player.yandex_station
   mode: single
   icon: mdi:phone-classic
 update_shopping_list:
@@ -106,8 +111,23 @@ yandex_beta:
   alias: Яндекс Станция. Включить режим Бета
   sequence:
   - service: media_player.play_media
-    entity_id: media_player.yandex_station
     data:
-      media_content_id: true
       media_content_type: beta
+      media_content_id: 'true'
+    target:
+      entity_id: media_player.yandex_station
   mode: single
+update_location_lesha:
+  sequence:
+  - service: notify.mobile_app_sm_g9730
+    data:
+      message: request_location_update
+  mode: single
+  alias: Update location Lesha
+update_location_polina:
+  sequence:
+  - service: notify.mobile_app_sm_g960f
+    data:
+      message: request_location_update
+  mode: single
+  alias: Update location Polina

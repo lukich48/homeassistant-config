@@ -4,7 +4,6 @@
   "key": "lovelace",
   "data": {
     "config": {
-      "swipe_nav": null,
       "button_card_templates": {
         "simple": {
           "aspect_ratio": "1/1",

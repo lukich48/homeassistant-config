@@ -1,18 +1,25 @@
 {
-    "version": 1,
-    "key": "timer",
-    "data": {
-        "items": [
-            {
-                "name": "bathroom_dht_healthcheck",
-                "duration": "0:10:00",
-                "id": "bathroom_dht_healthcheck"
-            },
-            {
-                "name": "hall_dht_healthcheck",
-                "duration": "0:10:00",
-                "id": "dht_healthcheck"
-            }
-        ]
-    }
+  "version": 1,
+  "minor_version": 1,
+  "key": "timer",
+  "data": {
+    "items": [
+      {
+        "name": "bathroom_dht_healthcheck",
+        "duration": "0:10:00",
+        "id": "bathroom_dht_healthcheck"
+      },
+      {
+        "name": "hall_dht_healthcheck",
+        "duration": "0:10:00",
+        "id": "dht_healthcheck"
+      },
+      {
+        "id": "yandex_station_volume_delay",
+        "name": "yandex_station_volume_lock",
+        "duration": "0:00:01",
+        "restore": false
+      }
+    ]
+  }
 }

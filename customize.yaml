@@ -88,7 +88,7 @@ light.livingroom_lamp:
   friendly_name: Люстра в зале
 automation.bathroom_fan:
   friendly_name: Автовытяжка в ванной
-fan.humidifier:
+humidifier.humidifier:
   friendly_name: Увлажнитель
 media_player.yandex_station:
   icon: yandex:station-mini

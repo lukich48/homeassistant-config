@@ -128,3 +128,6 @@ About
 /.yandex_station.json
 /.shopping_list.json
 /blueprints
+*.DS_Store
+/*.db-wal
+/*.db-shm

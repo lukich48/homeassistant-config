@@ -10,15 +10,14 @@ homeassistant:
   unit_system: metric
   # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
   time_zone: Europe/Moscow
-  
+
   customize: !include customize.yaml
-  
+
   auth_providers:
     - type: homeassistant
-    # - type: legacy_api_password
-    # - type: trusted_networks
-      # trusted_networks:
-        # - 192.168.88.0/24
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.88.0/24
 
 group: !include groups.yaml
 script: !include scripts.yaml
@@ -32,6 +31,9 @@ input_boolean:
 input_text:
 input_select:
 counter:
+input_button:
+
+wake_on_lan:
 
 scene: !include scenes.yaml
 
@@ -40,6 +42,8 @@ scene: !include scenes.yaml
 
 # Enables the frontend
 frontend:
+  extra_module_url:
+    - /hacsfiles/lovelace-card-mod/card-mod.js
 
 lovelace:
   mode: storage
@@ -49,11 +53,12 @@ config:
 
 # default_config:
 mobile_app:
+my:
 
 http:
   # api_password: !secret http_password
-  # ssl_certificate: /ssl/fullchain.pem
-  # ssl_key: /ssl/privkey.pem
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
 
 # Checks for available updates
 # updater:
@@ -84,18 +89,18 @@ sun:
 system_health:
 
 person:
-      
+
 device_tracker:
   - platform: snmp
     host: 192.168.88.1
-    community: !secret snmp_comunity 
+    community: !secret snmp_comunity
     baseoid: 1.3.6.1.4.1.14988.1.1.1.2.1.1
     interval_seconds: 30
     # consider_home: 120
     new_device_defaults:
       track_new_devices: false
-  - platform: google_maps
-    username: rodal2807.home@gmail.com
+  # - platform: google_maps
+  #   username: rodal2807.home@gmail.com
 
 # Weather Prediction
 # weather:
@@ -112,37 +117,9 @@ sensor:
     # - 'time_utc'
     # - 'time_date'
     # - 'beat'
-      
+
   # - platform: yr
-  
-  - platform: mqtt
-    state_topic: 'home/hall/dht'
-    device_class: temperature
-    name: temperature
-    unit_of_measurement: '°C'
-    value_template: '{{ value_json.temperature }}'
-    
-  - platform: mqtt
-    state_topic: 'home/hall/dht'
-    device_class: humidity
-    name: humidity
-    unit_of_measurement: '%'
-    value_template: '{{ value_json.humidity }}'
-    
-  - platform: mqtt
-    state_topic: 'home/bathroom/dht'
-    device_class: temperature
-    name: bathroom_temperature
-    unit_of_measurement: '°C'
-    value_template: '{{ value_json.temperature }}'
-    
-  - platform: mqtt
-    state_topic: 'home/bathroom/dht'
-    device_class: humidity
-    name: bathroom_humidity
-    unit_of_measurement: '%'
-    value_template: '{{ value_json.humidity }}'  
-      
+
   # - platform: filter
     # name: "filtered humidity"
     # entity_id: sensor.Humidity
@@ -152,98 +129,52 @@ sensor:
         # radius: 4.0
       # - filter: lowpass
         # time_constant: 10
-        # precision: 2         
+        # precision: 2
 
 light:
-# подсветка кухни
-  - platform: mqtt
-    name: kitchen_worktop
-    state_topic: "home/kitchen/switch/worktop/state"
-    command_topic: "home/kitchen/switch/worktop"
-    payload_on: 1
-    payload_off: 0
-    qos: 0
-# лампа на кухне
-  - platform: mqtt
-    name: kitchen_table
-    state_topic: "home/kitchen/switch2/table/state"
-    command_topic: "home/kitchen/switch2/table"
-    payload_on: 1
-    payload_off: 0
-    qos: 0
-# свет в ванной
-  - platform: mqtt
-    name: bathroom_mirror
-    state_topic: "home/bathroom/switch/mirror/state"
-    command_topic: "home/bathroom/switch/mirror"
-    payload_on: 1
-    payload_off: 0
-    qos: 0   
-# свет в коридоре
-  - platform: mqtt
-    name: hall_lamp
-    state_topic: "home/hall/switch/lamp/state"
-    command_topic: "home/hall/switch/lamp"
-    payload_on: 1
-    payload_off: 0
-    qos: 0  
-# свет в зале
-  - platform: mqtt
-    name: livingroom_lamp_warm
-    state_topic: "home/livingroom/lamp/warm/state"
-    command_topic: "home/livingroom/lamp/warm"
-    payload_on: 1
-    payload_off: 0
-    qos: 0  
-  - platform: mqtt
-    name: livingroom_lamp_cold
-    state_topic: "home/livingroom/lamp/cold/state"
-    command_topic: "home/livingroom/lamp/cold"
-    payload_on: 1
-    payload_off: 0
-    qos: 0  
+# верхний свет на кухне
+  - platform: switch
+    name: kitchen_light_switch_2
+    entity_id: switch.kitchen_light_switch_2
   - platform: group
-    name: livingroom_lamp
+    name: kitchen_evening_light
     entities:
-      - light.livingroom_lamp_warm
-      - light.livingroom_lamp_cold
+      - light.kitchen_worktop
+      - light.kitchen_table
   - platform: group
     name: kitchen_light
     entities:
       - light.kitchen_worktop
       - light.kitchen_table
+      - light.kitchen_light_switch_2
+# свет в зале
+  - platform: switch
+    name: livingroom_lamp_warm
+    entity_id: switch.livingroom_lamp_switch_2
+  - platform: switch
+    name: livingroom_lamp_cold
+    entity_id: switch.livingroom_lamp_switch_1
+  - platform: group
+    name: livingroom_lamp
+    entities:
+      - light.livingroom_lamp_warm
+      - light.livingroom_lamp_cold
+
   - platform: group
     name: all_light
     entities:
       - light.kitchen_worktop
       - light.kitchen_table
+      - light.kitchen_light_switch_2
       - light.bathroom_mirror
       - light.hall_lamp
       - light.livingroom_lamp_warm
       - light.livingroom_lamp_cold
 
 switch:
-# подсветка растений
-  - platform: mqtt
-    name: kitchen_plants
-    state_topic: "home/kitchen/switch2/plants/state"
-    command_topic: "home/kitchen/switch2/plants"
-    payload_on: 1
-    payload_off: 0
-    qos: 0
-    retain: true
-# теплый пол    
-  - platform: mqtt
-    name: hall_warmfloor
-    state_topic: "home/hall/switch/warmfloor/state"
-    command_topic: "home/hall/switch/warmfloor"
-    payload_on: 1
-    payload_off: 0
-    qos: 0
-    retain: true
-#автополив
+ # автополив
   - platform: mqtt_template
-    name: autowatering  
+    name: autowatering
     state_topic: "home/kitchen/switch2/waterpump/state"
     command_topic: "home/kitchen/switch2/waterpump"
     payload_on: '{"action":"hold","duration": {{(states.input_number.autowatering_duration.state
@@ -251,7 +182,6 @@ switch:
     payload_off: 0
     state_on: 1
     state_off: 0
- 
  # вытяжка
   - platform: mqtt_template
     name: laundry_fan
@@ -262,7 +192,6 @@ switch:
     payload_off: 0
     state_on: 1
     state_off: 0
-    
   - platform: mqtt_template
     name: bathroom_fan
     state_topic: "home/bathroom/switch/fan/state"
@@ -272,13 +201,18 @@ switch:
     payload_off: '{"action":"off"}'
     state_on: 1
     state_off: 0
-     
-fan:
-  - platform: xiaomi_miio
-    host: 192.168.88.210
-    token: 8685c9cc2554950f0279c28603198656
-    name: humidifier
-    model: zhimi.humidifier.ca1
+
+  - platform: wake_on_lan
+    name: wol_desktop
+    mac: 44:8A:5B:D4:1F:C6
+    host: 192.168.88.40
+
+# fan:
+  # - platform: xiaomi_miio
+    # host: 192.168.88.210
+    # token: 8685c9cc2554950f0279c28603198656
+    # name: humidifier
+    # model: zhimi.humidifier.ca1
 
 # vacuum:
   # - platform: xiaomi_miio
@@ -293,29 +227,95 @@ fan:
   # cache: true
   # cache_dir: /tmp/tts
   # time_memory: 300
-  
+
 
 mqtt:
-  broker: rodal2807.synology.me
-  port: 1883
-  # protocol: 3.1.1
-  client_id: home-assistant
-  username: !secret mqtt_login
-  password: !secret mqtt_password
-  discovery: true
   discovery_prefix: homeassistant
-  
+  switch:
+  # подсветка растений
+    - name: kitchen_plants
+      state_topic: "home/kitchen/switch2/plants/state"
+      command_topic: "home/kitchen/switch2/plants"
+      payload_on: 1
+      payload_off: 0
+      qos: 0
+      retain: true
+  # теплый пол
+    - name: hall_warmfloor
+      state_topic: "home/hall/switch/warmfloor/state"
+      command_topic: "home/hall/switch/warmfloor"
+      payload_on: 1
+      payload_off: 0
+      qos: 0
+      retain: true
+  light:
+  # подсветка кухни
+    - name: kitchen_worktop
+      state_topic: "home/kitchen/switch/worktop/state"
+      command_topic: "home/kitchen/switch/worktop"
+      payload_on: 1
+      payload_off: 0
+      qos: 0
+  # лампа на кухне
+    - name: kitchen_table
+      state_topic: "home/kitchen/switch2/table/state"
+      command_topic: "home/kitchen/switch2/table"
+      payload_on: 1
+      payload_off: 0
+      qos: 0
+  # свет в ванной
+    - name: bathroom_mirror
+      state_topic: "home/bathroom/switch/mirror/state"
+      command_topic: "home/bathroom/switch/mirror"
+      payload_on: 1
+      payload_off: 0
+      qos: 0
+  # свет в коридоре
+    - name: hall_lamp
+      state_topic: "home/hall/switch/lamp/state"
+      command_topic: "home/hall/switch/lamp"
+      payload_on: 1
+      payload_off: 0
+      qos: 0
+  sensor:
+    - state_topic: 'home/hall/dht'
+      device_class: temperature
+      name: temperature
+      unit_of_measurement: '°C'
+      value_template: '{{ value_json.temperature }}'
+
+    - state_topic: 'home/hall/dht'
+      device_class: humidity
+      name: humidity
+      unit_of_measurement: '%'
+      value_template: '{{ value_json.humidity }}'
+
+    - state_topic: 'home/bathroom/dht'
+      device_class: temperature
+      name: bathroom_temperature
+      unit_of_measurement: '°C'
+      value_template: '{{ value_json.temperature }}'
+
+    - state_topic: 'home/bathroom/dht'
+      device_class: humidity
+      name: bathroom_humidity
+      unit_of_measurement: '%'
+      value_template: '{{ value_json.humidity }}'
+
+
 recorder:
   exclude:
     entities:
       - sensor.time
       - automation.bathroom_dht_healthcheck
       - automation.hall_dht_healthcheck
+      - automation.alise_turn_down
+      - automation.alise_turn_up
 
 timer:
   stop_fan:
     duration: '00:10:00'
-    
+
 # tuya:
   # username: !secret tuya_username
   # password: !secret tuya_password
@@ -325,28 +325,54 @@ timer:
   # default: error
   # logs:
    # homeassistant.components.device_tracker: debug
-  
+
 #dialogflow:
 
-google_assistant:
-  project_id: homeassistant-2807
+# google_assistant:
+#   project_id: homeassistant-2807
   # api_key: !secret google_assistant_api_key
 
-yandex_smart_home: !include yandex_smart_home.yaml   
+yandex_smart_home: !include yandex_smart_home.yaml
 #yandex_smart_home_fix: #https://github.com/dmitry-k/yandex_smart_home/issues/116
 morph_numbers:
 
 yandex_station:
   username: rodal48@yandex.ru
   password: !secret yandex_password
-  intents:
-    Какая влажность в доме?:
-    Какая температура в доме?:
-    Тестовое сообщение: ага
+  devices:
+    FF98F02970096DE564DD2B43:  # device_id вашей колонки
+      # host: 192.168.88.38 #192.168.88.23
+      name: Яндекс Мини черная  # имя можно задать и тут
+    FF98F029D1F488F781DCB2E2:
+      name: Яндекс Мини белая
+  # intents:
+    # Какая влажность в доме?:
+    # Какая температура в доме?:
+    # Тестовое сообщение: ага
 
-yandex_dialogs:
-    
-    
-    
-    
-    
+# yandex_dialogs:
+
+browser_mod:
+  devices:
+    7fe68a10-02b2a98d:
+      name: custis_laptop
+    a75fa0b2-ba4e22aa:
+      name: ipad
+    0c9ede6b-a454b2ea:
+      name: ipad_safari
+
+vacuum_zones:
+  entity_id: vacuum.rockrobo
+  zones:
+    livingroom:
+      sequence:
+      - service: script.vacuum_livingroom
+    hall:
+      sequence:
+      - service: script.vacuum_hall
+    bathroom:
+      sequence:
+      - service: script.vacuum_bathroom
+    kitchen:
+      sequence:
+      - service: script.vacuum_kitchen

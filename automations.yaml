@@ -258,3 +258,162 @@
         as_text=false) }}
       media_content_type: text
   mode: single
+- id: '1654717812218'
+  alias: Яндекс станция. Увеличить громкость утром
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '7'
+    minutes: '00'
+    seconds: '00'
+  condition: []
+  action:
+  - repeat:
+      for_each:
+      - media_player.yandex_station_white
+      - media_player.yandex_station
+      sequence:
+      - service: media_player.volume_set
+        target:
+          entity_id: '{{repeat.item}}'
+        data:
+          volume_level: 0.5
+  mode: single
+- id: '1654719566999'
+  alias: Яндекс станция. Уменьшить громкость вечером
+  description: ''
+  trigger:
+  - platform: time_pattern
+    hours: '20'
+    minutes: '00'
+    seconds: '00'
+  condition: []
+  action:
+  - repeat:
+      for_each:
+      - media_player.yandex_station_white
+      - media_player.yandex_station
+      sequence:
+      - service: media_player.volume_set
+        target:
+          entity_id: '{{repeat.item}}'
+        data:
+          volume_level: 0.4
+  mode: single
+- id: '1655580244891'
+  alias: Яндекс станция черная. Увеличить громкость Алисы
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - media_player.yandex_station
+    attribute: alice_state
+    to: SPEAKING
+  condition: []
+  action:
+  - service: input_number.set_value
+    target:
+      entity_id: input_number.yandex_station_volume
+    data:
+      value: '{{states.media_player.yandex_station.attributes.volume_level}}'
+  - service: media_player.volume_set
+    entity_id: media_player.yandex_station
+    data:
+      volume_level: '{{states.media_player.yandex_station.attributes.volume_level
+        + 0.1}}'
+  mode: single
+- id: '1655580313362'
+  alias: Яндекс станция черная. Уменьшить громкость Алисы
+  description: ''
+  trigger:
+  - platform: state
+    entity_id:
+    - media_player.yandex_station
+    attribute: alice_state
+    from: SPEAKING
+  condition: []
+  action:
+  - service: media_player.volume_set
+    entity_id: media_player.yandex_station
+    data:
+      volume_level: '{{states.input_number.yandex_station_volume.state}}'
+  mode: single
+- id: '1663965751919'
+  alias: Яндекс станция белая. Нормализация громкости
+  description: Автоматически уменьшает громкость музыки
+  trigger:
+  - platform: template
+    value_template: '{{states.media_player.yandex_station_white.attributes.alice_state
+      == "IDLE" and states.media_player.yandex_station_white.state == "playing" }}'
+    id: turn_down
+  - platform: template
+    value_template: '{{states.media_player.yandex_station_white.attributes.alice_state
+      != "IDLE"}}'
+    id: turn_up
+  - platform: state
+    entity_id:
+    - media_player.yandex_station_white
+    attribute: volume_level
+    id: on_volume_changed
+  condition:
+  - or:
+    - and:
+      - alias: Событие turn_down
+        condition: trigger
+        id: turn_down
+      - alias: Громкость уже установлена
+        condition: template
+        value_template: "{{states.media_player.yandex_station_white.attributes.volume_level
+          | float\n  != (states.input_number.yandex_station_white_volume.state | float
+          - 0.1) | round(1)}}     "
+    - and:
+      - or:
+        - alias: Событие turn_up
+          condition: trigger
+          id: turn_up
+        - alias: Событие on_volume_changed
+          condition: trigger
+          id: on_volume_changed
+      - alias: Громкость уже установлена
+        condition: template
+        value_template: "{{states.media_player.yandex_station_white.attributes.volume_level
+          | float\n  != states.input_number.yandex_station_white_volume.state | float}}"
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: turn_down
+      sequence:
+      - parallel:
+        - service: timer.start
+          data: {}
+          target:
+            entity_id: timer.yandex_station_volume_lock
+        - service: media_player.volume_set
+          entity_id: media_player.yandex_station_white
+          data:
+            volume_level: '{{(states.input_number.yandex_station_white_volume.state
+              | float - 0.1) | round(1)}}        '
+    - conditions:
+      - condition: trigger
+        id: turn_up
+      sequence:
+      - service: media_player.volume_set
+        entity_id: media_player.yandex_station_white
+        data:
+          volume_level: '{{states.input_number.yandex_station_white_volume.state}}'
+    - conditions:
+      - condition: trigger
+        id: on_volume_changed
+      - condition: not
+        conditions:
+        - condition: state
+          entity_id: timer.yandex_station_volume_lock
+          state: active
+      sequence:
+      - service: input_number.set_value
+        target:
+          entity_id: input_number.yandex_station_white_volume
+        data:
+          value: '{{states.media_player.yandex_station_white.attributes.volume_level}}'
+  mode: restart
