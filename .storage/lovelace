@@ -55,7 +55,7 @@
                   }
                 ]
               },
-              "value": "unavailable"
+              "value": "unknown"
             }
           ],
           "styles": {
@@ -750,7 +750,7 @@
                 },
                 {
                   "type": "custom:button-card",
-                  "entity": "light.kitchen_light_switch_2",
+                  "entity": "light.kitchen_light_switch_1",
                   "name": "Верхний",
                   "template": "default"
                 },
@@ -988,7 +988,7 @@
                 },
                 {
                   "type": "custom:button-card",
-                  "entity": "switch.bathroom_fan",
+                  "entity": "fan.bathroom_fan",
                   "name": "Вытяжка",
                   "template": "default"
                 },

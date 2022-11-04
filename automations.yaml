@@ -346,18 +346,22 @@
     value_template: '{{states.media_player.yandex_station_white.attributes.alice_state
       == "IDLE" and states.media_player.yandex_station_white.state == "playing" }}'
     id: turn_down
-  - platform: template
-    value_template: '{{states.media_player.yandex_station_white.attributes.alice_state
-      != "IDLE"}}'
-    id: turn_up
+  - id: turn_up
+    platform: state
+    entity_id:
+    - media_player.yandex_station_white
+    attribute: alice_state
+    to: SPEAKING
   - platform: state
     entity_id:
     - media_player.yandex_station_white
     attribute: volume_level
     id: on_volume_changed
   condition:
-  - or:
-    - and:
+  - condition: or
+    conditions:
+    - condition: and
+      conditions:
       - alias: Событие turn_down
         condition: trigger
         id: turn_down
@@ -366,38 +370,49 @@
         value_template: "{{states.media_player.yandex_station_white.attributes.volume_level
           | float\n  != (states.input_number.yandex_station_white_volume.state | float
           - 0.1) | round(1)}}     "
+        enabled: false
     - and:
       - or:
-        - alias: Событие turn_up
-          condition: trigger
-          id: turn_up
-        - alias: Событие on_volume_changed
-          condition: trigger
-          id: on_volume_changed
-      - alias: Громкость уже установлена
-        condition: template
-        value_template: "{{states.media_player.yandex_station_white.attributes.volume_level
-          | float\n  != states.input_number.yandex_station_white_volume.state | float}}"
+        - and:
+          - alias: Событие turn_up
+            condition: trigger
+            id: turn_up
+          - alias: Громкость уже установлена
+            condition: template
+            value_template: "{{states.media_player.yandex_station_white.attributes.volume_level
+              | float\n  != states.input_number.yandex_station_white_volume.state
+              | float}}"
+        - and:
+          - alias: Событие on_volume_changed
+            condition: trigger
+            id: on_volume_changed
+          - not:
+            - condition: state
+              entity_id: timer.yandex_station_volume_lock
+              state: active
   action:
   - choose:
     - conditions:
       - condition: trigger
         id: turn_down
       sequence:
-      - parallel:
-        - service: timer.start
-          data: {}
-          target:
-            entity_id: timer.yandex_station_volume_lock
-        - service: media_player.volume_set
-          entity_id: media_player.yandex_station_white
-          data:
-            volume_level: '{{(states.input_number.yandex_station_white_volume.state
-              | float - 0.1) | round(1)}}        '
+      - service: timer.start
+        target:
+          entity_id: timer.yandex_station_volume_lock
+        data: {}
+      - service: media_player.volume_set
+        entity_id: media_player.yandex_station_white
+        data:
+          volume_level: '{{(states.input_number.yandex_station_white_volume.state
+            | float - 0.1) | round(1)}}        '
     - conditions:
       - condition: trigger
         id: turn_up
       sequence:
+      - service: timer.start
+        target:
+          entity_id: timer.yandex_station_volume_lock
+        enabled: true
       - service: media_player.volume_set
         entity_id: media_player.yandex_station_white
         data:
@@ -405,15 +420,85 @@
     - conditions:
       - condition: trigger
         id: on_volume_changed
-      - condition: not
-        conditions:
-        - condition: state
-          entity_id: timer.yandex_station_volume_lock
-          state: active
       sequence:
-      - service: input_number.set_value
+      - if:
+        - alias: изменили громкость музыки из приложения
+          condition: template
+          value_template: "{{ states.media_player.yandex_station_white.state == \"playing\"\n
+            \ }}        "
+        then:
+        - alias: Прибавим 0.1
+          service: input_number.set_value
+          target:
+            entity_id: input_number.yandex_station_white_volume
+          data:
+            value: '{{states.media_player.yandex_station_white.attributes.volume_level
+              | float + 0.1 | round(1)}}'
+        else:
+        - service: input_number.set_value
+          target:
+            entity_id: input_number.yandex_station_white_volume
+          data:
+            value: '{{states.media_player.yandex_station_white.attributes.volume_level}}'
+  mode: queued
+  max: 2
+- id: '1667499588499'
+  alias: Проходной выключатель. Коридор
+  description: ''
+  trigger:
+  - platform: device
+    type: turned_on
+    device_id: 55cd6b6ef2820223c79aae4bbb4feb4f
+    entity_id: switch.kitchen_light_switch_2
+    domain: switch
+    id: turn_on
+  - platform: device
+    type: turned_off
+    device_id: 55cd6b6ef2820223c79aae4bbb4feb4f
+    entity_id: switch.kitchen_light_switch_2
+    domain: switch
+    id: turn_off
+  - platform: mqtt
+    topic: home/hall/switch/lamp/state
+    payload: '1'
+    id: is_on
+  - platform: mqtt
+    topic: home/hall/switch/lamp/state
+    payload: '0'
+    id: is_off
+  condition: []
+  action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: turn_on
+      sequence:
+      - service: light.turn_on
+        data: {}
         target:
-          entity_id: input_number.yandex_station_white_volume
-        data:
-          value: '{{states.media_player.yandex_station_white.attributes.volume_level}}'
-  mode: restart
+          entity_id: light.hall_lamp
+    - conditions:
+      - condition: trigger
+        id: turn_off
+      sequence:
+      - service: light.turn_off
+        data: {}
+        target:
+          entity_id: light.hall_lamp
+    - conditions:
+      - condition: trigger
+        id: is_on
+      sequence:
+      - type: turn_on
+        device_id: 55cd6b6ef2820223c79aae4bbb4feb4f
+        entity_id: switch.kitchen_light_switch_2
+        domain: switch
+    - conditions:
+      - condition: trigger
+        id: is_off
+      sequence:
+      - type: turn_off
+        device_id: 55cd6b6ef2820223c79aae4bbb4feb4f
+        entity_id: switch.kitchen_light_switch_2
+        domain: switch
+  mode: single

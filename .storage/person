@@ -1,37 +1,37 @@
 {
-    "version": 2,
-    "minor_version": 1,
-    "key": "person",
-    "data": {
-        "items": [
-            {
-                "device_trackers": [
-                    "device_tracker.phone_lesha_snmp",
-                    "device_tracker.sm_g9730",
-                    "device_tracker.google_maps_114601646161770081243",
-                    "device_tracker.sm_g9730_2"
-                ],
-                "id": "54df184f3d8e404ca5787a4b15e17df2",
-                "name": "Lesha",
-                "user_id": "65f72a95d10c442f8e05f1cf964cacba",
-                "picture": null
-            },
-            {
-                "device_trackers": [
-                    "device_tracker.sm_g960f",
-                    "device_tracker.phone_polina_snmp"
-                ],
-                "id": "e3cc711d968047558fd7300dc4ddede2",
-                "name": "Polina",
-                "user_id": "baf8744284634dabbc2b9845eeb20bea"
-            },
-            {
-                "name": "Ipad",
-                "device_trackers": [],
-                "user_id": "b2287d1e097f4986b2877dcc2ff6f7b6",
-                "picture": null,
-                "id": "ipad"
-            }
-        ]
-    }
+  "version": 2,
+  "minor_version": 1,
+  "key": "person",
+  "data": {
+    "items": [
+      {
+        "device_trackers": [
+          "device_tracker.phone_lesha_snmp",
+          "device_tracker.sm_g9730",
+          "device_tracker.google_maps_114601646161770081243",
+          "device_tracker.sm_g9730_2"
+        ],
+        "id": "54df184f3d8e404ca5787a4b15e17df2",
+        "name": "Lesha",
+        "user_id": "65f72a95d10c442f8e05f1cf964cacba",
+        "picture": null
+      },
+      {
+        "device_trackers": [
+          "device_tracker.sm_s901b"
+        ],
+        "id": "e3cc711d968047558fd7300dc4ddede2",
+        "name": "Polina",
+        "user_id": "baf8744284634dabbc2b9845eeb20bea",
+        "picture": null
+      },
+      {
+        "name": "Ipad",
+        "device_trackers": [],
+        "user_id": "b2287d1e097f4986b2877dcc2ff6f7b6",
+        "picture": null,
+        "id": "ipad"
+      }
+    ]
+  }
 }

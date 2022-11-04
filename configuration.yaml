@@ -134,8 +134,8 @@ sensor:
 light:
 # верхний свет на кухне
   - platform: switch
-    name: kitchen_light_switch_2
-    entity_id: switch.kitchen_light_switch_2
+    name: kitchen_light_switch_1
+    entity_id: switch.kitchen_light_switch_1
   - platform: group
     name: kitchen_evening_light
     entities:
@@ -146,7 +146,7 @@ light:
     entities:
       - light.kitchen_worktop
       - light.kitchen_table
-      - light.kitchen_light_switch_2
+      - light.kitchen_light_switch_1
 # свет в зале
   - platform: switch
     name: livingroom_lamp_warm
@@ -165,7 +165,7 @@ light:
     entities:
       - light.kitchen_worktop
       - light.kitchen_table
-      - light.kitchen_light_switch_2
+      - light.kitchen_light_switch_1
       - light.bathroom_mirror
       - light.hall_lamp
       - light.livingroom_lamp_warm
@@ -301,6 +301,21 @@ mqtt:
       name: bathroom_humidity
       unit_of_measurement: '%'
       value_template: '{{ value_json.humidity }}'
+  fan:
+    - name: bathroom_fan
+      state_topic: "home/bathroom/switch/fan/state"
+      command_topic: "home/bathroom/switch/fan"
+      command_template: '{"action":"{{"hold" if value == "1" else "off"}}","duration": {{(states.input_number.fan_duration.state
+              | int)*1000}}}'
+      payload_on: 1
+      payload_off: 0
+    - name: laundry_fan
+      state_topic: "home/bathroom/switch/laundry-fan/state"
+      command_topic: "home/bathroom/switch/laundry-fan"
+      command_template: '{"action":"{{"hold" if value == "1" else "off"}}","duration": {{(states.input_number.fan_duration.state
+              | int)*1000}}}'
+      payload_on: 1
+      payload_off: 0
 
 
 recorder:

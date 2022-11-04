@@ -5,10 +5,16 @@
   "data": {
     "devices": [
       {
+        "area_id": null,
         "config_entries": [
           "6597b0ad42d919fd92e4765b53a427e4"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": "config_entry",
+        "entry_type": null,
+        "hw_version": null,
+        "id": "63303004d06a467690a9a3167a26f8db",
         "identifiers": [
           [
             "mobile_app",
@@ -17,22 +23,22 @@
         ],
         "manufacturer": "samsung",
         "model": "SM-G9730",
+        "name_by_user": null,
         "name": "SM-G9730",
         "sw_version": "31",
-        "hw_version": null,
-        "entry_type": null,
-        "id": "63303004d06a467690a9a3167a26f8db",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": "config_entry",
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "8e012d2e9f8142afb9e2883d088d4c6c"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "8f9644582abd46818eb88e8f6ca6815b",
         "identifiers": [
           [
             "mobile_app",
@@ -41,22 +47,22 @@
         ],
         "manufacturer": "samsung",
         "model": "SM-G960F",
+        "name_by_user": null,
         "name": "SM-G960F",
         "sw_version": "28",
-        "hw_version": null,
-        "entry_type": null,
-        "id": "8f9644582abd46818eb88e8f6ca6815b",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "b693a904588d465385469d478ac731b7"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "e62fe185d82c4efe8d46dc45fdc79a8c",
         "identifiers": [
           [
             "mqtt",
@@ -65,22 +71,22 @@
         ],
         "manufacturer": "Beijing Roborock Technology Co., Ltd.",
         "model": "Xiaomi Mi Robot Vacuum",
+        "name_by_user": null,
         "name": "rockrobo",
         "sw_version": "2021.03.0 (Valetudo)",
-        "hw_version": null,
-        "entry_type": null,
-        "id": "e62fe185d82c4efe8d46dc45fdc79a8c",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "78b19208b1c72a0c47ccc33c7a20a59f"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "2151e645c9526cd35f4e65c9ae7fa68a",
         "identifiers": [
           [
             "yandex_station",
@@ -89,22 +95,22 @@
         ],
         "manufacturer": "Яндекс",
         "model": "Станция Мини",
-        "name": "Яндекс Мини черная",
-        "sw_version": "1.137.4.14.1449327965.20220915",
-        "hw_version": null,
-        "entry_type": null,
-        "id": "2151e645c9526cd35f4e65c9ae7fa68a",
-        "via_device_id": null,
-        "area_id": null,
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Яндекс Мини черная",
+        "sw_version": "1.141.4.15.1503541050.20221031",
+        "via_device_id": null
       },
       {
+        "area_id": "c17cdf61a7764acbaa83176bf585730e",
         "config_entries": [
           "0dbd70f101fe2c94429f9a07cfd8fb45"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "447e731ec9ca144eeb25429335aa4179",
         "identifiers": [
           [
             "cast",
@@ -113,27 +119,27 @@
         ],
         "manufacturer": "NVIDIA",
         "model": "SHIELD Android TV",
+        "name_by_user": null,
         "name": "SHIELD",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "447e731ec9ca144eeb25429335aa4179",
-        "via_device_id": null,
-        "area_id": "c17cdf61a7764acbaa83176bf585730e",
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": "c17cdf61a7764acbaa83176bf585730e",
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": "https://home.miot-spec.com/s/lumi.gateway.mgl03",
         "connections": [
           [
             "mac",
             "54:ef:44:24:d5:e7"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a04f97cb88d880083dbf4a32b44dd9b9",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -146,31 +152,31 @@
         ],
         "manufacturer": "Xiaomi",
         "model": "gateway ZNDMWG03LM ZNDMWG02LM",
+        "name_by_user": null,
         "name": "Шлюз",
         "sw_version": "1.5.0_0102",
-        "hw_version": null,
-        "entry_type": null,
-        "id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "via_device_id": null,
-        "area_id": "c17cdf61a7764acbaa83176bf585730e",
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": "https://home.miot-spec.com/s/lumi.gateway.mgl03"
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": "https://home.miot-spec.com/s/1371",
         "connections": [
-          [
-            "mac",
-            "a4:c1:38:22:75:96"
-          ],
           [
             "bluetooth",
             "a4c138227596"
+          ],
+          [
+            "mac",
+            "a4:c1:38:22:75:96"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "299230648e658f8f804ebc6fd661ebcb",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -179,22 +185,22 @@
         ],
         "manufacturer": "Xiaomi",
         "model": "ble LYWSD03MMC",
+        "name_by_user": null,
         "name": "Mi Temperature and Humidity Monitor 2",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "299230648e658f8f804ebc6fd661ebcb",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": "https://home.miot-spec.com/s/1371"
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "646ee159fd0f11eab25185e9d5c110b1"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "d2f9c2d75efa1d746e131b69e8368d44",
         "identifiers": [
           [
             "openweathermap",
@@ -203,27 +209,27 @@
         ],
         "manufacturer": "OpenWeather",
         "model": null,
+        "name_by_user": null,
         "name": "OpenWeatherMap",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": "service",
-        "id": "d2f9c2d75efa1d746e131b69e8368d44",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "582d34391d38"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4b980401e32909d2497ce8a01a597e35",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -232,85 +238,85 @@
         ],
         "manufacturer": "Xiaomi",
         "model": "LYWSDCGQ/01ZM",
+        "name_by_user": null,
         "name": "Xiaomi TH Sensor",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "4b980401e32909d2497ce8a01a597e35",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "d06814830810"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "d06814830810"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "c369010797ddd57197186f6a7172ca39",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "d06814830810"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "faca71ae6197"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "faca71ae6197"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "a13597e4e2b98b039f31cb5b0f836533",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "faca71ae6197"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "e4d1d1239161"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "5db0588f5ae559a3015894f6a05883f3",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -319,27 +325,27 @@
         ],
         "manufacturer": "Huami",
         "model": "Tracker",
+        "name_by_user": null,
         "name": "Huami MiBand or Amazfit Watch",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "5db0588f5ae559a3015894f6a05883f3",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": "c17cdf61a7764acbaa83176bf585730e",
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "c8478cb680de"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "02c37782b86c199e43c563fc16578927",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -348,22 +354,22 @@
         ],
         "manufacturer": "Xiaomi",
         "model": "XMTZC04HM",
+        "name_by_user": null,
         "name": "Xiaomi Scale 2",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "02c37782b86c199e43c563fc16578927",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": "c17cdf61a7764acbaa83176bf585730e",
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a8a12b3f460b29252e42c56479bacddf",
         "identifiers": [
           [
             "browser_mod",
@@ -372,27 +378,27 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "custis_laptop",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "a8a12b3f460b29252e42c56479bacddf",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "e555ab52ce71"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "1382e292371f38af2c7a12fe16def857",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -401,22 +407,22 @@
         ],
         "manufacturer": "Huami",
         "model": "Tracker",
+        "name_by_user": null,
         "name": "Huami MiBand or Amazfit Watch",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "1382e292371f38af2c7a12fe16def857",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "7abdcb235af27af4acf7beab8b1a1667",
         "identifiers": [
           [
             "browser_mod",
@@ -425,22 +431,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "34e5041f-b12c9ecb",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "7abdcb235af27af4acf7beab8b1a1667",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "1ee07a559e8f04b1c99c978e6be194a4",
         "identifiers": [
           [
             "browser_mod",
@@ -449,22 +455,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "ipad_safari",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "1ee07a559e8f04b1c99c978e6be194a4",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "ced824d0c5549ddd116bab42fd38403e",
         "identifiers": [
           [
             "browser_mod",
@@ -473,22 +479,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "ipad",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "ced824d0c5549ddd116bab42fd38403e",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "4bdb44b6a575aa791ecbceab71f13a1d",
         "identifiers": [
           [
             "browser_mod",
@@ -497,22 +503,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "ce5aa749-390ab03f",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "4bdb44b6a575aa791ecbceab71f13a1d",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "79422d59c6c1efaa98f4e0e0af9a1c7e",
         "identifiers": [
           [
             "browser_mod",
@@ -521,22 +527,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "a5251029-b5edc414",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "79422d59c6c1efaa98f4e0e0af9a1c7e",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "2dc14826199e6cadc9ae2c86b092cc53",
         "identifiers": [
           [
             "browser_mod",
@@ -545,259 +551,259 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "ff5079e6-b4c73149",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "2dc14826199e6cadc9ae2c86b092cc53",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "f3ddc90b90e1"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "f3ddc90b90e1"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "1648b2653de6c38111b1c076eb151302",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "f3ddc90b90e1"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "eb833fa2f29b"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "eb833fa2f29b"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "822c06f468cdc092d08a9c0dab5c2150",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "eb833fa2f29b"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "f8c8f6409811"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "f8c8f6409811"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "95b415ffc013c592035130418e71f04a",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "f8c8f6409811"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "c167fa6d0cb5"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "c167fa6d0cb5"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "eb04174047daf6187786178559efc580",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "c167fa6d0cb5"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "f8fb7af08347"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "f8fb7af08347"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "f211e198ac72c62df5abafe84fa25930",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "f8fb7af08347"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "d1fb04b80243"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "d1fb04b80243"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "8b0f57d7bc0d36087d5cb0a5e5d36550",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "d1fb04b80243"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "1408060b5c1c"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "1408060b5c1c"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "9a46f3541b944d5258d6659e86cebade",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "1408060b5c1c"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "ce8d700b295e"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "ce8d700b295e"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "6aac8337643b5552e534cbf037a34701",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "ce8d700b295e"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "e5dd7fe7d20c"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "b56fbf1c408e5ee9d8c84417416ec5b8",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -806,22 +812,22 @@
         ],
         "manufacturer": "Huami",
         "model": "Tracker",
+        "name_by_user": null,
         "name": "Huami MiBand or Amazfit Watch",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "b56fbf1c408e5ee9d8c84417416ec5b8",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "cbec946baef87b6928afcb1d7a2908fe",
         "identifiers": [
           [
             "browser_mod",
@@ -830,56 +836,56 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "b823eaa9-beaab6a3",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "cbec946baef87b6928afcb1d7a2908fe",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "f064553da5f1"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "f064553da5f1"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "86a7bd126abd1b38fdf03bc6bd30edaa",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "f064553da5f1"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "e0743f6d984f"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f1115bfa2129f0ca86ea56afd75d82b5",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -888,22 +894,22 @@
         ],
         "manufacturer": "Huami",
         "model": "Tracker",
+        "name_by_user": null,
         "name": "Huami MiBand or Amazfit Watch",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "f1115bfa2129f0ca86ea56afd75d82b5",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f84ac0c92354bd89db90b6ef148aee23",
         "identifiers": [
           [
             "browser_mod",
@@ -912,85 +918,85 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "de92c68b-32129f59",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "f84ac0c92354bd89db90b6ef148aee23",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "d078217d98d8"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "d078217d98d8"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "8a8aff067a5727f243ec23a27fd0ceac",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "d078217d98d8"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "1408150a4c31"
           ]
         ],
-        "identifiers": [
-          [
-            "xiaomi_gateway3",
-            "1408150a4c31"
-          ]
-        ],
-        "manufacturer": "Huami",
-        "model": "Tracker",
-        "name": "Huami MiBand or Amazfit Watch",
-        "sw_version": null,
-        "hw_version": null,
+        "disabled_by": null,
         "entry_type": null,
+        "hw_version": null,
         "id": "ce642ade13cf1cf42531e3f4c1ae0a17",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
+        "identifiers": [
+          [
+            "xiaomi_gateway3",
+            "1408150a4c31"
+          ]
+        ],
+        "manufacturer": "Huami",
+        "model": "Tracker",
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Huami MiBand or Amazfit Watch",
+        "sw_version": null,
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "6c664a99c879d775b5431be6514b1b7d"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "bluetooth",
             "14071d0f0f49"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "9ce172d57ab3c51bdeaf6ebf1227db99",
         "identifiers": [
           [
             "xiaomi_gateway3",
@@ -999,22 +1005,22 @@
         ],
         "manufacturer": "Huami",
         "model": "Tracker",
+        "name_by_user": null,
         "name": "Huami MiBand or Amazfit Watch",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "9ce172d57ab3c51bdeaf6ebf1227db99",
-        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9",
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": "a04f97cb88d880083dbf4a32b44dd9b9"
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "bda74b79aa4d799f2ed23aec472a41f2",
         "identifiers": [
           [
             "browser_mod",
@@ -1023,22 +1029,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "29729b3e-bef1f817",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "bda74b79aa4d799f2ed23aec472a41f2",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0054c93d2b712b25357b0965a7b8ee1d",
         "identifiers": [
           [
             "browser_mod",
@@ -1047,22 +1053,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "5f80563d-aba11449",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "0054c93d2b712b25357b0965a7b8ee1d",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "1b44dfdd627e420ca4d05315c0bb1c16",
         "identifiers": [
           [
             "browser_mod",
@@ -1071,22 +1077,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "fb1138cb-fc078f2f",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "1b44dfdd627e420ca4d05315c0bb1c16",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "b4f05e557a723d48f2c99e2a71d3cae7"
         ],
+        "configuration_url": "homeassistant://hacs",
         "connections": [],
+        "disabled_by": null,
+        "entry_type": "service",
+        "hw_version": null,
+        "id": "e92c54204cd24fb6bd7a1d61ef5787de",
         "identifiers": [
           [
             "hacs",
@@ -1095,22 +1101,22 @@
         ],
         "manufacturer": "hacs.xyz",
         "model": "",
+        "name_by_user": null,
         "name": "HACS",
         "sw_version": "1.27.2",
-        "hw_version": null,
-        "entry_type": "service",
-        "id": "e92c54204cd24fb6bd7a1d61ef5787de",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": "homeassistant://hacs"
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "bea978e313fcbb6d27ddaf96d1543097",
         "identifiers": [
           [
             "browser_mod",
@@ -1119,22 +1125,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "01c232b6-733dffab",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "bea978e313fcbb6d27ddaf96d1543097",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "78b19208b1c72a0c47ccc33c7a20a59f"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a99997e33aea9487b3ec92a2ad1f259d",
         "identifiers": [
           [
             "yandex_station",
@@ -1143,22 +1149,22 @@
         ],
         "manufacturer": "Яндекс",
         "model": "Станция Мини",
-        "name": "Яндекс Мини белая",
-        "sw_version": "1.137.4.14.1449327965.20220915",
-        "hw_version": null,
-        "entry_type": null,
-        "id": "a99997e33aea9487b3ec92a2ad1f259d",
-        "via_device_id": null,
-        "area_id": null,
         "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "name": "Яндекс Мини белая",
+        "sw_version": "1.141.4.15.1503541050.20221031",
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "bb7c59450c2add750f970d3302a1fc1b",
         "identifiers": [
           [
             "browser_mod",
@@ -1167,22 +1173,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "2ab0a4be-9e15ad54",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "bb7c59450c2add750f970d3302a1fc1b",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "b34d30f0dd502ed019a79ef746781586",
         "identifiers": [
           [
             "browser_mod",
@@ -1191,22 +1197,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "8f78b157-0cbf301f",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "b34d30f0dd502ed019a79ef746781586",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "a42049bf4beae216ae9cd985e6d93b0e",
         "identifiers": [
           [
             "browser_mod",
@@ -1215,27 +1221,27 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "88d48cc9-672cab26",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "a42049bf4beae216ae9cd985e6d93b0e",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": "kitchen",
         "config_entries": [
           "d780b0371a719eb434de6bdce80c6db1"
         ],
+        "configuration_url": null,
         "connections": [
           [
             "mac",
             "5c:e5:0c:b2:a9:03"
           ]
         ],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "cf1a1d56848d4ec3a659d40c3d32bf09",
         "identifiers": [
           [
             "xiaomi_miio",
@@ -1244,22 +1250,22 @@
         ],
         "manufacturer": "Xiaomi",
         "model": "zhimi.humidifier.ca1",
+        "name_by_user": null,
         "name": "zhimi.humidifier.ca1",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "cf1a1d56848d4ec3a659d40c3d32bf09",
-        "via_device_id": null,
-        "area_id": "kitchen",
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "cc24a0653759ec2eac6f47e8abf6e677",
         "identifiers": [
           [
             "browser_mod",
@@ -1268,22 +1274,22 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "eecb0d06-f0c80d8f",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "cc24a0653759ec2eac6f47e8abf6e677",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "a5e228e19ce6ac2be644cfa5aa712bbb"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f13e0161ff0f6db60e7cdde2b259c210",
         "identifiers": [
           [
             "tuya",
@@ -1292,22 +1298,22 @@
         ],
         "manufacturer": "Tuya",
         "model": "Smart Plug (eZhUXk6MmN7tmCMl)",
+        "name_by_user": null,
         "name": "в зале",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "f13e0161ff0f6db60e7cdde2b259c210",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "a5e228e19ce6ac2be644cfa5aa712bbb"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "fcd2f5f3e7e069f4877d87a8faa3d5a0",
         "identifiers": [
           [
             "tuya",
@@ -1316,22 +1322,22 @@
         ],
         "manufacturer": "Tuya",
         "model": "Smart Plug (eZhUXk6MmN7tmCMl)",
+        "name_by_user": null,
         "name": "у деда",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "fcd2f5f3e7e069f4877d87a8faa3d5a0",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "a5e228e19ce6ac2be644cfa5aa712bbb"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "0f6de053dc8b17293c41f73a05ec63ef",
         "identifiers": [
           [
             "tuya",
@@ -1340,22 +1346,22 @@
         ],
         "manufacturer": "Tuya",
         "model": "AUBESS Smart Socket 20A (kj5zuqiq3jfeaiex)",
+        "name_by_user": null,
         "name": "anova_socket",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "0f6de053dc8b17293c41f73a05ec63ef",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "b0af973a5629863dc531a62dbdd711cc"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "46bb4eed9dec5bb6e2450d8d340573da",
         "identifiers": [
           [
             "mobile_app",
@@ -1364,22 +1370,22 @@
         ],
         "manufacturer": "samsung",
         "model": "SM-G9730",
+        "name_by_user": null,
         "name": "SM-G9730",
         "sw_version": "31",
-        "hw_version": null,
-        "entry_type": null,
-        "id": "46bb4eed9dec5bb6e2450d8d340573da",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
           "d0cde10bb751bec1ed6ee42ce56ab11d"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "6abbcbe63a1ddbc9b8b003f811c66209",
         "identifiers": [
           [
             "browser_mod",
@@ -1388,64 +1394,106 @@
         ],
         "manufacturer": null,
         "model": null,
+        "name_by_user": null,
         "name": "bf5892b6-3c941920",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "6abbcbe63a1ddbc9b8b003f811c66209",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": null,
         "config_entries": [
-          "a5e228e19ce6ac2be644cfa5aa712bbb"
+          "6ebb5ad6a4042d9e2b588fe3f6806c39"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "cf9de4ec287009235d93c85a10ddf337",
         "identifiers": [
           [
-            "tuya",
-            "03702740e868e74d4253"
+            "mobile_app",
+            "fec36e96b6afcceb"
           ]
         ],
-        "manufacturer": "Tuya",
-        "model": "W602 (sjcgmr9bqubfjeis)",
-        "name": "livingroom_lamp",
+        "manufacturer": "samsung",
+        "model": "SM-S901B",
+        "name_by_user": null,
+        "name": "SM-S901B",
+        "sw_version": "31",
+        "via_device_id": null
+      },
+      {
+        "area_id": null,
+        "config_entries": [
+          "d0cde10bb751bec1ed6ee42ce56ab11d"
+        ],
+        "configuration_url": null,
+        "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "f95b420d9a6ed3b3ffb76657f1e26ede",
+        "identifiers": [
+          [
+            "browser_mod",
+            "beb63749-42844027"
+          ]
+        ],
+        "manufacturer": null,
+        "model": null,
+        "name_by_user": null,
+        "name": "beb63749-42844027",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "c87d6e41aa063e968298c518b0b1ec11",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
-        "disabled_by": null,
-        "configuration_url": null
+        "via_device_id": null
       },
       {
+        "area_id": "kitchen",
         "config_entries": [
           "a5e228e19ce6ac2be644cfa5aa712bbb"
         ],
+        "configuration_url": null,
         "connections": [],
+        "disabled_by": null,
+        "entry_type": null,
+        "hw_version": null,
+        "id": "55cd6b6ef2820223c79aae4bbb4feb4f",
         "identifiers": [
           [
             "tuya",
-            "2600707070039f33adca"
+            "74050055e09806dbd510"
           ]
         ],
         "manufacturer": "Tuya",
         "model": "W602 (sjcgmr9bqubfjeis)",
+        "name_by_user": null,
         "name": "kitchen_light",
         "sw_version": null,
-        "hw_version": null,
-        "entry_type": null,
-        "id": "d563c81df8a7352a1b245fb1be6dd821",
-        "via_device_id": null,
-        "area_id": null,
-        "name_by_user": null,
+        "via_device_id": null
+      },
+      {
+        "area_id": "c17cdf61a7764acbaa83176bf585730e",
+        "config_entries": [
+          "a5e228e19ce6ac2be644cfa5aa712bbb"
+        ],
+        "configuration_url": null,
+        "connections": [],
         "disabled_by": null,
-        "configuration_url": null
+        "entry_type": null,
+        "hw_version": null,
+        "id": "5cd8dde5f7477daa7e1ef5ec8bbe071c",
+        "identifiers": [
+          [
+            "tuya",
+            "847181173c61058b737f"
+          ]
+        ],
+        "manufacturer": "Tuya",
+        "model": "W602 (sjcgmr9bqubfjeis)",
+        "name_by_user": null,
+        "name": "livingroom_lamp",
+        "sw_version": null,
+        "via_device_id": null
       }
     ],
     "deleted_devices": [
@@ -1461,6 +1509,34 @@
           ]
         ],
         "id": "4f32476fe87dc829e2d6373636e903d4",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "a5e228e19ce6ac2be644cfa5aa712bbb"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "tuya",
+            "2600707070039f33adca"
+          ]
+        ],
+        "id": "d563c81df8a7352a1b245fb1be6dd821",
+        "orphaned_timestamp": null
+      },
+      {
+        "config_entries": [
+          "a5e228e19ce6ac2be644cfa5aa712bbb"
+        ],
+        "connections": [],
+        "identifiers": [
+          [
+            "tuya",
+            "03702740e868e74d4253"
+          ]
+        ],
+        "id": "c87d6e41aa063e968298c518b0b1ec11",
         "orphaned_timestamp": null
       }
     ]

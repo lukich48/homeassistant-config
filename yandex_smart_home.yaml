@@ -8,7 +8,7 @@
     include_entities:
       - light.kitchen_worktop
       - light.kitchen_table
-      - light.kitchen_light_switch_2
+      - light.kitchen_light_switch_1
       - light.kitchen_evening_light
       - light.bathroom_mirror
       - light.hall_lamp
@@ -36,7 +36,7 @@
       room: 'Кухня'
     light.kitchen_table:
       room: 'Кухня'
-    light.kitchen_light_switch_2:
+    light.kitchen_light_switch_1:
       room: 'Кухня'
       name: 'Верхний свет'
     light.kitchen_evening_light:

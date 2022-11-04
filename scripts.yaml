@@ -126,7 +126,7 @@ update_location_lesha:
   alias: Update location Lesha
 update_location_polina:
   sequence:
-  - service: notify.mobile_app_sm_g960f
+  - service: notify.mobile_app_sm_s901b
     data:
       message: request_location_update
   mode: single
