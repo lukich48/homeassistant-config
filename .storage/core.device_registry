@@ -165,12 +165,12 @@
         "configuration_url": "https://home.miot-spec.com/s/1371",
         "connections": [
           [
-            "bluetooth",
-            "a4c138227596"
-          ],
-          [
             "mac",
             "a4:c1:38:22:75:96"
+          ],
+          [
+            "bluetooth",
+            "a4c138227596"
           ]
         ],
         "disabled_by": null,

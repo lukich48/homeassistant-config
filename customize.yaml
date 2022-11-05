@@ -38,10 +38,10 @@ switch.hall_warmfloor:
 switch.autowatering:
   friendly_name: Автополив
   icon: mdi:water-pump
-switch.laundry_fan:
+fan.laundry_fan:
   friendly_name: Вытяжка в прачечной
   icon: mdi:fan
-switch.bathroom_fan:
+fan.bathroom_fan:
   friendly_name: Вытяжка в ванной
   icon: mdi:fan
 automation.turn_on_light_plants:

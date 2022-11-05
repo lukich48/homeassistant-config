@@ -18,8 +18,8 @@
       - switch.kitchen_plants
       - switch.kitchen_plants
       - switch.hall_warmfloor
-      - switch.laundry_fan
-      - switch.bathroom_fan
+      - fan.laundry_fan
+      - fan.bathroom_fan
       # - script.vacuum_livingroom
       # - script.vacuum_hall
       # - script.vacuum_bathroom
@@ -56,9 +56,9 @@
       room: 'Зал'
     # light.livingroom_lamp:
       # room: Зал
-    switch.laundry_fan:
+    fan.laundry_fan:
       room: 'Прачечная'
-    switch.bathroom_fan:
+    fan.bathroom_fan:
       room: 'Ванная'
     vacuum.rockrobo:
       room: 'Зал'

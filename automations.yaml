@@ -168,7 +168,7 @@
     value_template: '{{states.sensor.bathroom_humidity.state | int >= states.sensor.humidity.state
       | int + 20}}'
   - condition: state
-    entity_id: switch.bathroom_fan
+    entity_id: fan.bathroom_fan
     state: 'off'
   - condition: state
     entity_id: timer.bathroom_dht_healthcheck

@@ -994,7 +994,7 @@
                 },
                 {
                   "type": "custom:button-card",
-                  "entity": "switch.laundry_fan",
+                  "entity": "fan.laundry_fan",
                   "name": "Вытяжка <br /> в прачечной",
                   "template": "default"
                 },
